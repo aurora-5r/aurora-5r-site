@@ -1,8 +1,40 @@
+$primary: #6282c2; // Black
+$secondary: #6282c2; //blue
+$body-bg: #fff; //white
+$text-body: #484d52; //gray
+$body-color: $text-body;
+$border-radius: 8px;
+$special: #6282c2; // blue
+$black: #000;
+$white: #fff;
+$yellow: #fde477;
+$light-yellow: #fcf4c8;
+$green: #57c79a;
+$light-green: #6ff8d4;
+$dark-yellow: #e4d48e;
+$red: #ee3530;
+$light-red: #f1857e;
+$gray: #989898;
+
+$theme-colors: (
+  "special": $special,
+  "yellow": $yellow,
+  "blue": $special,
+  "green": $green,
+  "red": $red,
+  "gray": $gray,
+  "light-red": $light-red,
+  "light-green": $light-green,
+  "light-yellow": $light-yellow,
+  "dark-yellowww": $dark-yellow,
+);
+
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
 /* Base */
+/* ici */
 @import "site-base";
 /* Navbar */
 @import "site-navbar";
