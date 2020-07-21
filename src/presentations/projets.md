@@ -2,63 +2,42 @@
 
 title: "Nous réalisons les projets des PMEs"
 
-description: "Nos pilotes de projets s'appuient sur des Ã©quipes composÃ©es selon les besoins des projets en conception, prototypage, certifications, industrialisation,supply-chain, marketing, commercialisation, numérique pour mener à bien les projets."
+description: "Nos pilotes de projets s'appuient sur des équipes composées selon les besoins des projets en conception, prototypage, certifications, industrialisation,supply-chain, marketing, commercialisation, numérique pour mener à bien les projets."
 
 subtitle: "Le numérique comme moteur."
 
-subdescription: "Nous considérons que faire du numérique n'est pas une fin en soit, mais un moteur indispensable à  l'innovation et au développement des entreprises. Pour mener à  bien nos projets nous nous appuyons sur des outils que nous avons conçus."
+subdescription: "Nous considérons que faire du numérique n'est pas une fin en soi, mais un moteur indispensable à  l'innovation et au développement des entreprises. Pour mener à  bien nos projets nous nous appuyons sur des outils que nous avons conçus."
 
 image: "images/nous_realisons.svg"
 
 ---
 
-## Identification des projets.
+## Le référentiel 5R pour évaluer, sélectionner et amplifier les projets.
 
-Nous identifions 5 natures de projets sur lesquels Aurora intervient .
+Au travers du 5R, chaque projet est évalué selon 2 grands axes  qui sont la faisabilité et l’impact. Le 5R propose une grille de lecture partagée, quantifiable qui permet de se poser les bonnes questions, d’avoir une vision partagée du projet et d’identifier des actions pour amplifier le projet.
 
-<div class="table-responsive">
-<table class="table table-striped table-bordered .table-hover ">
-  <tr>
-    <td>Nature de projet</td>
-    <td>Origine</td>
-  </tr>
-  <tr>
-    <td>Volonté de localiser des produits / équipements actuellement sourcés à l’étranger.
-</td>
-    <td>Acheteur / supply chain de grands groupes
-Association des acheteurs</td>
-  </tr>
-  <tr>
-    <td>Idées ou proof of concept (poc) laissés dans les tiroirs par manque de temps ou de moyens</td>
-    <td>PME / ETI
-</td>
-  </tr>
-  <tr>
-    <td>Accélérateur de start-up</td>
-    <td>Start-up de 1 ou 2 ans d’âge avec un concept intéressant mais manquant de moyens</td>
-  </tr>
-  <tr>
-    <td>Accélérateur commercial de PME - stratégie digital, export, positionnement marché, redesign</td>
-    <td>PME</td>
-  </tr>
-  <tr>
-    <td>Solutions numériques, méthodologiques, technologiques ou autre</td>
-    <td>Analyse des écosystèmes, besoin des institutions, retour d’expérience</td>
-  </tr>
-</table>
-</div>
+La vocation d’AuRoRa est d’intervenir sur des projets qui permettent d'accélérer la transition écologique et solidaire. Les projets qui ne répondent pas à ces critères ne seront donc pas retenus.
 
+### Pour mesurer la faisabilité, les critères Réseau, Réaliste et Réactif sont utilisés.
 
-## Sélection des projets.
+**Réseau** : Le réseau du territoire est-il en mesure de répondre aux enjeux du projet ? Nous évaluons également  l’existence d’un modèle de partage de la valeur équitable entre les différents acteurs de la chaîne de valeur..
 
-Les projets sont évalués selon des critères qui permettent de mesurer leur pertinence au regard de la méthode 5R.
+**Réaliste** : Une évaluation de l’équation  économique (le business case) permet de confirmer l’existence d’un modèle économique viable qui permettra à l’activité de se développer. Nous interrogeons également notre capacité à réaliser le projet, et en particulier nous évaluons si l’apport de AuRoRa (au travers de nos méthodes, expertises, …) est vraiment un différenciateur ou si ce projet pourrait être fait par une autre structure.  Nous privilégions les projets pour lesquels notre valeur ajoutée est la plus grande. 
+
+**Réactif** : Nous voulons avoir un impact quantifiable et rapide, pour cela nous privilégions les projets dont le temps estimé de réalisation est inférieur à 6 mois et nous n’intervenons que très rarement si il est supérieur à 18 mois.. La mesure des  risques techniques et commerciaux nous permet de confirmer que le planning annoncé est le bon.
 
 <div class="table-responsive">
 <table class="table table-striped table-bordered .table-hover ">
   <tr>
-    <td>Axe de la méthode 5R</td>
+    <td></td>
     <td>Critère</td>
     <td>Echelle de cotation.</td>
+  </tr>
+  <tr>
+    <td>Réseau</td>
+    <td>Capacité du réseau à répondre au besoin</td>
+    <td>1- Fable
+5- Forte</td>
   </tr>
   <tr>
     <td>Réseau</td>
@@ -90,6 +69,30 @@ Les projets sont évalués selon des critères qui permettent de mesurer leur pe
     <td>1- Très risqué
 5- Peu risqué</td>
   </tr>
+</table>
+</div>
+
+
+La faisabilité est calculée en additionnant les notes des 6 critères et en multipliant par 10/3 pour ramener à 100..
+
+### L’impact est lui quantifié avec les critères Réseau, Résilient et Responsable.
+
+**Résilient** : le projet permet-il de créer ou maintenir des emplois locaux ? Le modèle économique sous-jacent est-il basé sur l’utilisation du tissu industriel local qui permettra un accroissement de la résilience économique du territoire.
+
+**Responsable** :  nous évaluons les impacts du projet en terme environnementaux (réduction de l’impact carbone de la chaine, réduction des gaspillage, …) et les impacts sociétaux en particulier sur le respect d’un contrat social équitable pour tous.
+
+<div class="table-responsive">
+<table class="table table-striped table-bordered .table-hover ">
+  <tr>
+    <td></td>
+    <td>Critère</td>
+    <td>Echelle de cotation.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
   <tr>
     <td>Résilient</td>
     <td>Création d’emplois</td>
@@ -118,21 +121,13 @@ Les projets sont évalués selon des critères qui permettent de mesurer leur pe
 </div>
 
 
-Le score du projet est la somme des cotations.
-
-* Un 1 est éliminatoire.
-
-* Un projet recevant une note de 30 ou plus est considéré comme accepté.
-
-* Un projet recevant une note entre 20 et 30 est considéré comme éligible selon les ressources disponibles et une réflexion plus approfondie.
-
-* Un projet ayant une note inférieure à 20 est rejeté.
+L’impact est calculé en additionnant les notes des 4 critères et en multipliant par 5..
 
 ## Le déroulement des projets.
 
-Dans l’’approche 5R (réseau réaliste, réactif, résilient et responsable) l'équipe est organisée  en cercles (sous-projets) qui travaillent en parallèle  s avec une synchronisation permanente au moyen d’une gouvernance de nature holacratique.
+Léquipe est organisée  en cercles (sous-projets) qui travaillent en parallèle  s avec une synchronisation permanente au moyen d’une gouvernance de nature holacratique.
 
-. Chaque cercle dispose de ses ressources propres et est autonome pour prendre les décisions relatives à son périmètre défini. Tout choix ayant des conséquences sur les autres cercles fait l’objet d’une synchronisation (quotidienne) au niveau du cercle général. Les décisions sont prises sur la base du consentement ou de la non objection (une objection étant une décision qui aurait un impact tel qu’elle mettrait en péril des éléments fondamentaux du projet sans possibilité de les corriger avec un impact acceptable en temps ou coût par exemple).
+.Chaque cercle dispose de ses ressources propres et est autonome pour prendre les décisions relatives à son périmètre défini. Tout choix ayant des conséquences sur les autres cercles fait l’objet d’une synchronisation (quotidienne) au niveau du cercle général. Les décisions sont prises sur la base du consentement ou de la non objection (une objection étant une décision qui aurait un impact tel qu’elle mettrait en péril des éléments fondamentaux du projet sans possibilité de les corriger avec un impact acceptable en temps ou coût par exemple).
 
 L’intérêt est de pouvoir explorer diverses solutions rapidement et de progresser sur les plus prometteuses. Il est admis que plusieurs pistes seront abandonnées en cours de route. Néanmoins le gain en vitesse permet de compenser les ressources consacrées aux pistes s’étant terminées en impasse.
 
