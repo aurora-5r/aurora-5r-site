@@ -1,0 +1,16 @@
+{% extends "base.njk" %}
+
+{% block content %}
+    <div class="site-section" ">
+        <div class="container sp pt-5">
+            <div class="row justify-content-md-center pt-100">
+                <div class="col-md-10">
+                    <h1>
+                        {{ title }}
+                    </h1>
+                    {{content | safe}}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
