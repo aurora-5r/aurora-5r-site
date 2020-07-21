@@ -1,0 +1,4 @@
+[build]
+    command = "npx eleventy"
+    functions = "functions"
+    publish = "site"
