@@ -1,0 +1,26 @@
+{
+  "name": "aurora2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "eleventy-plugin-sass": "^1.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurentmau/aurora2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurentmau/aurora2.0/issues"
+  },
+  "homepage": "https://github.com/laurentmau/aurora2.0#readme"
+}
