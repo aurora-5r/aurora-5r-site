@@ -1,0 +1,61 @@
+---
+layout: "base.njk"
+---
+
+<!--WELCOME MESSAGE ------------------------------------------------------------------------------------->
+<div class="site-blocks-cover" style="overflow: hidden;">
+  <div class="container  pt-5">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-6 mr-auto">
+        <h1>Pour les PMEs.</h1>
+        <h2>
+          AuRorA accompagne vos projets innovants de transition
+        </h2>
+        <p>
+          #AuRorA accélére et réalise les projets dans leur intégralité ( de la conception à la mise en vente) des projets d’innovation appliquée (lancement de nouveaux produits), de transformation ou de relocalisation de produits ou de services. Les projets doivent permettre de créer de l’activité et de l’emploi en 2 à 12 mois.
+        </p>
+      </div>
+      <div class="col-md-6" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+        <img src="/images/illustration.svg" alt="Image" class="img-fluid img-fluid">
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- END WELCOME MESSAGE ------------------------------------------------------------------------------------->
+
+<div class="feature-big">
+<div class="container">
+
+  {% for presentation in collections.presentations %}
+    <div class="row mb-5 site-section">
+      <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
+        <h2 class="text-black">{{ presentation.data.title }}</h2>
+        <p class="mb-4">
+          {{ presentation.data.description }}</p>
+
+        <div class="author-box" data-aos="fade-left">
+          <div class="d-flex mb-4">
+
+            <div class="mr-auto text-black">
+              <strong class="font-weight-bold mb-0"></strong>
+              <br>
+              {{ presentation.data.subtitle }}
+            </div>
+          </div>
+          <blockquote>
+            {{ presentation.data.subdescription }}</blockquote>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-right">
+        <img src="{{ presentation.data.image }}" " alt=" Image" class=" img-fluid"=" img-fluid""="img-fluid" "">
+        {% if presentation.page %}
+          <a href="{{ presentation.url }}" class="btn btn-primary">
+            En savoir savoir plus
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+  {% endfor %}

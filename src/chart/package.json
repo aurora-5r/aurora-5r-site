@@ -1,0 +1,14 @@
+{
+  "name": "@laurentmau/chart-template",
+  "main": "ac136e6e0caaaf0a@173.js",
+  "version": "173.0.0",
+  "homepage": "https://observablehq.com/@laurentmau/chart-template",
+  "author": {
+    "name": "Laurent Maumet ",
+    "url": "https://observablehq.com/@laurentmau"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

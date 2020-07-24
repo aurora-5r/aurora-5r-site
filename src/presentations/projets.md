@@ -10,6 +10,8 @@ subdescription: "Nous considérons que faire du numérique n'est pas une fin en 
 
 image: "images/nous_realisons.svg"
 
+detail: false
+
 ---
 
 ## Le référentiel 5R pour évaluer, sélectionner et amplifier les projets.
