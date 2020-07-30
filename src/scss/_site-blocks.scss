@@ -1547,7 +1547,22 @@
     font-style: italic;
   }
 }
-
+.my-box {
+  box-shadow: 0 5px 15px -2px rgba($black, 0.1);
+  margin-bottom: 40px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-left: 3px solid $primary;
+  *:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    max-width: 50px;
+  }
+  blockquote {
+    font-style: italic;
+  }
+}
 .shadow {
   box-shadow: 0 5px 15px -2px rgba($black, 0.1);
 }
@@ -1713,4 +1728,241 @@
       color: $white;
     }
   }
+}
+
+/*****************************
+  *
+  09.
+  tabs-area
+  *****************************
+  */
+.tabs-area .tabs-nav {
+  display: block;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.tabs-area .tabs-nav li {
+  width: 25%;
+  padding: 0 12.5px;
+  display: inline-block;
+  float: left;
+  position: relative;
+}
+@media only screen and (max-width: 991px) {
+  .tabs-area .tabs-nav li {
+    width: 50%;
+    margin-top: -5px;
+  }
+}
+.tabs-area .tabs-nav li a {
+  text-align: center;
+  color: #222538;
+  display: block;
+  border-bottom: 2px solid #222538;
+  padding: 25px 0;
+}
+.tabs-area .tabs-nav li a::after {
+  content: "";
+  border: 10px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.tabs-area .tabs-nav li a i {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.tabs-area .tabs-nav li a span {
+  font-size: 18px;
+  font-weight: 700;
+}
+.tabs-area .tabs-nav li a.active {
+  color: #fff;
+  border-radius: 5px;
+}
+.tabs-area .tabs-nav li a.active::after {
+  border-bottom-color: transparent !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  opacity: 1;
+}
+
+.tabs-area .tab-content {
+  border: 1px solid #cad4de;
+  padding: 40px;
+  border-radius: 4px;
+}
+
+/*****************************
+ *   00 - common & reset css
+ *****************************
+ *
+ */
+.c1 {
+  color: #2d3666;
+}
+
+.c1-bg {
+  background-color: #2d3666;
+}
+
+.c1-bo {
+  border-color: #2d3666 !important;
+}
+
+.c2 {
+  color: #222538;
+}
+
+.c2-bg {
+  background-color: #222538;
+}
+
+.c2-bo {
+  border-color: #222538 !important;
+}
+
+.c3,
+#menu ul ul li a:hover,
+.single-service.bordered .inner:hover .icon,
+.bordered.single-service-2 .inner:hover .icon,
+.bordered.single-service-3 .inner:hover .icon,
+.single-service.bordered .inner:hover h4,
+.bordered.single-service-2 .inner:hover h4,
+.bordered.single-service-3 .inner:hover h4,
+.single-service-3 .inner:hover .title .icon,
+.isotope-menu li.active,
+.isotope-menu li:hover,
+.single-portfolio .inner .portfolio-img .hover-content .button,
+.single-portfolio .inner .portfolio-content h3:hover,
+.faq-sidebar li a,
+.single-pricing .inner a.button:hover,
+.single-pricing-2 .inner a.button:hover,
+.single-pricing-2.active .inner a.button {
+  color: $primary;
+}
+
+.c3-bg,
+.bg1,
+.button,
+.hero-slider .owl-dots .owl-dot.active,
+.single-service-2:hover .inner,
+.single-portfolio .inner .portfolio-img .hover-content,
+.faq .single-item.active,
+.single-faq h2 span,
+.footer_widget .nw_form button,
+.tabs-area .tabs-nav li a.active,
+.single-team .inner .team-img::after,
+.single-pricing.active .inner,
+.active.single-pricing-2 .inner,
+.single-pricing-2.active .inner .title .price {
+  background-color: $primary;
+}
+
+.c3-bo,
+.button,
+.single-service.bordered .inner:hover,
+.bordered.single-service-2 .inner:hover,
+.bordered.single-service-3 .inner:hover,
+.testimonial-slider .single-slide,
+.tabs-area .tabs-nav li a::after,
+.tabs-area .tabs-nav li a.active,
+.contact-form input:not([type="submit"]):focus,
+.contact-form textarea:focus {
+  border-color: $primary !important;
+}
+
+.trns,
+.button,
+.button-2,
+.nav-column a,
+.nav-column span,
+.nav-column .right-nav span,
+form.search-form,
+#menu ul > li > a,
+#menu ul ul,
+#menu ul ul::after,
+#menu ul ul li a,
+.hero-slider .owl-dots .owl-dot,
+.single-service .inner,
+.single-service-2 .inner,
+.single-service-3 .inner,
+.single-service .inner .title .icon,
+.single-service-2 .inner .title .icon,
+.single-service-3 .inner .title .icon,
+.single-service .inner .title h4,
+.single-service-2 .inner .title h4,
+.single-service-3 .inner .title h4,
+.single-service .inner .content,
+.single-service-2 .inner .content,
+.single-service-3 .inner .content,
+.isotope-menu li,
+.single-portfolio .inner .portfolio-img .hover-content,
+.single-portfolio .inner .portfolio-content h3,
+.faq-sidebar li a,
+.single-team .inner .team-img::after,
+.contact-form input:not([type="submit"]),
+.contact-form textarea {
+  -webkit-transition: all 0.3s cubic-bezier(0.84, 0.35, 0.39, 0.74) 0s;
+  transition: all 0.3s cubic-bezier(0.84, 0.35, 0.39, 0.74) 0s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a:focus,
+a:hover,
+a:visited,
+input,
+input:hover,
+input:focus,
+input:active,
+select {
+  text-decoration: none;
+  outline: none !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+}
+
+.bg2 {
+  background-color: #f3f6fa;
+}
+
+.sp {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.spt {
+  padding-top: 90px;
+}
+
+.spb {
+  padding-bottom: 90px;
 }

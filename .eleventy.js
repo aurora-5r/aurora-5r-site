@@ -2,6 +2,8 @@ module.exports = function (eleventyConfig) {
   // Add a filter using the Config API
   eleventyConfig.addFilter("myFilter", function () {});
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/content");
+
   eleventyConfig.addPassthroughCopy("src/scss");
   eleventyConfig.addPassthroughCopy("src/css");
 
