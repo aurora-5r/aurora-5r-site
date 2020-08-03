@@ -1,3 +1,4 @@
+
 SOURCE_DOCS="/mnt/chromeos/GoogleDrive/MyDrive/dev/DOC_COMPIL/"
 RAC="/home/laurent/dev/aurora2.0"
 DEST_DOCS="${RAC}/src/"
