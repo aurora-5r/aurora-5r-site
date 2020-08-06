@@ -2,114 +2,427 @@
 layout: "base.njk"
 ---
 
-<!--WELCOME MESSAGE ------------------------------------------------------------------------------------->
+{#--WELCOME MESSAGE -------------------------------------------------------------------------------------#}
+
 <div class="site-blocks-cover" style="overflow: hidden;">
   <div class="container  pt-5">
+
     <div class="row align-items-center justify-content-center">
-
       <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+        <img src="/images/ramp.svg" alt="Image" class="img-fluid img-absolute">
+        <div class="row">
+          <div class="col-md-6 mr-auto">
 
-        <img src="/images/illustration.svg" alt="Image" class="img-fluid img-absolute">
+            <h1>#AuRorA et les PMEs.</h1>
+            <h4>
+              Accélérateur et amplificateur de projets innovants de transition.
+            </h4>
 
-        <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-6 mr-auto">
-            <h1>AuRorA pour les PMEs.</h1>
-            <h2>
-              AuRorA accompagne vos projets innovants de transition
-            </h2>
           </div>
 
         </div>
 
       </div>
+
     </div>
   </div>
+
 </div>
-<!-- END WELCOME MESSAGE ------------------------------------------------------------------------------------->
 
-<div class="site-section" id="features-section">
-  <div class="container">
-    <div class="row mb-5 justify-content-center text-center" data-aos="fade-up">
-      <div class="col-9 text-center  mb-5">
-        <h2 class="section-title">AuRorA en quelques mots.</h2>
-        <p >...
-        </p>
+{#--END WELCOME MESSAGE -------------------------------------------------------------------------------------#}
 
+{#--  TABS -------------------------------------------------------------------------------------#}
+
+<div class="tabs-area spb">
+
+  <div class="container" data-aos="fade-up">
+    <div class="row  justify-content-center text-center " data-aos="fade-up">
+      <div class="col-12 text-center  ">
+        <h2 class="section-title  pb-3 mb-4">Etre accompagné par #AuRorA c’est ...</h2>
       </div>
     </div>
-    {#
-    <div class="row align-items-stretch justify-content-center">
-      <div class="col-md-6 col-lg-6 mb-4 mb-lg-4" data-aos="fade-up">
+    {#--  MENU -------------------------------------------------------------------------------------#}
+
+    <ul class="nav tabs-nav" id="pills-tab" role="tablist">
+
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#vision">
+          <i class="fa fa-binoculars"></i>
+          <span>
+            <h4>Une vision</h4>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#cadre">
+          <i class="fa fa-pie-chart"></i>
+          <span>
+            <h4>Un cadre</h4>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#demarche">
+          <i class="fa fa-qrcode"></i>
+          <span>
+            <h4>Une démarche</h4>
+          </span>
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      {#--  TAB 1 -------------------------------------------------------------------------------------#}
+
+      <div class="tab-pane fade  show active" id="vision" role="tabpanel">
+        <div class="row align-items-center  mb-3">
+          <div class="col-1">
+            <h2 class="text-primary">
+              1</h2>
+          </div>
+          <div class="col-md-5">
+            <p class=" mb-0">
+              C'est tout d’abord adhérer à l’idée qu’il est nécessaire de construire de nouveaux modèles économiques et technologiques afin de construire une société plus résiliante et responsable de l’environnement, et que pour ce faire, une approche multidisciplinaire et intergénérationnelle fondée sur une répartition collaborative et transparente de la valeur permettra d’ouvrir de nouveaux horizons.
+            </p>
+          </div>
+          <div class="col-md-6" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+            <img src="/images/5R.svg" alt="Image" class="img-fluid img-fluid">
+          </div>
+        </div>
+      </div>
+      {#--  TAB 2 -------------------------------------------------------------------------------------#}
+
+      <div class="tab-pane fade" id="cadre" role="tabpanel">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  1</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Accepter l’éventuelle refondation du concept du projet en accord avec les critères 5R.
+                </p>
+              </div>
+
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  2</h2>
+              </div>
+              <div class="col">
+                <p class=" mb-0">
+                  Adhérer au modèle #AuRorA de partage de la valeur et d’innovation accélérée et collaborative.
+                </p>
+              </div>
+
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  3</h2>
+              </div>
+              <div class="col">
+
+                <p class=" mb-0">
+                  Signer l’accord de projet liant les différentes parties, incluant #AuRorA comme tiers de confiance sur le partage de valeur et comme pilote du projet.
+                </p>
+              </div>
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  4</h2>
+              </div>
+              <div class="col">
+                <p class=" mb-0">
+                  Signer le ou les accords de financement conjointement préparés et négociés.
+                </p>
+              </div>
+            </div>
+
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  5</h2>
+              </div>
+              <div class="col">
+                <p class=" mb-0">
+                  Etre prêt à supporter les investissements industriels et/ou les changements structurels nécessaires pour la bonne réussite du projet.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      {#--  TAB 3 -------------------------------------------------------------------------------------#}
+
+      <div class="tab-pane fade" id="demarche" role="tabpanel">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  1</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Présentation du concept ou du projet via une première réunion.
+                </p>
+              </div>
+
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  2</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Redéfinition du projet par l’équipe #AuRorA selon les critères 5R sous 2 à 3 semaine
+                </p>
+              </div>
+
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  3</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Signature de l’accord de projet
+                </p>
+              </div>
+
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  4</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Définition des besoins en resusources : compétences et financement
+                </p>
+              </div>
+              <div class=" col">
+
+                <div class="my-box">
+                  <div class="d-flex">
+
+                    <div class="mr-auto ">
+                      <p class=" mb-0 text-dark">
+                        #AuRorA apporte les compétences, complémentaires à celles disponibles au sein de la PME via des équipes de jeunes diplômés encadrés par des professionnels expérimentés, en mécénat de compétences ou partage salarial.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  5</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Mise en place de l’équipe projet et des financements sous 3 à 6 semaines.
+                </p>
+              </div>
+              <div class=" col">
+
+                <div class="my-box">
+                  <div class="d-flex">
+
+                    <div class="mr-auto ">
+                      <p class=" mb-0 text-dark">
+                        Les financements sont des subventions ou des avances remboursables (remboursement en proportion des revenus réalisés suite au projet),
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  6</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Exécution du projet
+                </p>
+              </div>
+
+            </div>
+
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  7</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Retour d’expérience et suivi du projet
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature-big">
+    <div class="container">
+
+      <div class="row mb-5 mt-3 pt-3   align-items-stretch">
+        <div class="col-md-3  justify-content-center">
+          <h5 class="d-flex justify-content-center">
+            <div class="unit-4-icon mr-2">
+              <span class="icon-wrap">
+                <span class=" icon-event_available"></span></span>
+            </div>
+            Date de lancement
+          </h5>
+          <p class="d-flex justify-content-center">Septembre 2020</p>
+        </div>
+        <div class="col-md-4  text-justify-center ">
+          <h5 class=" d-flex justify-content-center">
+            <div class="unit-4-icon mr-2">
+              <span class="icon-wrap">
+                <span class=" icon-domain"></span></span>
+            </div>Forme Juridique</h4>
+          <p class="d-flex justify-content-center">Société Coopérative à Intérêt Collectif (SCIC)</p>
+        </div>
+
+        <div class="col-md-2 ">
+          <h5 class="d-flex justify-content-center">
+            <div class="unit-4-icon mr-2">
+              <span class="icon-wrap">
+                <span class=" icon-room"></span></span>
+            </div>Localisation</h5>
+          <p class="d-flex justify-content-center">Grenoble</p>
+        </div>
+        <div class="col-md-3 ">
+          <h5 class="d-flex justify-content-center">
+            <div class="unit-4-icon mr-2">
+              <span class="icon-wrap">
+                <span class=" icon-explore"></span></span>
+            </div>
+            Périmètre d’action
+          </h5>
+          <p class="d-flex justify-content-center">
+            La région AuRA
+          </p>
+        </div>
+      </div>
+      {#
+            <div class="w-100">
+
+              <h5 class="d-flex">
+                <div class="unit-4-icon mr-2">
+                  <span class="icon-wrap">
+                    <span class=" icon-recent_actors"></span></span>
+                </div>Membres fondateurs</h5>
+              <p>UGA-Grenoble INP, UDIMEC, CCI</p>
+            </div>
+            #}
+    </div>
+  </div>
+
+</div>
+{#--  END TABS -------------------------------------------------------------------------------------#}
+
+<div class="site-section">
+  <div class="container">
+    <div class="row align-items-stretch">
+
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
 
         <div class="unit-4 d-block">
           <div class="unit-4-icon mb-3 ">
             <span class="icon-wrap" style="background-color:#6282c2">
-              <span class="text-danger icon-store_mall_directory"></span></span>
+              <span class="text-danger icon-done"></span></span>
           </div>
-          <div>
-            <h3>Compétences</h3>
-            <p>
-              Des compétences, complémentaires à celles disponibles au sein de la ou les PME via des équipes composées de jeunes diplômés encadrés par des professionnels expérimentés, en mécénat de compétences ou partage salarial, utilisant des méthodes et outils de gestion de projet et de l’innovation originaux centrés sur le partage de valeur et la collaboration.</p>
+          <div class="text-left">
+            <p>#AuRorA est une Société Coopérative à Intérêt Collectif (SCIC), créée à Grenoble par un groupe de cadres expérimentés, ayant œuvré ensemble au sein du collectif bénévole Voc-coV (www.voc-cov.org) et UGA-Grenoble INP, l'UDIMEC, la CCI. #AuRorA a une vision régionale.
+              <br>
+              #AuRorA travaille en étroite collaboration avec un cursus certifiant - la Transition Entrepreneurship School - en-cours de création au sein de Grenoble INP et de GEM.</p>
 
           </div>
         </div>
 
       </div>
-      <div class="col-md-6 col-lg-6 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
 
         <div class="unit-4 d-block">
           <div class="unit-4-icon mb-3">
             <span class="icon-wrap" style="background-color:#ee3530">
-              <span class="text-primary icon-store_mall_directory"></span></span>
+              <span class="text-primary icon-done"></span></span>
           </div>
-          <div>
-            <h3>Financements</h3>
-            <p>
-              les financements via des subventions ou des avances remboursables (remboursement en proportion des revenus réalisés suite au projet), préparés et négociés par #AuRorA avec la ou les PME mais contractualisés directement entre les financeurs (région, BPI …) et la ou les PME
+          <div class="text-left">
+
+            <p>Le principe d’#AuRorA est d’accélérer et de réaliser dans leur intégralité ( de la conception à la mise en vente) des projets d’innovation appliquée (lancement de nouveaux produits), de transformation ou de relocalisation de produits ou de services au bénéfice des PMEs, leur permettant de prendre les virages technologiques du 21ème siècle et de s’inscrire dans les grands défis environnementaux et sociétaux tout en relançant leur activité. L’objectif est que les projets génèrent un revenu en 2 à 12 mois.
             </p>
 
           </div>
         </div>
       </div>
-#}
-  </div>
-</div>
-</div>
-<div class="feature-big">
-<div class="container">
-
-  {#
-  {% for presentation in collections.presentations %}
-    <div class="row mb-5 site-section">
-      <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
-        <h2 class="text-black">{{ presentation.data.title }}</h2>
-        <p class="mb-4">
-          {{ presentation.data.description }}</p>
-
-        <div class="author-box" data-aos="fade-left">
-          <div class="d-flex mb-4">
-
-            <div class="mr-auto text-black">
-              <strong class="font-weight-bold mb-0"></strong>
-              <br>
-              {{ presentation.data.subtitle }}
-            </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 " data-aos="fade-up" data-aos-delay="200">
+        <div class="unit-4 d-block">
+          <div class="unit-4-icon mb-3">
+            <span class="icon-wrap" style="background-color:#57c79a">
+              <span class="text-primary icon-done"></span></span>
           </div>
-          <blockquote>
-            {{ presentation.data.subdescription }}</blockquote>
+          <div class="text-left">
+            <p >
+              AuRorA apporte
+              <ul >
+                <li >
+                  Les compétences, complémentaires à celles disponibles au sein de la PME utilisant des méthodes et outils de gestion de projet et de l’innovation originaux centrés sur le partage de valeur et la collaboration.
+                </li>
+                <li>
+                  Un accès facilité avec les centres d’innovation, de conception et d’essais des grandes écoles, universités ou institutions (telles que Grenoble INP ou le CEA).
+                </li>
+                <li>
+                  Les financements préparés et négociés par #AuRorA avec la PME et contractualisés entre les financeurs (région, BPI …) et la PME
+                </li>
+              </ul>
+            </p>
+
+          </div>
         </div>
+
       </div>
-      <div class="col-lg-7" data-aos="fade-right">
-        <img src="{{ presentation.data.image }}" " alt=" Image" class=" img-fluid"=" img-fluid""="img-fluid" "">
-        {% if presentation.page %}
-          <a href="{{ presentation.url }}" class="btn btn-primary">
-            En savoir savoir plus
-          </a>
-        {% endif %}
+
+    </div>
+
+    <div class="row  justify-content-center text-center " data-aos="fade-up">
+      <div class="col-12 text-center  ">
+
+        <a href="/content/aurora_pme.pdf" class="btn btn-primary">
+          <i class="fa fa-download"></i>
+          Télecharger la brochure</a>
       </div>
     </div>
 
-  {% endfor %}
-  #}
-</div>
+  </div>
+
 </div>
