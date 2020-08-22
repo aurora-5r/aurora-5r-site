@@ -43,7 +43,7 @@ layout: "base.njk"
           </div>
           <div>
             <h3>PMEs</h3>
-            <p>Nous vous accompagnons dans dans vos projets innovants pour construire le monde d'après.</p>
+            <p>Nous vous accompagnons dans vos projets innovants pour construire le monde d'après.</p>
             <p>
               <a href="/pmes" class="btn btn-primary">
                 En savoir plus
@@ -71,13 +71,8 @@ layout: "base.njk"
               </a>
             </p>
 
-      <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
-          <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
           </div>
         </div>
-        <div class="site-mobile-menu-body"></div>
       </div>
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
         <div class="unit-4 d-block">
@@ -94,19 +89,40 @@ layout: "base.njk"
               </a>
             </p>
 
-      <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="navigation">
+          </div>
+        </div>
+      </div>
 
-        <!--MAIN MENU ------------------------------------------------------------------------------------->
+    </div>
+  </div>
+</div>
 
-        <div class="container">
-          <div class="row align-items-center">
+<div class="feature-big">
+  <div class="container">
 
-            <div class="col-6 col-md-3 col-xl-4  d-block">
-              <h1 class="mb-0 site-logo">
-                <a href="/index.html" class="text-black h2 mb-0">#AuRorA
-                </a>
-              </h1>
+    {% for presentation in collections.presentations %}
+      <div class="row mb-5 site-section">
+        <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
+          <h2 class="text-black">{{ presentation.data.title }}</h2>
+          <p class="mb-4">
+            {{ presentation.data.description }}</p>
+
+          <div class="author-box" data-aos="fade-left">
+            <div class="d-flex mb-4">
+
+              <div class="mr-auto text-black">
+                <strong class="font-weight-bold mb-0"></strong>
+                <br>
+                {{ presentation.data.subtitle }}
+              </div>
             </div>
+            <blockquote>
+              {{ presentation.data.subdescription }}</blockquote>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-right">
+          <img src="{{ presentation.data.image }}" " alt=" Image" class=" img-fluid"=" img-fluid""="img-fluid" "">
+          {% if presentation.data.detail %}
 
             <a href="{{ presentation.url }}" class="btn btn-primary">
               En savoir plus
@@ -115,10 +131,7 @@ layout: "base.njk"
         </div>
       </div>
 
-                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
-                  <li>
-                    <a href="/" class="nav-link">Accueil</a>
-                  </li>
+    {% endfor %}
 
   </div>
 
@@ -170,34 +183,54 @@ layout: "base.njk"
                 <a href="" https://www.linkedin.com/in/pem-frot-1304g73/"=" https://www.linkedin.com/in/pem-frot-1304g73/""="https://www.linkedin.com/in/pem-frot-1304g73/" "">
                   <span class="icon-linkedin"></span></a>
 
-            <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0">
-              <a href="#" class="site-menu-toggle js-menu-toggle text-black float-right">
-                <span class="icon-menu h3"></span></a>
+              </div>
             </div>
+            <h2 class="text-black h1">Pierre-Emmanuel Frot</h2>
+            <span class="sub-title d-block mb-3">Fondateur</span>
+            <p></p>
 
           </div>
         </div>
-        <!--END MAIN MENU ------------------------------------------------------------------------------------>
 
-      </header>
-      <div class="site-blocks-cover" style="overflow: hidden;">
-        <div class="container  pt-5">
-          <div class="row align-items-center justify-content-center">
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="person">
+            <div class="bio-img">
+              <figure>
+                <img src="images/L.jpeg" alt="Image" class="img-fluid" height="500px">
+              </figure>
+              <div class="social">
+                <a href="https://fr.linkedin.com/in/laurentmaumet">
+                  <span class="icon-linkedin"></span>
+                </a>
 
-            <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
-
-              <img src="/images/ramp.svg" alt="Image" class="img-fluid img-absolute">
-
-              <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-6 mr-auto">
-                  <h1>
-                    EN CONSTRUCTION
-                  </h1>
-                </div>
-
+                <a href="https://twitter.com/lmau">
+                  <span class="icon-twitter"></span>
+                </a>
               </div>
-
             </div>
+            <h2 class="text-black h1">Laurent Maumet</h2>
+            <span class="sub-title d-block mb-3">Fondateur</span>
+            <p></p>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="person">
+            <div class="bio-img">
+              <figure>
+                <img src="images/C.jpeg" alt="Image" class="img-fluid" height="500px">
+              </figure>
+              <div class="social">
+
+                <a href="https://www.linkedin.com/in/cedric-stien-b1141aa/">
+                  <span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+            <h2 class="text-black h1">Cédric Stien</h2>
+            <span class="sub-title d-block mb-3">Fondateur</span>
+
+            <p>.</p>
           </div>
         </div>
 
@@ -233,7 +266,6 @@ layout: "base.njk"
 
         </div>
       </div>
-      <div></div>
 
     </div>
   </div>
