@@ -7,7 +7,7 @@ subtitle: "Le 5R pour évaluer les projets."
 
 subdescription: "Le référentiel 5R est utilisé pour évaluer les projets identifiés décider ou non de les lancer. Cette évaluation nous aide également à proposer des idées pour amplifier et améliorer les projets.."
 
-image: "/images/5R.svg"
+image: "/images/5r.svg"
 
 detail: true
 ---

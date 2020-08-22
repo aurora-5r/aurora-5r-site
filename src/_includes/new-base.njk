@@ -32,8 +32,6 @@
             </div>
         </div>
 
-        
-
         <div class="site-wrap" id="home-section">
 
             <div class="site-mobile-menu site-navbar-target">
@@ -45,55 +43,50 @@
                 <div class="site-mobile-menu-body"></div>
             </div>
 
-            <header class="site-navbar site-navbar-wrap py-4 js-sticky-header site-navbar-target" role="navigation">
+            <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="navigation">
+
+                {#-- MAIN MENU -------------------------------------------------------------#}
 
                 <div class="container">
                     <div class="row align-items-center">
-
                         <div class="col-6 col-md-3 col-xl-4  d-block">
                             <h1 class="mb-0 site-logo">
                                 <a href="/index.html" class="text-black h2 mb-0">#AuRorA
                                 </a>
                             </h1>
                         </div>
-
                         <div class="col-12 col-md-9 col-xl-8 main-menu">
                             <nav class="site-navigation position-relative text-right" role="navigation">
+
                                 <nav id="menu" class="d-none d-lg-block">
-
                                     <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
-                                        <li>
-                                            <a href="/" class="nav-link">Accueil</a>
-                                        </li>
 
                                         <li>
-                                            <a href="/#contact-section" class="nav-link">Contact</a>
+                                            <a href="portfolio.html">Portfolio</a>
                                         </li>
-                                        <li>
-                                            <a href="/presentations/approche" class="nav-link">5R</a>
 
-                                        </li>
                                         <li class="has-children">
-                                            <a>
-                                                Aurora pour</a>
+                                            <a >Home</a>
                                             <ul class="dropdown">
                                                 <li>
-                                                    <a href="/pmes">PMEs</a>
+                                                    <a href="index.html">Home - 01</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/jeunes">Jeunes diplômés</a>
+                                                    <a href="index-2.html">Home - 02</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/partenaires">
-                                                        Partenaires</a>
+                                                    <a href="index-3.html">Home - 03</a>
                                                 </li>
                                             </ul>
                                         </li>
+                                        <li>
+                                            <a href="contact.html">Contact</a>
+                                        </li>
                                     </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </nav>
+                                </nav>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0">
@@ -101,13 +94,12 @@
                         <span class="icon-menu h3"></span></a>
                 </div>
 
-            </header>
+            </div>
         </div>
-         
-
 
         {#-- END MAIN MENU ------------------------------------------------------------------#}
 
+    </header>
     <div>
         {% block content %}
 
@@ -139,13 +131,11 @@
 
                     <p class="mb-0">
                         <a href="#" class="p-3">
-                            <span class="icon-facebook"></span>
-                             <span class="visually-hidden">facebook</span>
-</a>
+                            <span class="icon-facebook"></span></a>
                         <a href="#" class="p-3">
-                            <span class="icon-twitter" title="twitter"></span></a>
+                            <span class="icon-twitter"></span></a>
 
-                        <a href="#" class="p-3" title="linkedin">
+                        <a href="#" class="p-3">
                             <span class="icon-linkedin"></span></a>
 
                     </p>

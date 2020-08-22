@@ -2,13 +2,14 @@
 layout: "base.njk"
 ---
 
-<!--WELCOME MESSAGE ------------------------------------------------------------------------------------->
+{#--WELCOME MESSAGE -------------------------------------------------------------------------------------#}
+
 <div class="site-blocks-cover" style="overflow: hidden;">
   <div class="container  pt-5">
 
     <div class="row align-items-center justify-content-center">
       <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
-        <img src="/images/ramp.svg" alt="Image" class="img-fluid img-absolute">
+        <img src="/images/ramp.svg" alt="image" class="img-fluid img-absolute">
         <div class="row">
           <div class="col-md-6 mr-auto">
 
@@ -28,16 +29,20 @@ layout: "base.njk"
 
 </div>
 
-<!-- END WELCOME MESSAGE ------------------------------------------------------------------------------------->
+{#--END WELCOME MESSAGE -------------------------------------------------------------------------------------#}
 
-<div class="tabs-area spb">
+{#--  TABS -------------------------------------------------------------------------------------#}
+
+<div class="tabs-area spb pb-0">
 
   <div class="container" data-aos="fade-up">
     <div class="row  justify-content-center text-center " data-aos="fade-up">
       <div class="col-12 text-center  ">
-        <h2 class="section-title  pb-3 mb-4  y">Etre entreprise partenaire d'#AuRorA c'est</h2>
+        <h2 class="section-title  pb-3 mb-4">Etre entreprise partenaire d'#AuRorA c'est ...</h2>
       </div>
     </div>
+    {#--  MENU -------------------------------------------------------------------------------------#}
+
     <ul class="nav tabs-nav" id="pills-tab" role="tablist">
 
       <li class="nav-item">
@@ -66,7 +71,9 @@ layout: "base.njk"
       </li>
 
     </ul>
-    <div class="tab-content" id="pills-tabContent">
+
+    <div class="tab-content" id="pills-tabcontent">
+      {#--  TAB 1 -------------------------------------------------------------------------------------#}
 
       <div class="tab-pane fade  show active" id="vision" role="tabpanel">
         <div class="row align-items-center  mb-3">
@@ -80,10 +87,12 @@ layout: "base.njk"
             </p>
           </div>
           <div class="col-md-6" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
-            <img src="/images/5R.svg" alt="Image" class="img-fluid img-fluid">
+            <img src="/images/5r.svg" alt="image" class="img-fluid img-fluid">
           </div>
         </div>
       </div>
+      {#--  TAB 2 -------------------------------------------------------------------------------------#}
+
       <div class="tab-pane fade" id="actions" role="tabpanel">
         <div class="row">
           <div class="col-md-12">
@@ -95,17 +104,18 @@ layout: "base.njk"
               <div class="col" data-aos="fade-left">
 
                 <p class=" mb-0">
-                  Devenir adhérent de la SCIC - en achetant un minimum de 50 parts au sein du collège des entreprises partenaires.
+                  Signer la charte de partenariat et devenir adhérent de la SCIC en achetant un minimum de 50 parts au sein du collège des entreprises partenaires et clientes.
+
                 </p>
               </div>
-              <div class=" col" ="col" ">
+              <div class=" col">
 
                 <div class="my-box">
                   <div class="d-flex">
 
                     <div class="mr-auto ">
                       <p class=" mb-0 text-dark">
-                        Ce collège dispose de 20% des droits de vote au niveau de l’assemblée générale et de 2 sièges au conseil d’administration. La part est fixée à 200€.
+                        Ce collège dispose de 10% des droits de vote au niveau de l’assemblée générale et de 2 sièges au conseil d’administration. La part est fixée à 200€.
                       </p>
                     </div>
                   </div>
@@ -155,7 +165,7 @@ layout: "base.njk"
               </div>
               <div class="col">
                 <p class=" mb-0">
-                  Apporter des projets soit de localisation de besoins soit de renforcement du réseau de sous-traitants.
+                  Apporter des projets d’innovation appliquée, de transformation ou de localisation de produits ou services et de renforcement du réseau de sous-traitants.
                 </p>
               </div>
             </div>
@@ -164,6 +174,8 @@ layout: "base.njk"
 
         </div>
       </div>
+      {#--  TAB 3 -------------------------------------------------------------------------------------#}
+
       <div class="tab-pane fade" id="benefices" role="tabpanel">
         <div class="row">
           <div class="col-md-8">
@@ -193,81 +205,81 @@ layout: "base.njk"
                   3</h2>
               </div>
               <div class="col">
-                <p>La gestion de ses talents et leurs compétences/p>
-                </div>
-              </div>
-              <div class="row align-items-center mb-2">
-                <div class="col-1">
-                  <h2 class="text-primary">
-                    4</h2>
-                </div>
-                <div class="col">
-                  <p>
-                    La politique de recrutement en relation avec l’activité</p>
-                </div>
-              </div>
-              <div class="row align-items-center mb-2">
-                <div class="col-1">
-                  <h2 class="text-primary">
-                    5</h2>
-                </div>
-                <div class="col">
-                  <p>
-                    Son réseau de sous-traitance</p>
-                </div>
+                <p>La gestion de ses talents et leurs compétences</p>
               </div>
             </div>
-            <div class="col-md-4"></div>
+            <div class="row align-items-center mb-2">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  4</h2>
+              </div>
+              <div class="col">
+                <p>
+                  La politique de recrutement en relation avec l’activité</p>
+              </div>
+            </div>
+            <div class="row align-items-center mb-2">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  5</h2>
+              </div>
+              <div class="col">
+                <p>
+                  Son réseau de sous-traitance</p>
+              </div>
+            </div>
           </div>
+          <div class="col-md-4"></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="feature-big">
-    <div class="container">
+</div>
+<div class="feature-big">
+  <div class="container">
 
-      <div class="row mb-5 mt-3 pt-3   align-items-stretch">
-        <div class="col-md-3  justify-content-center">
-          <h5 class="d-flex justify-content-center">
-            <div class="unit-4-icon mr-2">
-              <span class="icon-wrap">
-                <span class=" icon-event_available"></span></span>
-            </div>
-            Date de lancement
-          </h5>
-          <p class="d-flex justify-content-center">Septembre 2020</p>
-        </div>
-        <div class="col-md-4  text-justify-center ">
-          <h5 class=" d-flex justify-content-center">
-            <div class="unit-4-icon mr-2">
-              <span class="icon-wrap">
-                <span class=" icon-domain"></span></span>
-            </div>Forme Juridique</h4>
-          <p class="d-flex justify-content-center">Société Coopérative à Intérêt Collectif (SCIC)</p>
-        </div>
-
-        <div class="col-md-2 ">
-          <h5 class="d-flex justify-content-center">
-            <div class="unit-4-icon mr-2">
-              <span class="icon-wrap">
-                <span class=" icon-room"></span></span>
-            </div>Localisation</h5>
-          <p class="d-flex justify-content-center">Grenoble</p>
-        </div>
-        <div class="col-md-3 ">
-          <h5 class="d-flex justify-content-center">
-            <div class="unit-4-icon mr-2">
-              <span class="icon-wrap">
-                <span class=" icon-explore"></span></span>
-            </div>
-            Périmètre d’action
-          </h5>
-          <p class="d-flex justify-content-center">
-            La région AuRA
-          </p>
-        </div>
+    <div class="row mb-1 mt-3 pt-3   align-items-stretch">
+      <div class="col-md-3  justify-content-center">
+        <h5 class="d-flex justify-content-center">
+          <div class="unit-4-icon mr-2">
+            <span class="icon-wrap">
+              <span class=" icon-event_available"></span></span>
+          </div>
+          Date de lancement
+        </h5>
+        <p class="d-flex justify-content-center">Septembre 2020</p>
       </div>
-      {#
+      <div class="col-md-4  text-justify-center ">
+        <h5 class=" d-flex justify-content-center">
+          <div class="unit-4-icon mr-2">
+            <span class="icon-wrap">
+              <span class=" icon-domain"></span></span>
+          </div>Forme Juridique</h4>
+        <p class="d-flex justify-content-center">Société Coopérative à Intérêt Collectif (SCIC)</p>
+      </div>
+
+      <div class="col-md-2 ">
+        <h5 class="d-flex justify-content-center">
+          <div class="unit-4-icon mr-2">
+            <span class="icon-wrap">
+              <span class=" icon-room"></span></span>
+          </div>Localisation</h5>
+        <p class="d-flex justify-content-center">Grenoble</p>
+      </div>
+      <div class="col-md-3 ">
+        <h5 class="d-flex justify-content-center">
+          <div class="unit-4-icon mr-2">
+            <span class="icon-wrap">
+              <span class=" icon-explore"></span></span>
+          </div>
+          Périmètre d’action
+        </h5>
+        <p class="d-flex justify-content-center">
+          La région AuRA
+        </p>
+      </div>
+    </div>
+    {#
             <div class="w-100">
 
               <h5 class="d-flex">
@@ -278,72 +290,77 @@ layout: "base.njk"
               <p>UGA-Grenoble INP, UDIMEC, CCI</p>
             </div>
             #}
-    </div>
   </div>
 </div>
+
+</div>
+{#--  END TABS -------------------------------------------------------------------------------------#}
+
 <div class="site-section">
-  <div class="container">
-    <div class="row align-items-stretch">
+<div class="container">
+  <div class="row align-items-stretch">
 
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
 
-        <div class="unit-4 d-block">
-          <div class="unit-4-icon mb-3 ">
-            <span class="icon-wrap" style="background-color:#6282c2">
-              <span class="text-danger icon-done"></span></span>
-          </div>
-          <div>
-            <p>#AuRorA est une Société Coopérative à Intérêt Collectif (SCIC), créée à Grenoble par un petit groupe de cadres expérimentés, ayant œuvré ensemble au sein du collectif bénévole Voc-coV (www.voc-cov.org), avec une vision régionale (AURA).</p>
-
-          </div>
+      <div class="unit-4 d-block">
+        <div class="unit-4-icon mb-3 ">
+          <span class="icon-wrap" style="background-color:#6282c2">
+            <span class="text-danger icon-done"></span>
+          </span>
         </div>
+        <div>
+          <p>
+            #AuRorA est une Société Coopérative à Intérêt Collectif (SCIC), créée à Grenoble par un groupe de cadres expérimentés, ayant œuvré ensemble au sein du collectif bénévole Voc-coV (www.voc-cov.org) et UGA-Grenoble INP, l'UDIMEC, la CCI. #AuRorA a une vision régionale.<br>
+            #AuRorA travaille en étroite collaboration avec un cursus certifiant - la Transition Entrepreneurship School - en-cours de création au sein de Grenoble INP et de GEM.
 
-      </div>
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+          </p>
 
-        <div class="unit-4 d-block">
-          <div class="unit-4-icon mb-3">
-            <span class="icon-wrap" style="background-color:#ee3530">
-              <span class="text-primary icon-done"></span></span>
-          </div>
-          <div>
-
-            <p>Le principe d’#AuRorA est d’accélérer et de réaliser dans leur intégralité des projets d’innovation appliquée, de transformation ou de relocalisation de produits ou de services au bénéfice des PMEs, leur permettant de prendre les virages technologiques du 21ème siècle et de s’inscrire dans les grands défis environnementaux et sociétaux tout en relançant leur activité. Les projets ont une durée de 18 mois maximum.
-            </p>
-
-          </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="unit-4 d-block">
-          <div class="unit-4-icon mb-3">
-            <span class="icon-wrap" style="background-color:#57c79a">
-              <span class="text-primary icon-done"></span></span>
-          </div>
-          <div>
-            <p>#AuRorA s’appuie sur des équipes composées de jeunes diplômés encadrés par des professionnels expérimentés, en mécénat de compétences, partage salariale ou recherche d’emploi, utilisant des méthodes et outils de gestion de projet et de l’innovation originaux centrés sur le partage de valeur et la collaboration.</p>
-
-          </div>
-        </div>
-
       </div>
 
     </div>
+    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 " data-aos="fade-up" data-aos-delay="100">
 
-    <div class="row  justify-content-center text-center " data-aos="fade-up">
-      <div class="col-12 text-center  ">
+      <div class="unit-4 d-block">
+        <div class="unit-4-icon mb-3">
+          <span class="icon-wrap" style="background-color:#ee3530">
+            <span class="text-primary icon-done"></span></span>
+        </div>
+        <div>
 
-        <a href="/content/Aurora_Partenaires.pdf" class="btn btn-primary">
-          <i class="fa fa-download"></i>
-          Télecharger la brochure</a>
+          <p>Le principe d’#AuRorA est d’accélérer et de réaliser dans leur intégralité des projets d’innovation appliquée, de transformation ou de relocalisation de produits ou de services au bénéfice des PMEs, leur permettant de prendre les virages technologiques du 21ème siècle et de s’inscrire dans les grands défis environnementaux et sociétaux tout en relançant leur activité. Les projets ont une durée de 18 mois maximum.
+          </p>
+
+        </div>
       </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="unit-4 d-block">
+        <div class="unit-4-icon mb-3">
+          <span class="icon-wrap" style="background-color:#57c79a">
+            <span class="text-primary icon-done"></span></span>
+        </div>
+        <div>
+          <p>#AuRorA s’appuie sur des équipes composées de jeunes diplômés encadrés par des professionnels expérimentés, en mécénat de compétences, partage salariale ou recherche d’emploi, utilisant des méthodes et outils de gestion de projet et de l’innovation originaux centrés sur le partage de valeur et la collaboration.</p>
+
+        </div>
+      </div>
+
     </div>
 
   </div>
 
-</div>
+  <div class="row  justify-content-center text-center " data-aos="fade-up">
+    <div class="col-12 text-center  ">
+
+      <a href="/content/aurora_partenaires.pdf" class="btn btn-primary">
+        <p class="text-white icon-cloud_download pb-0 mb-0" style="font-size:18px">
+          Télecharger la brochure</p>
+      </a>
+
+    </div>
+  </div>
 
 </div>
 
-</div>
 </div>
