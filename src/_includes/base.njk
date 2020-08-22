@@ -32,6 +32,8 @@
             </div>
         </div>
 
+        
+
         <div class="site-wrap" id="home-section">
 
             <div class="site-mobile-menu site-navbar-target">
@@ -43,9 +45,8 @@
                 <div class="site-mobile-menu-body"></div>
             </div>
 
-            <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="navigation">
+            <header class="site-navbar site-navbar-wrap py-4 js-sticky-header site-navbar-target" role="navigation">
 
-                {#-- MAIN MENU -------------------------------------------------------------#}
                 <div class="container">
                     <div class="row align-items-center">
 
@@ -100,12 +101,13 @@
                         <span class="icon-menu h3"></span></a>
                 </div>
 
-            </div>
+            </header>
         </div>
+         
+
 
         {#-- END MAIN MENU ------------------------------------------------------------------#}
 
-    </header>
     <div>
         {% block content %}
 
@@ -137,11 +139,13 @@
 
                     <p class="mb-0">
                         <a href="#" class="p-3">
-                            <span class="icon-facebook"></span></a>
+                            <span class="icon-facebook"></span>
+                             <span class="visually-hidden">facebook</span>
+</a>
                         <a href="#" class="p-3">
-                            <span class="icon-twitter"></span></a>
+                            <span class="icon-twitter" title="twitter"></span></a>
 
-                        <a href="#" class="p-3">
+                        <a href="#" class="p-3" title="linkedin">
                             <span class="icon-linkedin"></span></a>
 
                     </p>
