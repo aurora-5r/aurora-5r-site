@@ -1,24 +1,65 @@
 {
-  "name": "aurora2.0",
+  "name": "aurora",
   "version": "1.0.0",
-  "description": "",
-  "main": ".eleventy.js",
-  "dependencies": {},
-  "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
-  },
+  "description": "Aurora-5r.fr",
+  "main": "index.bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eleventy:default": "npx eleventy",
+    "eleventy:watch": "npx eleventy --watch",
+    "scripts:prod": "webpack --mode=production",
+    "scripts:dev": "webpack --mode development --progress",
+    "copy": "sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html",
+    "dev": "run-s --print-label   scripts:dev eleventy:default copy",
+    "my-dev:debug": "DEBUG=* npm run my-dev",
+    "build": "run-s --print-label   scripts:prod eleventy:default copy "
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laurentmau/aurora2.0.git"
+    "url": "git+https://ianrose@github.com/ianrose/deventy.git"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/laurentmau/aurora2.0/issues"
+    "url": "https://github.com/ianrose/deventy/issues"
   },
-  "homepage": "https://github.com/laurentmau/aurora2.0#readme"
+  "homepage": "https://github.com/ianrose/deventy#readme",
+  "devDependencies": {
+    "compression-webpack-plugin": "^5.0.1",
+    "file-loader": "^6.0.0",
+    "light-server": "2.6.4"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@gfx/zopfli": "^1.0.15",
+    "acorn": "^7.4.0",
+    "aos": "^2.3.4",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "bootstrap": "^4.5.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.2",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "jquery": "^3.5.1",
+    "jquery-sticky": "^1.0.4",
+    "jquery-ui": "^1.12.1",
+    "jquery.countdown": "^1.2.8",
+    "mini-css-extract-plugin": "^0.11.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.16.1",
+    "postcss-cli": "^6.1.3",
+    "sass-loader": "^10.0.1",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-manifest-plugin": "^2.2.0"
+  }
 }
