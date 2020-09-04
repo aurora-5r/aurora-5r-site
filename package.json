@@ -9,7 +9,7 @@
     "eleventy:watch": "npx eleventy --watch",
     "scripts:prod": "webpack --mode=production",
     "scripts:dev": "webpack --mode development --progress",
-    "copy": "sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html",
+    "copy": "sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/",
     "dev": "run-s --print-label   scripts:dev eleventy:default copy",
     "my-dev:debug": "DEBUG=* npm run my-dev",
     "build": "run-s --print-label   scripts:prod eleventy:default copy "
