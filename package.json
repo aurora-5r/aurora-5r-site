@@ -1,5 +1,5 @@
 {
-  "name": "aurora",
+  "name": "aurora-5r",
   "version": "1.0.0",
   "description": "Aurora-5r.fr",
   "main": "index.bundle.js",
@@ -14,16 +14,6 @@
     "my-dev:debug": "DEBUG=* npm run my-dev",
     "build": "run-s --print-label   scripts:prod eleventy:default copy "
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://ianrose@github.com/ianrose/deventy.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ianrose/deventy/issues"
-  },
-  "homepage": "https://github.com/ianrose/deventy#readme",
   "devDependencies": {
     "compression-webpack-plugin": "^5.0.1",
     "file-loader": "^6.0.0",

@@ -18,13 +18,13 @@ detail: false
 
 Au travers du 5R, chaque projet est évalué selon 2 grands axes  qui sont la faisabilité et l’impact. Le 5R propose une grille de lecture partagée, quantifiable qui permet de se poser les bonnes questions, d’avoir une vision partagée du projet et d’identifier des actions pour amplifier le projet.
 
-La vocation d’AuRoRa est d’intervenir sur des projets qui permettent d'accélérer la transition écologique et solidaire. Les projets qui ne répondent pas à ces critères ne seront donc pas retenus.
+La vocation d’AuRoRa-5R est d’intervenir sur des projets qui permettent d'accélérer la transition écologique et solidaire. Les projets qui ne répondent pas à ces critères ne seront donc pas retenus.
 
 ### Pour mesurer la faisabilité, les critères Réseau, Réaliste et Réactif sont utilisés.
 
 **Réseau** : Le réseau du territoire est-il en mesure de répondre aux enjeux du projet ? Nous évaluons également  l’existence d’un modèle de partage de la valeur équitable entre les différents acteurs de la chaîne de valeur..
 
-**Réaliste** : Une évaluation de l’équation  économique (le business case) permet de confirmer l’existence d’un modèle économique viable qui permettra à l’activité de se développer. Nous interrogeons également notre capacité à réaliser le projet, et en particulier nous évaluons si l’apport de AuRoRa (au travers de nos méthodes, expertises, …) est vraiment un différenciateur ou si ce projet pourrait être fait par une autre structure.  Nous privilégions les projets pour lesquels notre valeur ajoutée est la plus grande. 
+**Réaliste** : Une évaluation de l’équation  économique (le business case) permet de confirmer l’existence d’un modèle économique viable qui permettra à l’activité de se développer. Nous interrogeons également notre capacité à réaliser le projet, et en particulier nous évaluons si l’apport de AuRoRa-5R (au travers de nos méthodes, expertises, …) est vraiment un différenciateur ou si ce projet pourrait être fait par une autre structure.  Nous privilégions les projets pour lesquels notre valeur ajoutée est la plus grande. 
 
 **Réactif** : Nous voulons avoir un impact quantifiable et rapide, pour cela nous privilégions les projets dont le temps estimé de réalisation est inférieur à 6 mois et nous n’intervenons que très rarement si il est supérieur à 18 mois.. La mesure des  risques techniques et commerciaux nous permet de confirmer que le planning annoncé est le bon.
 

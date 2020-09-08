@@ -15,7 +15,7 @@ detail: true
 ## Le référentiel 5R pour évaluer, sélectionner et amplifier les projets.
 
 Au travers du 5R, chaque projet est évalué selon 2 grands axes qui sont la faisabilité et l’impact. Le 5R propose une grille de lecture partagée, quantifiable qui permet de se poser les bonnes questions, d’avoir une vision partagée du projet et d’identifier des actions pour amplifier le projet.
-La vocation d’AuRoRa est d’intervenir sur des projets qui permettent d'accélérer la transition écologique et solidaire. Les projets qui ne répondent pas à ces critères ne seront donc pas retenus.
+La vocation d’AuRoRa-5R est d’intervenir sur des projets qui permettent d'accélérer la transition écologique et solidaire. Les projets qui ne répondent pas à ces critères ne seront donc pas retenus.
 
 <div id="observablehq-6c546d9b">
   <div class="row align-items-top">
