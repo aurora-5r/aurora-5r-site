@@ -1,10 +1,8 @@
 import 'bootstrap';
 import 'jquery';
 import 'jquery-ui';
-//import 'jquery.countdown';
 import 'jquery-sticky';
 import AOS from 'aos';
-//import jQuery from './jquery-3.3.1.min.js';
 import 'owl.carousel';
 ;
 
@@ -245,9 +243,9 @@ jQuery(document).ready(function ($) {
 
     });
   };
-	/*
-	OnePageNavigation();
-	*/
+
+  OnePageNavigation();
+
 
   var siteScroll = function () {
 
