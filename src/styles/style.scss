@@ -1,23 +1,24 @@
 $primary: #6282c2; // Black
-$secondary: #6282c2; //blue
-$body-bg: #fff; //white
-$text-body: #484d52; //gray
-$body-color: $text-body;
-$border-radius: 8px;
-$special: #6282c2; // blue
-$black: #000;
-$white: #fff;
-$yellow: #fde477;
-$light-yellow: #fcf4c8;
-$green: #57c79a;
-$light-green: #6ff8d4;
-$dark-yellow: #e4d48e;
-$red: #ee3530;
-$light-red: #f1857e;
+$secondary: #6282c2 !important; //blue
+$body-bg: #fff !important; //white
+$text-body: #484d52 !important; //gray
+$body-color: $text-body !important;
+$border-radius: 8px !important;
+$special: #6282c2 !important; // blue
+//$black:#000000 !important;
+//$white: #ffffff !important;
+$yellow: #fde477 !important;
+$light-yellow: #fcf4c8 !important;
+$green: #57c79a !important;
+$light-green: #6ff8d4 !important;
+$dark-yellow: #e4d48e !important;
+$red: #ee3530 !important;
+$light-red: #f1857e !important;
 $gray: #989898;
+$warning: #57c79a;
 
-$theme-colors: (
-  "special": $special,
+
+$theme-colors: ("special": $special,
   "yellow": $yellow,
   "blue": $special,
   "green": $green,
@@ -28,7 +29,3 @@ $theme-colors: (
   "light-yellow": $light-yellow,
   "dark-yellowww": $dark-yellow,
 );
-
-
-
-
