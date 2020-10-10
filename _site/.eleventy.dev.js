@@ -1,13 +1,15 @@
-const fs = require("fs");
-const path = require("path");
+"use strict";
 
+var fs = require("fs");
 
-const manifestPath = path.resolve(__dirname, "dist", "scripts", "manifest.json");
-const manifest = JSON.parse(fs.readFileSync(manifestPath, {
+var path = require("path");
+
+var manifestPath = path.resolve(__dirname, "dist", "scripts", "manifest.json");
+var manifest = JSON.parse(fs.readFileSync(manifestPath, {
   encoding: "utf8"
-}))
-const pluginSEO = require("eleventy-plugin-seo");
+}));
 
+var pluginSEO = require("eleventy-plugin-seo");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSEO, {
@@ -15,21 +17,16 @@ module.exports = function (eleventyConfig) {
     description: "AuRorA-5R accompagne les PME de la région AURA dans leurs projets innovants pour des transitions responsables",
     url: "https://aurora-5r.fr",
     author: "Laurent Maumet",
-    twitter: "aurora-5r",
+    twitter: "aurora-5r"
   });
-  eleventyConfig.addPassthroughCopy('src/images')
-  // Add a shortcode for bundled CSS.
-  eleventyConfig.addShortcode("bundledCss", function () {
-    return manifest["main.css"] ?
-      `<link href="${manifest["main.css"]}" rel="stylesheet" />` :
-      "";
-  });
+  eleventyConfig.addPassthroughCopy('src/images'); // Add a shortcode for bundled CSS.
 
-  // Add a shortcode for bundled JS.
+  eleventyConfig.addShortcode("bundledCss", function () {
+    return manifest["main.css"] ? "<link href=\"".concat(manifest["main.css"], "\" rel=\"stylesheet\" />") : "";
+  }); // Add a shortcode for bundled JS.
+
   eleventyConfig.addShortcode("bundledJs", function () {
-    return manifest["main.js"] ?
-      `<script src="${manifest["main.js"]}"></script>` :
-      "";
+    return manifest["main.js"] ? "<script src=\"".concat(manifest["main.js"], "\"></script>") : "";
   });
   return {
     dir: {
@@ -40,5 +37,5 @@ module.exports = function (eleventyConfig) {
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md', 'html', 'yml'],
     htmlTemplateEngine: 'njk'
-  }
-}
+  };
+};
