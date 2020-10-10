@@ -1,7 +1,8 @@
 ---
 layout: "base.njk"
 ---
-{#--WELCOME MESSAGE ------------------------------------------------------------------------#}
+
+{#--WELCOME MESSAGE -------------------------------------------------------------------------------------#}
 
 <div class="site-blocks-cover" style="overflow: hidden;height:40vh !important; min-height:350px !important ">
   <div class="container  pt-1;" style="padding-top: 150px !important;">
@@ -25,11 +26,217 @@ layout: "base.njk"
 </div>
 
 {#--END WELCOME MESSAGE -------------------------------------------------------------------------------------#}
-<div class="site-section">
+
+{#--  TABS -------------------------------------------------------------------------------------#}
+
+<div class="tabs-area spb">
+
+  <div class="container" data-aos="fade-up">
+
+    {#--  MENU -------------------------------------------------------------------------------------#}
+
+    <ul class="nav tabs-nav" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#demarche">
+          <i class="fa fa-qrcode"></i>
+          <span>
+            <h4>Une démarche</h4>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " id="pills-profile-tab" data-toggle="pill" href="#vision">
+          <i class="fa fa-binoculars"></i>
+          <span>
+            <h4>Une vision</h4>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#cadre">
+          <i class="fa fa-pie-chart"></i>
+          <span>
+            <h4>Un cadre</h4>
+          </span>
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      {#--  TAB 1 -------------------------------------------------------------------------------------#}
+
+      <div class="tab-pane fade  " id="vision" role="tabpanel">
+        <div class="row align-items-center  mb-3">
+          <div class="col-1">
+            <h2 class="text-primary">
+              1</h2>
+          </div>
+          <div class="col-md-5">
+            <p class=" mb-0">
+              C'est tout d’abord adhérer à l’idée qu’il est nécessaire de construire de nouveaux modèles économiques et technologiques afin de construire une société plus résiliante et responsable de l’environnement, et que pour ce faire, une approche multidisciplinaire et intergénérationnelle fondée sur une répartition collaborative et transparente de la valeur permettra d’ouvrir de nouveaux horizons.
+            </p>
+          </div>
+          <div class="col-md-6" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+            <img src="/images/5R.svg" alt="Image" class="img-fluid img-fluid">
+          </div>
+        </div>
+      </div>
+      {#--  TAB 2 -------------------------------------------------------------------------------------#}
+
+      <div class="tab-pane fade" id="cadre" role="tabpanel">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  1</h2>
+              </div>
+              <div class="col" data-aos="fade-left">
+
+                <p class=" mb-0">
+                  Accepter l’éventuelle refondation du concept du projet en accord avec les critères 5R.
+                </p>
+              </div>
+
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  2</h2>
+              </div>
+              <div class="col">
+                <p class=" mb-0">
+                  Adhérer au modèle AuRorA-5R de partage de la valeur et d’innovation accélérée et collaborative.
+                </p>
+              </div>
+
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  3</h2>
+              </div>
+              <div class="col">
+
+                <p class=" mb-0">
+                  Signer l’accord de projet liant les différentes parties, incluant AuRorA-5R comme tiers de confiance sur le partage de valeur et comme pilote du projet.
+                </p>
+              </div>
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  4</h2>
+              </div>
+              <div class="col">
+                <p class=" mb-0">
+                  Signer le ou les accords de financement conjointement préparés et négociés.
+                </p>
+              </div>
+            </div>
+
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  5</h2>
+              </div>
+              <div class="col">
+                <p class=" mb-0">
+                  Etre prêt à supporter les investissements industriels et/ou les changements structurels nécessaires pour la bonne réussite du projet.
+                </p>
+              </div>
+            </div>
+            <div class="row align-items-center  mb-3">
+              <div class="col-1">
+                <h2 class="text-primary">
+                  6</h2>
+              </div>
+              <div class="col">
+                <p class=" mb-0">
+                  Possibilité de rejoindre la SCIC et le collège des entreprises partenaires et clientes.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      {#--  TAB 3 -------------------------------------------------------------------------------------#}
+
+      <div class="tab-pane fade show active" id="demarche" role="tabpanel">
+        <div class="container">
+          <div class="timeline">
+            <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
+              <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
+                <h3 class=" text-light">
+                  Présentation du concept ou du projet
+                </h3>
+                <p>Lors d'une première réunion sont discutés position et enjeux de la chaîne de valeur.
+                </p>
+              </div>
+              <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
+                <p>
+                  CONCEPT</p>
+              </div>
+              <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
+                <time>Quelques heures</time>
+              </div>
+            </div>
+            <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
+              <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
+                <h3 class=" text-light">Etude de Positionnement et de Faisabilité 5R
+                </h3>
+                <p>Avec une analyse de positionnement et de faisabilité, une cible 5R est définie en fonction de paramètres économiques et du positionnement dans la chaîne de valeur.
+                </p>
+                <img src="/images/cible_5r.png" class="img-fluid" alt="img">
+              </div>
+              <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
+                <p>
+                  STRUCTURER</p>
+              </div>
+              <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
+                <time>
+                  Quelques semaines</time>
+              </div>
+            </div>
+            <div class="row no-gutters justify-content-end justify-content-md-around align-items-start timeline-nodes">
+              <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
+                <h3 class="text-light">Le projet
+                </h3>
+                <p>
+                  le projet
+                </p>
+                <img src="/images/trajectoire_5r.png" class="img-fluid" alt="img">
+              </div>
+              <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
+                <p>
+                  EXECUTER</p>
+              </div>
+              <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
+                <time>
+                  3 à 18 mois</time>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="mailto:contact@aurora-5r.fr" target="_blank" class="btn btn-warning btn-block ">
+      Contactez-nous pour discuter de votre accompagnement
+    </a>
+  </div>
+
+</div>
+{#--  END TABS -------------------------------------------------------------------------------------#}
+
+{# <div class="site-section">
 
   <div class="container sp pt-1">
     <div class="row align-items-stretch">
-      <div class="col-md-6 col-lg-4 " data-aos="fade-up">
+        <div class="col-md-6 col-lg-4 " data-aos="fade-up">
 
         <div class="unit-4 d-block">
           <div class="unit-4-icon mb-3 ">
@@ -92,4 +299,4 @@ layout: "base.njk"
 
     </div>
   </div>
-</div>
+</div> #}

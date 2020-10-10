@@ -8,11 +8,12 @@
     "eleventy:default": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
     "scripts:prod": "webpack --mode=production",
-    "scripts:dev": "webpack --mode development --progress",
+    "scripts:dev": "webpack --mode development --watch",
     "copy": "sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/",
-    "dev": "run-s --print-label   scripts:dev eleventy:default copy",
+    "sync": "sudo ./syncTest.sh",
+    "dev": "npm-run-all --parallel sync scripts:dev eleventy:watch ",
     "my-dev:debug": "DEBUG=* npm run my-dev",
-    "build": "run-s --print-label   scripts:prod eleventy:default copy "
+    "build": "run-s --print-label   scripts:prod eleventy:default "
   },
   "devDependencies": {
     "compression-webpack-plugin": "^5.0.1",
