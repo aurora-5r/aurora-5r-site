@@ -10,14 +10,20 @@ const pluginSEO = require("eleventy-plugin-seo");
 
 
 module.exports = function (eleventyConfig) {
+
+
   eleventyConfig.addPlugin(pluginSEO, {
     title: "AuRorA-5R",
-    description: "AuRorA-5R accompagne les PME de la région AURA dans leurs projets innovants pour des transitions responsables",
+    description: "Transcubateur. AuRorA-5R accompagne les PME de la région AURA dans leurs projets innovants pour des transitions responsables",
     url: "https://aurora-5r.fr",
     author: "Laurent Maumet",
     twitter: "aurora-5r",
   });
   eleventyConfig.addPassthroughCopy('src/images')
+  eleventyConfig.addPassthroughCopy('robots.txt')
+  eleventyConfig.addPassthroughCopy('src/posts/images')
+
+
   // Add a shortcode for bundled CSS.
   eleventyConfig.addShortcode("bundledCss", function () {
     return manifest["main.css"] ?

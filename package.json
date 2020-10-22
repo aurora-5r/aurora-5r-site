@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eleventy:default": "npx eleventy",
+    "eleventy:debug": "DEBUG=* npm run eleventy:default",
     "eleventy:watch": "npx eleventy --watch",
     "scripts:prod": "webpack --mode=production",
     "scripts:dev": "webpack --mode development ",
