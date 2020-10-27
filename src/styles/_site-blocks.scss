@@ -74,13 +74,12 @@
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 400;
     color: $black;
-    font-weight: 900;
 
     @include media-breakpoint-down(md) {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
 
@@ -361,6 +360,8 @@
     box-shadow: 0 5px 40px -5px rgba(0, 0, 0, 0.1);
   }
 }
+
+
 
 .post-entry {
   position: relative;
@@ -2420,5 +2421,17 @@ span {
   .timeline-image::before {
     width: 60px;
     height: 60px;
+  }
+}
+
+.post-content {
+
+  img {
+    border-radius: 4px;
+    border-color: #222538;
+    max-width: 80%;
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    z-depth: 2;
   }
 }

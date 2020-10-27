@@ -1,0 +1,28 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container sp pt-5" style="padding-top: 150px !important;">
+      <div class="row justify-content-md-center pt-100">
+        <div class="col-md-10">
+
+          <div class="post-content">
+            <h1>
+              <a href="{{ url }}">{{ title }}</a>
+            </h1>
+            <p class="lead">
+              {# by
+        {{ author}} #}
+              {# <time class="postlist-date" datetime="{{ post.date | date('Y-MM-DD') }}">{{ post.date|date("DD MMMM Y", locale) }}</time>#}
+            </p>
+
+            <p>
+              {{content | safe}}
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
