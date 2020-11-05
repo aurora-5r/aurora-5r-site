@@ -23,8 +23,6 @@ a {
   }
 }
 
-
-
 h1,
 h2,
 h3,
@@ -279,7 +277,7 @@ h5,
     height: auto !important;
   }
 
-  >div {
+  > div {
     transform: scale(1);
     transition: 0.8s all ease-in-out;
   }
@@ -287,7 +285,7 @@ h5,
   &:hover,
   &:focus,
   &:active {
-    >div {
+    > div {
       transform: scale(1.2);
     }
   }
@@ -321,7 +319,7 @@ h5,
     }
   }
 
-  >.container {
+  > .container {
     position: relative;
     z-index: 1;
   }
@@ -350,7 +348,7 @@ h5,
   position: relative;
   transition: 0.3s all ease-in-out;
 
-  >span {
+  > span {
     font-size: 50px;
     position: absolute;
     top: 50%;
@@ -445,4 +443,15 @@ h5,
   overflow: auto;
   position: absolute;
   width: auto;
+}
+
+.my-zoom {
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+}
+
+.my-zoom:hover {
+  transform: scale(
+    1.2
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

@@ -1,24 +1,36 @@
 .primary-gradient {
   background: rgba(66, 134, 244, 1);
-  background: -moz-linear-gradient(left,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
-  background: -webkit-gradient(left top,
-      right top,
-      color-stop(0%, rgba(66, 134, 244, 1)),
-      color-stop(100%, rgba(66, 226, 244, 1)));
-  background: -webkit-linear-gradient(left,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
-  background: -o-linear-gradient(left,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
-  background: -ms-linear-gradient(left,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
-  background: linear-gradient(to right,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
+  background: -moz-linear-gradient(
+    left,
+    rgba(66, 134, 244, 1) 0%,
+    rgba(66, 226, 244, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(66, 134, 244, 1)),
+    color-stop(100%, rgba(66, 226, 244, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(66, 134, 244, 1) 0%,
+    rgba(66, 226, 244, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(66, 134, 244, 1) 0%,
+    rgba(66, 226, 244, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(66, 134, 244, 1) 0%,
+    rgba(66, 226, 244, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(66, 134, 244, 1) 0%,
+    rgba(66, 226, 244, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4286f4', endColorstr='#42e2f4', GradientType=1);
 }
 
@@ -59,15 +71,14 @@
   }
 
   &,
-  &>.container>.row {
+  & > .container > .row {
     min-height: 600px;
     height: calc(100vh);
   }
 
   &.inner-page-cover {
-
     &,
-    &>.container>.row {
+    & > .container > .row {
       min-height: 400px;
       height: calc(20vh);
     }
@@ -361,8 +372,6 @@
   }
 }
 
-
-
 .post-entry {
   position: relative;
   overflow: hidden;
@@ -411,7 +420,7 @@
       margin-left: 0 !important;
     }
 
-    >a {
+    > a {
       padding-left: 0 !important;
       background: none !important;
       padding-right: 0 !important;
@@ -501,7 +510,7 @@
         font-size: 25px;
       }
 
-      >span {
+      > span {
         position: absolute;
         line-height: 0;
         top: 50%;
@@ -562,21 +571,27 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: -moz-linear-gradient(top,
-          transparent 0%,
-          transparent 18%,
-          rgba(0, 0, 0, 0.8) 99%,
-          rgba(0, 0, 0, 0.8) 100%);
-      background: -webkit-linear-gradient(top,
-          transparent 0%,
-          transparent 18%,
-          rgba(0, 0, 0, 0.8) 99%,
-          rgba(0, 0, 0, 0.8) 100%);
-      background: linear-gradient(to bottom,
-          transparent 0%,
-          transparent 18%,
-          rgba(0, 0, 0, 0.8) 99%,
-          rgba(0, 0, 0, 0.8) 100%);
+      background: -moz-linear-gradient(
+        top,
+        transparent 0%,
+        transparent 18%,
+        rgba(0, 0, 0, 0.8) 99%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      background: -webkit-linear-gradient(
+        top,
+        transparent 0%,
+        transparent 18%,
+        rgba(0, 0, 0, 0.8) 99%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 18%,
+        rgba(0, 0, 0, 0.8) 99%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
     }
   }
@@ -661,7 +676,7 @@
         opacity: 1;
       }
 
-      >span {
+      > span {
         position: absolute;
         left: 55%;
         top: 50%;
@@ -673,7 +688,6 @@
 
 .block-25 {
   ul {
-
     &,
     li {
       padding: 0;
@@ -759,7 +773,7 @@
     border-radius: 50%;
     color: $white;
 
-    >span {
+    > span {
       position: absolute;
       transform: translate(-50%, -50%);
       left: 50%;
@@ -782,7 +796,6 @@
 
 .site-block-27 {
   ul {
-
     &,
     li {
       padding: 0;
@@ -805,7 +818,6 @@
       }
 
       &.active {
-
         a,
         span {
           background: $primary;
@@ -847,21 +859,27 @@
     top: 0;
     left: 0;
     right: 0;
-    background: -moz-linear-gradient(top,
-        transparent 0%,
-        transparent 18%,
-        rgba(0, 0, 0, 0.8) 99%,
-        rgba(0, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient(top,
-        transparent 0%,
-        transparent 18%,
-        rgba(0, 0, 0, 0.8) 99%,
-        rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom,
-        transparent 0%,
-        transparent 18%,
-        rgba(0, 0, 0, 0.8) 99%,
-        rgba(0, 0, 0, 0.8) 100%);
+    background: -moz-linear-gradient(
+      top,
+      transparent 0%,
+      transparent 18%,
+      rgba(0, 0, 0, 0.8) 99%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      transparent 0%,
+      transparent 18%,
+      rgba(0, 0, 0, 0.8) 99%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 18%,
+      rgba(0, 0, 0, 0.8) 99%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
   }
 
@@ -1048,7 +1066,7 @@
     border-radius: 50%;
     margin: 0 auto !important;
 
-    >span {
+    > span {
       font-size: 35px;
       color: $white;
       position: absolute;
@@ -1240,7 +1258,6 @@
 }
 
 .custom-pagination {
-
   a,
   span {
     width: 40px;
@@ -1299,7 +1316,7 @@
     display: block;
     transition: 0.1s all ease;
 
-    >span {
+    > span {
       line-height: 0;
       font-size: 40px;
     }
@@ -1332,7 +1349,8 @@
     .icon {
       color: $white;
 
-      span {}
+      span {
+      }
     }
 
     .number {
@@ -1911,7 +1929,6 @@
 
 .form-subscribe {
   .btn {
-
     &:hover,
     &:active,
     &:focus {
@@ -2083,7 +2100,7 @@
 .nav-column span,
 .nav-column .right-nav span,
 form.search-form,
-#menu ul>li>a,
+#menu ul > li > a,
 #menu ul ul,
 #menu ul ul::after,
 #menu ul ul li a,
@@ -2166,8 +2183,7 @@ span {
   padding-bottom: 90px;
 }
 
-
-.accordion-section .panel-default>.panel-heading {
+.accordion-section .panel-default > .panel-heading {
   border: 0;
   background: #f4f4f4;
   padding: 0;
@@ -2180,7 +2196,7 @@ span {
 }
 
 .accordion-section .panel-default .panel-title a:after {
-  font-family: 'icomoon';
+  font-family: "icomoon";
   font-style: normal;
   font-size: 1.5rem;
   content: "\f106";
@@ -2196,7 +2212,6 @@ span {
 .accordion-section .panel-default .panel-body {
   font-size: 1.2rem;
 }
-
 
 .timeline {
   padding: 50px 0;
@@ -2225,7 +2240,7 @@ span {
 
 .timeline p,
 .timeline time {
-  color: $primary
+  color: $primary;
 }
 
 .timeline::before {
@@ -2245,7 +2260,7 @@ span {
   border: 1px solid $primary;
   position: relative;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0px 3px 25px 0px rgba(10, 55, 90, 0.2)
+  box-shadow: 0px 3px 25px 0px rgba(10, 55, 90, 0.2);
 }
 
 .timeline-nodes:nth-child(odd) h3,
@@ -2287,7 +2302,6 @@ span {
   position: relative;
   z-index: 100;
   display: table;
-
 }
 
 .timeline-image::before {
@@ -2303,8 +2317,6 @@ span {
   transform: translate(-50%, -50%);
   background-color: #6282c2;
   z-index: 1;
-
-
 }
 
 .timeline-image p {
@@ -2315,7 +2327,7 @@ span {
   z-index: 100;
   font-size: 10px;
   font-weight: bold;
-  color: #fff
+  color: #fff;
 }
 
 .timeline-image img {
@@ -2323,14 +2335,12 @@ span {
   z-index: 100;
 }
 
-
 /*small device style*/
 
 @media (max-width: 767px) {
-
   .timeline-nodes:nth-child(odd) h3,
   .timeline-nodes:nth-child(odd) p {
-    text-align: left
+    text-align: left;
   }
 
   .timeline-nodes:nth-child(even) {
@@ -2425,7 +2435,6 @@ span {
 }
 
 .post-content {
-
   img {
     border-radius: 4px;
     border-color: #222538;
@@ -2433,5 +2442,8 @@ span {
     opacity: 1;
     transition: 0.3s all ease-in-out;
     z-depth: 2;
+  }
+  eleventy-plugin-youtube-embed {
+    max-width: 80% !important;
   }
 }

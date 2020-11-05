@@ -7,11 +7,14 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, {
   encoding: "utf8"
 }))
 const pluginSEO = require("eleventy-plugin-seo");
+const embedYouTube = require("eleventy-plugin-youtube-embed");
 
 
 module.exports = function (eleventyConfig) {
 
-
+eleventyConfig.addPlugin(embedYouTube, {
+  embedClass: 'post-video'
+});
   eleventyConfig.addPlugin(pluginSEO, {
     title: "AuRorA-5R",
     description: "Transcubateur. AuRorA-5R accompagne les PME de la région AURA dans leurs projets innovants pour des transitions responsables",

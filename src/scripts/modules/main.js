@@ -6,6 +6,8 @@ import AOS from 'aos';
 import 'owl.carousel';
 ;
 
+
+
 AOS.init({
   duration: 800,
   easing: 'slide',

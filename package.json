@@ -10,11 +10,14 @@
     "eleventy:watch": "npx eleventy --watch",
     "scripts:prod": "webpack --mode=production",
     "scripts:dev": "webpack --mode development ",
+    "scripts:watch": "webpack --watch --mode development ",
+
     "copy": "sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/",
     "sync": "sudo ./syncTest.sh",
-    "dev": "run-s  scripts:dev eleventy:default copy ",
+    "dev": "run-p  scripts:watch eleventy:watch sync ",
+
     "my-dev:debug": "DEBUG=* npm run my-dev",
-    "build": "run-s --print-label   scripts:prod eleventy:default "
+    "prod": "run-s --print-label   scripts:prod eleventy:default "
   },
   "devDependencies": {
     "compression-webpack-plugin": "^5.0.1",
@@ -37,6 +40,7 @@
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "eleventy-plugin-seo": "^0.5.1",
+    "eleventy-plugin-youtube-embed": "^1.4.7",
     "jquery": "^3.5.1",
     "jquery-sticky": "^1.0.4",
     "jquery-ui": "^1.12.1",
