@@ -14,5 +14,8 @@ fields:
 - type: text
   name: summary
   label: summary
+- name: draft
+  type: boolean
+  label: DRAFT
 pages:
 - src/posts/un-nouveau-post.md
