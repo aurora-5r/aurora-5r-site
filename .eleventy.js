@@ -81,7 +81,7 @@ function extractFirstImage(doc) {
       content.substring(imgTagBegin + 4, imgTagEnd + 1);
     return res;
     return content.substring(imgTagBegin, imgTagEnd + 1);
+  } else {
+    return '<img class="center-block" src="/images/5R.png" alt="5R"></img>';
   }
-
-  return "";
 }
