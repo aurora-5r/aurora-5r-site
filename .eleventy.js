@@ -68,7 +68,7 @@ function extractFirstImage(doc) {
     console.warn(
       "❌ Failed to extract image: Document has no property `templateContent`."
     );
-    return "<img class=\"center-block\" src=\"/images/5r.png\" alt=\"5R\"></img>;
+    return '<img class="center-block" src="/images/5r.png" alt="5R"></img>';
   }
 
   const content = doc.templateContent;
