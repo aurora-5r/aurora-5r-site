@@ -9,6 +9,7 @@ sections:
   label: news
   create: documents
   match: "**/*"
+  exclude: "**/*.json"
 upload_dir: src/images
 public_path: "/images"
 front_matter_path: ''
