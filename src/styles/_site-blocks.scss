@@ -1021,15 +1021,21 @@
 .h-entry {
   img {
     margin-bottom: 30px;
+    height: 200px;
+    weight: auto;
+    display: inline-block;
+    text-align: center;
   }
-
+  summary {
+    height: 100px;
+  }
   .meta {
     color: darken(#ccc, 10%);
     font-size: 14px;
   }
 
-  h2 {
-    font-size: 20px;
+  h3 {
+    font-size: 1.3rem;
   }
 }
 

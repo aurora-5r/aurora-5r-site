@@ -115,7 +115,7 @@ layout: "base.njk"
       </div>
     </div>
 
-    <div class="row">
+    <div class="row ">
 
       {% set atPost = 0 %}
       {% set nb1 = collections.posts | length %}
@@ -125,19 +125,21 @@ layout: "base.njk"
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="{{ post.data.image }}" alt="{{ post.data.title }}" height="200px" weight="auto">
+              <a href="{{post.url}}">
+                {% first_image post %}
+              </a>
               <h3>
-                <a href="{{post.url}}">{{ post.data.title }}</a>
+                {{ post.data.title }}
               </h3>
-              {#
-                <div class="meta mb-4">{{ post.data.author }}
-                  <span class="mx-2">&bullet;</span>
-                   {{ post.date | date('Y-MM-DD') }}
-
-                </div>
-                <p>{{ post.data.summary }}</p>#}
+              <div class="meta mb-4">{{ post.data.author }}
+                <span class="mx-2">&bullet;</span>
+                {{ post.date.toLocaleDateString() }}
+              </div>
+              <summary>
+                {{ post.data.summary }}
+              </summary>
               <p>
-                <a href="{{post.url}}">Lire...</a>
+                <a href="{{post.url}}">Lire la suite...</a>
               </p>
             </div>
           </div>
