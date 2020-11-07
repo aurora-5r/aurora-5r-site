@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const livePosts = (p) => p.date <= now && !p.data.draft;
+const now = new Date();
 
 const manifestPath = path.resolve(
   __dirname,
@@ -46,6 +48,18 @@ module.exports = function (eleventyConfig) {
     return manifest["main.js"]
       ? `<script src="${manifest["main.js"]}"></script>`
       : "";
+  });
+  eleventyConfig.addCollection("posts", (collection) => {
+    return collection
+      .getFilteredByGlob("./src/posts/*.md")
+      .filter((_) => livePosts(_))
+      .reverse();
+  });
+  eleventyConfig.addCollection("drafts", (collection) => {
+    return collection
+      .getFilteredByGlob("./src/posts/*.md")
+      .filter((_) => !livePosts(_))
+      .reverse();
   });
   return {
     dir: {

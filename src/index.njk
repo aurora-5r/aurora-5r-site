@@ -134,6 +134,9 @@ layout: "base.njk"
               <div class="meta mb-4">{{ post.data.author }}
                 <span class="mx-2">&bullet;</span>
                 {{ post.date.toLocaleDateString('fr-FR') }}
+                <span class="mx-2">&bullet;</span>
+                draft :
+                {{ post.data.eleventyComputed.draft }}
               </div>
               <summary>
                 {{ post.data.summary }}

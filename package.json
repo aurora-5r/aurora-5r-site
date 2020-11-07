@@ -11,13 +11,11 @@
     "scripts:prod": "webpack --mode=production",
     "scripts:dev": "webpack --mode development ",
     "scripts:watch": "webpack --watch --mode development ",
-
     "copy": "sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/",
     "sync": "sudo ./syncTest.sh",
     "dev": "run-p  scripts:watch eleventy:watch sync ",
-
     "my-dev:debug": "DEBUG=* npm run my-dev",
-    "prod": "run-s --print-label   scripts:prod eleventy:default "
+    "prod": "ELEVENTY_ENV=production run-s --print-label   scripts:prod eleventy:default "
   },
   "devDependencies": {
     "compression-webpack-plugin": "^5.0.1",
