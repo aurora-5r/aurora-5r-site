@@ -4,7 +4,7 @@ author: Laurent
 date: 2020-10-15
 summary: La vidéo de notre intervention lors du Festival Transfo 2020 "Réussir la
   transition numérique responsable des PME“
-draft: true
+draft: false
 
 ---
 La vidéo de notre intervention lors du Festival Transfo 2020 "Réussir la transition numérique responsable des PME“
