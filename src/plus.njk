@@ -1,5 +1,6 @@
 ---
 layout: "base.njk"
+par: "null"
 ---
 <div class="site-blocks-cover" style="overflow: hidden;height:40vh !important; min-height:350px !important ">
   <div class="container  pt-1;" style="padding-top: 150px !important;">
@@ -45,7 +46,10 @@ layout: "base.njk"
           </div>
         </div>
         <div class="col-lg-7" data-aos="fade-right">
-          <img src="{{ presentation.data.image }}" " alt=" Image" class=" img-fluid"=" img-fluid""="img-fluid" "">
+          {% MyResponsiveImage presentation.data.image,
+          " image" %}
+          {# <img src="{{ presentation.data.image }}" " alt=" Image" class=" img-fluid"=" img-fluid""="img-fluid"> #}
+
           {% if presentation.data.detail %}
 
             <a href="{{ presentation.url }}" class="btn btn-primary">
@@ -70,7 +74,10 @@ layout: "base.njk"
       </div>
       <div class="row mb-5">
         <div class="col-lg-6" data-aos="fade-right">
-          <img src="/images/johann-siemens-EPy0gBJzzZU-unsplash.jpg" alt="Image" class="img-fluid">
+          {% MyResponsiveImage "src/images/johann-siemens-EPy0gBJzzZU-unsplash.jpg",
+          " image" %}
+          {#           <img src="/images/johann-siemens-EPy0gBJzzZU-unsplash.jpg" alt="Image" class="img-fluid">
+ #}
         </div>
         <div class="col-lg-5 ml-auto pl-lg-5">
           <h2 class="text-black mb-4 h3 font-weight-bold">Vocation</h2>

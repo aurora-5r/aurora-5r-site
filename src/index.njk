@@ -171,7 +171,10 @@ layout: "base.njk"
         <div class="person">
           <div class="bio-img">
             <figure>
-              <img src="images/PE.jpeg" alt="Image" class="img-fluid">
+              {% MyResponsiveImage "src/images/PE.jpg",
+              "Photo de Pierre-Emmanuel" %}
+
+              {# <img src="images/PE.jpeg" alt="Image" class="img-fluid"> #}
             </figure>
             <div class="social">
               <a href="" https://www.linkedin.com/in/pem-frot-1304g73/"=" https://www.linkedin.com/in/pem-frot-1304g73/""="https://www.linkedin.com/in/pem-frot-1304g73/" "">
@@ -190,7 +193,9 @@ layout: "base.njk"
         <div class="person">
           <div class="bio-img">
             <figure>
-              <img src="images/L.jpeg" alt="Image" class="img-fluid" height="500px">
+              {% MyResponsiveImage "src/images/L.jpeg",
+              "Photo de Laurent" %}
+              {# <img src="images/L.jpeg" alt="Image" class="img-fluid" height="500px"> #}
             </figure>
             <div class="social">
               <a href="https://fr.linkedin.com/in/laurentmaumet">
@@ -213,7 +218,9 @@ layout: "base.njk"
         <div class="person">
           <div class="bio-img">
             <figure>
-              <img src="images/C.jpeg" alt="Image" class="img-fluid" height="500px">
+              {% MyResponsiveImage "src/images/C.jpeg",
+              "Photo de Cédric" %}
+              {# <img src="images/C.jpeg" alt="Image" class="img-fluid" height="500px"> #}
             </figure>
             <div class="social">
 

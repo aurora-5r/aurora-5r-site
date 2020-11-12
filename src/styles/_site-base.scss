@@ -195,6 +195,13 @@ h5,
   &.site-section-sm {
     padding: 4em 0;
   }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+  }
 }
 
 .site-section-heading {

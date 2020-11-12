@@ -16,8 +16,101 @@ const manifest = JSON.parse(
 );
 const pluginSEO = require("eleventy-plugin-seo");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
+const Image = require("@11ty/eleventy-img");
+const sharp = require("sharp");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("src/images");
+
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "MyResponsiveImage",
+    async (src, alt) => {
+      if (alt === undefined) {
+        // You bet we throw an error on missing alt (alt="" works okay)
+        throw new Error("Missing alt on myResponsiveImage from: ${src}");
+      }
+      //return `MyResponsiveImage - ${src} - `;
+
+      let stats = await Image(src, {
+        widths: [25, 320, 640, 960, 1200, 1800, 2400],
+        formats: ["jpeg", "webp"],
+        urlPath: "/images/",
+        outputDir: "./dist/images/",
+      });
+      //let lowestSrc = stats[outputFormat][0];
+      let lowestSrc = stats["jpeg"][0];
+
+      let sizes = "100vw"; // Make sure you customize this!
+
+      // Iterate over formats and widths
+      return `<picture>
+     ${Object.values(stats)
+       .map((imageFormat) => {
+         return `  <source type="image/${
+           imageFormat[0].format
+         }" srcset="${imageFormat
+           .map((entry) => `${entry.url} ${entry.width}w`)
+           .join(", ")}" sizes="${sizes}">`;
+       })
+       .join("\n")}
+        <img
+          src="${lowestSrc.url}"
+          width="${lowestSrc.width}"
+          height="${lowestSrc.height}"
+          alt="${alt}">
+          </picture>`;
+    }
+  );
+
+  eleventyConfig.addNunjucksAsyncShortcode("Image", async (src, alt) => {
+    if (!alt) {
+      throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+    }
+
+    let stats = await Image(src, {
+      widths: [25, 320, 640, 960, 1200, 1800, 2400],
+      formats: ["jpeg", "webp"],
+      urlPath: "/images/",
+      outputDir: "./dist/images/",
+    });
+
+    let lowestSrc = stats["jpeg"][0];
+
+    const placeholder = await sharp(lowestSrc.outputPath)
+      .resize({ fit: sharp.fit.inside })
+      .blur()
+      .toBuffer();
+
+    const base64Placeholder = `data:image/png;base64,${placeholder.toString(
+      "base64"
+    )}`;
+
+    const srcset = Object.keys(stats).reduce(
+      (acc, format) => ({
+        ...acc,
+        [format]: stats[format].reduce(
+          (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+          ""
+        ),
+      }),
+      {}
+    );
+
+    const source = `<source type="image/webp" data-srcset="${srcset["webp"]}" >`;
+
+    const img = `<img
+      class="lazy"
+      alt="${alt}"
+      src="${base64Placeholder}"
+      data-src="${lowestSrc.url}"
+      data-sizes='(min-width: 1024px) 1024px, 100vw'
+      data-srcset="${srcset["jpeg"]}"
+      width="${lowestSrc.width}"
+      height="${lowestSrc.height}">`;
+
+    return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+  });
+
   eleventyConfig.addShortcode("first_image", (post) => extractFirstImage(post));
 
   eleventyConfig.addPlugin(embedYouTube, {
@@ -32,7 +125,6 @@ module.exports = function (eleventyConfig) {
     author: "Laurent Maumet",
     twitter: "aurora-5r",
   });
-  eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("src/posts/images");
 

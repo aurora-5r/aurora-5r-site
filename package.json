@@ -23,7 +23,8 @@
     "light-server": "2.6.4"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-img": "^0.3.0",
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
     "@gfx/zopfli": "^1.0.15",

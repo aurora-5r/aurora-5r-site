@@ -15,7 +15,8 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="concept.svg">
+   sodipodi:docname="concept.svg"
+>
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -49,11 +50,14 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+            <rect width="100%" height="100%" fill="white"/>
+
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-263.13332)">
+
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.22506523px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.4056266"
