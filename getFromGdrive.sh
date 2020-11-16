@@ -44,7 +44,7 @@ do
 done
 
 
-#rm -rf tmp_slides
+rm -rf tmp_slides
 
 
 

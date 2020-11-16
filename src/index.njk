@@ -126,10 +126,14 @@ layout: "base.njk"
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
               <a href="{{post.url}}">
-                {% first_image post %}
+                {% MyResponsiveImage post.cover,
+                " image" %}
+                {# {% first_image post %} #}
               </a>
+
               <h3>
-                {{ post.data.title }}
+
+                -
               </h3>
               <div class="meta mb-4">{{ post.data.author }}
                 <span class="mx-2">&bullet;</span>
