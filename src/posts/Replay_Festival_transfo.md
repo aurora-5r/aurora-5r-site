@@ -5,6 +5,7 @@ date: 2020-10-15
 summary: La vidéo de notre intervention lors du Festival Transfo 2020 "Réussir la
   transition numérique responsable des PME“
 draft: false
+cover: "/images/Replay_Festival_transfo.md0.png"
 
 ---
 La vidéo de notre intervention lors du Festival Transfo 2020 "Réussir la transition numérique responsable des PME“
