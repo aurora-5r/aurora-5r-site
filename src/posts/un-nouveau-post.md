@@ -3,7 +3,7 @@ title: Une entreprise numérique
 author: Cédric
 date: 2020-11-03T23:00:00.000+00:00
 summary: ''
-draft: false
+draft: true
 cover: "/images/screenshot-2020-11-09-at-11-45-10.png"
 
 ---
