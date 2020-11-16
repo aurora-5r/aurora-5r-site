@@ -4,6 +4,7 @@ author: Cédric
 date: 2020-11-03T23:00:00.000+00:00
 summary: ''
 draft: false
+cover: "/images/screenshot-2020-11-09-at-11-45-10.png"
 
 ---
 C’est devenu simple et peu coûteux en investissement et en coût de fonctionnement de devenir une entreprise qui utilise les dernières innovations du “numérique”. Certes c’est nouveau, et peu de personne ont les compétences pour activer ces usages en rééls différenciateurs et surtout pour en extraire la valeur. AuRorA a pour mission d’accompagner les PME afin sur leur marché, cette puissance peut créer des avantages compétitifs et ainsi développer durablement de la valeur pour ses clients.
