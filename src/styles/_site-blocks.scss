@@ -2456,3 +2456,13 @@ span {
     max-width: 80% !important;
   }
 }
+
+.offre-img {
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+  }
+}

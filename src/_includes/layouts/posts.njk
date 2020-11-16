@@ -15,17 +15,14 @@
               {# by
         {{ author}} #}
               {# <time class="postlist-date" datetime="{{ post.date | date('Y-MM-DD') }}">{{ post.date|date("DD MMMM Y", locale) }}</time>#}
-              first myValue :
-              {{data.myValue}}
-            </p>
 
-            <p>
-              {{content | safe}}
+              <p>
+                {{content | safe}}
 
-            </p>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-{% endblock content %}
+  {% endblock content %}

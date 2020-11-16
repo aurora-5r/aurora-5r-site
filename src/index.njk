@@ -106,7 +106,7 @@ layout: "base.njk"
 
 {#--NEWS  -------------------------------------------------------------------------------------#}
 
-<div class="site-section bg-light" id="blog-section">
+<div class="site-section " id="blog-section">
   <div class="container">
     <div class="row mt-2 mb-5">
       <div class="col-12 text-center">
@@ -126,14 +126,13 @@ layout: "base.njk"
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
               <a href="{{post.url}}">
-                {% MyResponsiveImage post.cover,
+                {% MyResponsiveImage "src/" + post.data.cover,
                 " image" %}
                 {# {% first_image post %} #}
               </a>
 
               <h3>
-
-                -
+                {{ post.data.title }}
               </h3>
               <div class="meta mb-4">{{ post.data.author }}
                 <span class="mx-2">&bullet;</span>
