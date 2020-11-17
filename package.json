@@ -16,7 +16,7 @@
     "sync": "sudo ./syncTest.sh",
     "dev": "run-p  scripts:watch eleventy:watch sync ",
     "my-dev:debug": "DEBUG=* npm run my-dev",
-    "prod": "ELEVENTY_ENV=production run-s --print-label clean  scripts:prod eleventy:default copy"
+    "prod": "ELEVENTY_ENV=production run-s --print-label clean  scripts:prod eleventy:default"
   },
   "devDependencies": {
     "compression-webpack-plugin": "^5.0.1",
