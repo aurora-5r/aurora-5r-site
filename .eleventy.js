@@ -85,7 +85,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("bundledJs", function () {
     return manifest["main.js"]
-      ? `<script src="${manifest["main.js"]}"></script>`
+      ? `<script src="${manifest["main.js"]}" async></script>`
       : "";
   });
   eleventyConfig.addCollection("posts", (collection) => {
