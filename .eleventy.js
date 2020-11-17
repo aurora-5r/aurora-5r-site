@@ -20,7 +20,8 @@ const Image = require("@11ty/eleventy-img");
 const sharp = require("sharp");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/images");
+  // eleventyConfig.addPassthroughCopy("src/images");
+  // eleventyConfig.addPassthroughCopy("src/posts/images");
 
   eleventyConfig.addNunjucksAsyncShortcode(
     "MyResponsiveImage",
@@ -29,8 +30,6 @@ module.exports = function (eleventyConfig) {
         // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error("Missing alt on myResponsiveImage from: ${src}");
       }
-      //return `MyResponsiveImage - ${src} - `;
-
       let stats = await Image(src, {
         widths: [25, 320, 640, 960, 1200, 1800, 2400],
         formats: ["jpeg", "webp"],
@@ -77,16 +76,13 @@ module.exports = function (eleventyConfig) {
     twitter: "aurora-5r",
   });
   eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("src/posts/images");
 
-  // Add a shortcode for bundled CSS.
   eleventyConfig.addShortcode("bundledCss", function () {
     return manifest["main.css"]
       ? `<link href="${manifest["main.css"]}" rel="stylesheet" />`
       : "";
   });
 
-  // Add a shortcode for bundled JS.
   eleventyConfig.addShortcode("bundledJs", function () {
     return manifest["main.js"]
       ? `<script src="${manifest["main.js"]}"></script>`
@@ -108,11 +104,11 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src",
       output: "dist",
-      data: "_data",
+      // data: "_data",
     },
-    passthroughFileCopy: true,
+    /* passthroughFileCopy: true,
     templateFormats: ["njk", "md", "html", "yml"],
-    htmlTemplateEngine: "njk",
+    htmlTemplateEngine: "njk", */
   };
 };
 
