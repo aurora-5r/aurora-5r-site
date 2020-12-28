@@ -106,9 +106,6 @@ module.exports = function (eleventyConfig) {
       output: "dist",
       // data: "_data",
     },
-    /* passthroughFileCopy: true,
-    templateFormats: ["njk", "md", "html", "yml"],
-    htmlTemplateEngine: "njk", */
   };
 };
 
