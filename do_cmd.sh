@@ -84,25 +84,25 @@ function ensure_container_running {
 
 function ensure_node_module_exists {
     log "Checking if node module exists"
-    if [[ ! -d landing-pages/node_modules/ ]] ; then
+    if [[ ! -d pages/node_modules/ ]] ; then
         log "Missing node dependencies. Start installation."
-        run_command "/opt/site/landing-pages/" yarn install
+        run_command "/opt/site/pages/" npm install
         log "Dependencies installed."
     fi
 }
 
 function ensure_that_website_is_build {
-    log "Check if landing-pages/dist/index.html file exists"
-    if [[ ! -f landing-pages/dist/index.html ]] ; then
+    log "Check if pages/dist/index.html file exists"
+    if [[ ! -f pages/dist/index.html ]] ; then
         log "The website is not built. Start building."
-        run_command "/opt/site/landing-pages/" npm run build
+        run_command "/opt/site/pages/" npm run build
         log "The website builded."
     fi
 }
 
 function build_image {
     log "Start building image"
-    docker build -t airflow-site .
+    docker build -t aurora-5r-site .
     log "End building image"
 }
 
@@ -198,14 +198,15 @@ function run_lint {
 
 function prepare_packages_metadata {
     log "Preparing packages-metadata.json"
-    python dump-docs-packages-metadata.py > "landing-pages/site/static/_gen/packages-metadata.json"
+    log "NOT YET IMPLEMENTED"
+    #python dump-docs-packages-metadata.py > "landing-pages/site/static/_gen/packages-metadata.json"
 }
 
-function build_landing_pages {
+function build_pages {
     log "Building landing pages"
-    run_command "/opt/site/landing-pages/" npm run index
+    #run_command "/opt/site/pages/" npm run index
     prepare_packages_metadata
-    run_command "/opt/site/landing-pages/" npm run build
+    run_command "/opt/site/pages/" npm run prod
 }
 
 function create_redirect {
@@ -241,12 +242,12 @@ function assert_file_exists {
 function build_site {
     log "Building full site"
     
-    if [[ ! -f "landing-pages/dist/index.html" ]]; then
-        build_landing_pages
+    if [[ ! -f "pages/dist/index.html" ]]; then
+        build_pages
     fi
     mkdir -p dist
     rm -rf dist/*
-    verbose_copy landing-pages/dist/. dist/
+    verbose_copy pages/dist/. dist/
     for pkg_path in docs-archive/*/ ; do
         # Process directories only,
         if [ ! -d "${pkg_path}" ]; then
@@ -272,7 +273,10 @@ function build_site {
     # This file may already have been created during building landing pages,
     # but when building a full site, it's worth regenerate
     log "Preparing packages-metadata.json"
-    python dump-docs-packages-metadata.py > "dist/_gen/packages-metadata.json"
+    log "NOT YET IMPLEMENTED"
+    
+    
+    #python dump-docs-packages-metadata.py > "dist/_gen/packages-metadata.json"
     
     # Sanity checks
     assert_file_exists dist/docs/index.html
@@ -303,13 +307,15 @@ function cleanup_environment {
 
 function prepare_theme {
     log "Preparing theme files"
-    SITE_DIST="landing-pages/dist"
-    THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
-    mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
-    cp ${SITE_DIST}/docs.*.js "${THEME_GEN}/js/docs.js"
-    cp ${SITE_DIST}/scss/main.min.*.css "${THEME_GEN}/css/main.min.css"
-    cp ${SITE_DIST}/scss/main-custom.min.*.css "${THEME_GEN}/css/main-custom.min.css"
-    echo "Successful copied required files"
+    log "NOT YET IMPLEMENTED"
+    
+    # SITE_DIST="landing-pages/dist"
+    # THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
+    # mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
+    # cp ${SITE_DIST}/docs.*.js "${THEME_GEN}/js/docs.js"
+    # cp ${SITE_DIST}/scss/main.min.*.css "${THEME_GEN}/css/main.min.css"
+    # cp ${SITE_DIST}/scss/main-custom.min.*.css "${THEME_GEN}/css/main-custom.min.css"
+    # echo "Successful copied required files"
 }
 
 if [[ "$#" -eq 0 ]]; then
@@ -345,13 +351,13 @@ prepare_environment
 
 # Check container commands
 if [[ "${CMD}" == "install-node-deps" ]] ; then
-    run_command "/opt/site/landing-pages/" yarn install
-    elif [[ "${CMD}" == "preview-landing-pages" ]]; then
+    run_command "/opt/site/pages/" yarn install
+    elif [[ "${CMD}" == "preview-pages" ]]; then
     ensure_node_module_exists
-    run_command "/opt/site/landing-pages/" npm run index
+    run_command "/opt/site/pages/" npm run index
     prepare_packages_metadata
-    run_command "/opt/site/landing-pages/" npm run preview
-    elif [[ "${CMD}" == "build-landing-pages" ]]; then
+    run_command "/opt/site/pages/" npm run preview
+    elif [[ "${CMD}" == "build-pages" ]]; then
     ensure_node_module_exists
     build_landing_pages
     elif [[ "${CMD}" == "build-site" ]]; then
@@ -360,23 +366,23 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     elif [[ "${CMD}" == "check-site-links" ]]; then
     ensure_node_module_exists
     ensure_that_website_is_build
-    run_command "/opt/site/landing-pages/" ./check-links.sh
+    run_command "/opt/site/pages/" ./check-links.sh
     elif [[ "${CMD}" == "prepare-theme" ]]; then
     ensure_that_website_is_build
     prepare_theme
     elif [[ "${CMD}" == "lint-js" ]]; then
     ensure_node_module_exists
     if [[ "$#" -eq 0 ]]; then
-        run_command "/opt/site/landing-pages/" npm run lint:js
+        run_command "/opt/site/pages/" npm run lint:js
     else
-        run_lint "/opt/site/landing-pages/" ./node_modules/.bin/eslint "$@"
+        run_lint "/opt/site/pages/" ./node_modules/.bin/eslint "$@"
     fi
     elif [[ "${CMD}" == "lint-css" ]]; then
     ensure_node_module_exists
     if [[ "$#" -eq 0 ]]; then
-        run_command "/opt/site/landing-pages/" npm run lint:css
+        run_command "/opt/site/pages/" npm run lint:css
     else
-        run_lint "/opt/site/landing-pages/" ./node_modules/.bin/stylelint "$@"
+        run_lint "/opt/site/pages/" ./node_modules/.bin/stylelint "$@"
     fi
     elif [[ "${CMD}" == "shell" ]]; then
     prevent_docker
