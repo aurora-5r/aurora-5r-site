@@ -1,0 +1,4 @@
+Sitemap: https://aurora-5r.fr/sitemap.xml
+
+User-agent: *
+Disallow:

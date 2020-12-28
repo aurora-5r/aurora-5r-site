@@ -1,0 +1,304 @@
+---
+layout: "base.njk"
+---
+
+{#--WELCOME MESSAGE -------------------------------------------------------------------------------------#}
+<div class="site-blocks-cover" style="overflow: hidden;">
+  <div class="container  pt-5">
+    <div class="row align-items-center justify-content-center">
+
+      <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+
+        {# <img src="/images/ramp.svg" alt="Image" class="img-fluid img-absolute"> #}
+
+        <div class="row mb-1" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 mr-auto mb-2">
+            <h1>Transcubateur</h1>
+            <p>
+              L’équipe AuRorA est là pour vous accompagner à développer et à réaliser vos projets de transitions numériques, technologiques et de modèle économiques.
+
+            </p>
+            <a href="/offres" class="btn btn-warning btn-block">
+              Découvrir nos offres
+            </a>
+
+            <a href="/inscription" class="btn btn-block btn-outline-dark">S'inscrire à la newsletter</a>
+          </div>
+
+          <div class="col-lg-6 mr-auto">
+            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body mb-0 p-0">
+                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Jz5zsuEyvxk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!--/.Content-->
+
+              </div>
+            </div>
+            <img class="img-fluid my-zoom z-depth-1 mx-auto" src="/images/aurora120s.png" alt="video" data-toggle="modal" data-target="#modal1">
+          </div>
+        </div>
+        <div class="row mb-1" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 mr-auto"></div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{#--END WELCOME MESSAGE -------------------------------------------------------------------------------------#}
+
+<div class="site-section">
+  <div class="container">
+
+    <div class="row align-items-stretch justify-content-center">
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="unit-4 d-block">
+          <div class="unit-4-icon mb-3">
+            <span class="icon-wrap" style="background-color:#ee3530">
+              <span class="text-primary icon-account_circle"></span></span>
+          </div>
+          <div>
+            <h3>Jeunes diplômés</h3>
+            <p>Nous vous permettons de vous lancer dans la vie professionnelle en participant aux projets.</p>
+
+            <p>
+              <a href="/jeunes" class="btn btn-primary">
+                En savoir plus
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="unit-4 d-block">
+          <div class="unit-4-icon mb-3">
+            <span class="icon-wrap" style="background-color:#57c79a">
+              <span class="text-primary icon-domain"></span></span>
+          </div>
+          <div>
+            <h3>Entreprises partenaires</h3>
+            <p>Nos projets ont besoin du savoir-faire de vos experts via du mécénat de compétences.</p>
+            <p>
+              <a href="/partenaires" class="btn btn-primary">
+                En savoir plus
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{#--NEWS  -------------------------------------------------------------------------------------#}
+
+<div class="site-section " id="blog-section">
+  <div class="container">
+    <div class="row mt-2 mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-3">News</h2>
+        <a href="/inscription" class="btn  btn-outline-dark">S'inscrire à la newsletter pour ne rien rater</a>
+      </div>
+    </div>
+
+    <div class="row ">
+
+      {% set atPost = 0 %}
+      {% set nb1 = collections.posts | length %}
+      {% for post in collections.posts | reverse %}
+        {% if atPost < 6 %}
+          {#  do your processing here or include it #}
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="h-entry">
+              <a href="{{post.url}}">
+                {% MyResponsiveImage "src/" + post.data.cover,
+                " image" %}
+                {# {% first_image post %} #}
+              </a>
+
+              <h3>
+                {{ post.data.title }}
+              </h3>
+              <div class="meta mb-4">{{ post.data.author }}
+                <span class="mx-2">&bullet;</span>
+                {{ post.date.toLocaleDateString('fr-FR') }}
+
+              </div>
+              <summary>
+                {{ post.data.summary }}
+              </summary>
+              <p>
+                <a href="{{post.url}}">Lire la suite...</a>
+              </p>
+            </div>
+          </div>
+          {% endif%}
+          {% set atPost = atPost + 1 %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+</div>
+{#--END NEWS  -------------------------------------------------------------------------------------#}
+
+{#--TEAM-------------------------------------------------------------------------------------#}
+<div class="site-section" id="our-team-section">
+  <div class="container">
+    <div class="row mb-5 justify-content-center text-center" data-aos="fade-up">
+      <div class="col-7 text-center  mb-5">
+        <h2 class="section-title">L'équipe</h2>
+        <p class="lead"></p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              {% MyResponsiveImage "src/images/PE.jpg",
+              "Photo de Pierre-Emmanuel" %}
+
+              {# <img src="images/PE.jpeg" alt="Image" class="img-fluid"> #}
+            </figure>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/pem-frot-1304g73/">
+                <span class="icon-linkedin"></span></a>
+
+            </div>
+          </div>
+          <h2 class="text-black h1">Pierre-Emmanuel Frot</h2>
+          <span class="sub-title d-block mb-3">Fondateur</span>
+          <p></p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              {% MyResponsiveImage "src/images/L.jpeg",
+              "Photo de Laurent" %}
+              {# <img src="images/L.jpeg" alt="Image" class="img-fluid" height="500px"> #}
+            </figure>
+            <div class="social">
+              <a href="https://fr.linkedin.com/in/laurentmaumet">
+                <span class="icon-linkedin"></span>
+              </a>
+
+              <a href="https://twitter.com/lmau">
+                <span class="icon-twitter"></span>
+              </a>
+            </div>
+          </div>
+          <h2 class="text-black h1">Laurent Maumet</h2>
+          <span class="sub-title d-block mb-3">Fondateur</span>
+          <p></p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              {% MyResponsiveImage "src/images/C.jpeg",
+              "Photo de Cédric" %}
+              {# <img src="images/C.jpeg" alt="Image" class="img-fluid" height="500px"> #}
+            </figure>
+            <div class="social">
+
+              <a href="https://www.linkedin.com/in/cedric-stien-b1141aa/">
+                <span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+          <h2 class="text-black h1">Cédric Stien</h2>
+          <span class="sub-title d-block mb-3">Fondateur</span>
+
+          <p>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{#--END TEAM  -------------------------------------------------------------------------------------#}
+
+{#--CONTACT  -------------------------------------------------------------------------------------#}
+<div class="site-section bg-light" id="contact-section">
+  <div class="container">
+    <div class="row  justify-content-center text-center" data-aos="fade-up"></div>
+    <div class="row justify-content-center text-center pt-3">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="mailto:contact@aurora-5r.fr" target="_blank" class="btn btn-primary">Ecrivez-nous</a>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="/inscription" class="btn btn-primary">Inscrivez-vous à la newsletter</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{#--END CONTACT  -------------------------------------------------------------------------------------#}
+
+<div class="site-section" id="contact-section">
+  <div class="container">
+    <div class="row justify-content-center text-center" data-aos="fade-up">
+      <div class="col-7 text-center">
+        <h3>Membres Fondateurs</h3>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              <img src="images/logo-udimec.png" alt="logo udimec" class="img-fluid" height="500px">
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              <img src="images/Grenoble INP - Établissement - Logo - 2020 (couleur, RVB).png" alt="logo inp" class="img-fluid" height="500px">
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              <img src="images/logoCCI.jpg" alt="logo CCI" class="img-fluid" height="500px">
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

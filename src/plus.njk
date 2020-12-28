@@ -1,0 +1,93 @@
+---
+layout: "base.njk"
+par: "null"
+---
+<div class="site-blocks-cover" style="overflow: hidden;height:40vh !important; min-height:350px !important ">
+  <div class="container  pt-1;" style="padding-top: 150px !important;">
+
+    <div class="row align-items-center justify-content-center" style="height:30vh !important; min-height:100px !important">
+      <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+        {# <img src="/images/ramp.svg" alt="image" class="img-fluid img-absolute"> #}
+        <div class="row">
+          <div class="col-md-12 mr-auto text-center">
+
+            <h1 >En savoir un peu plus</h1>
+
+            <h4>
+              Quelques informations à propos de notre démarche, nos valeurs, ...
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="feature-big">
+  <div class="container">
+
+    {% for presentation in collections.presentations %}
+      <div class="row mb-5 site-section">
+        <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
+          <h2 class="text-black">{{ presentation.data.title }}</h2>
+          <p class="mb-4">
+            {{ presentation.data.description }}</p>
+
+          <div class="author-box" data-aos="fade-left">
+            <div class="d-flex mb-4">
+
+              <div class="mr-auto text-black">
+                <strong class="font-weight-bold mb-0"></strong>
+                <br>
+                {{ presentation.data.subtitle }}
+              </div>
+            </div>
+            <blockquote>
+              {{ presentation.data.subdescription }}</blockquote>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-right">
+          {% MyResponsiveImage presentation.data.image,
+          " image" %}
+          {# <img src="{{ presentation.data.image }}" " alt=" Image" class=" img-fluid"=" img-fluid""="img-fluid"> #}
+
+          {% if presentation.data.detail %}
+
+            <a href="{{ presentation.url }}" class="btn btn-primary">
+              En savoir plus
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+  {#--ABOUT -------------------------------------------------------------------------------------#}
+
+  <div class="site-section bg-light" id="about-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="section-title mb-3">A propos de nous</h2>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          {% MyResponsiveImage "src/images/johann-siemens-EPy0gBJzzZU-unsplash.jpg",
+          " image" %}
+          {#           <img src="/images/johann-siemens-EPy0gBJzzZU-unsplash.jpg" alt="Image" class="img-fluid">
+ #}
+        </div>
+        <div class="col-lg-5 ml-auto pl-lg-5">
+          <h2 class="text-black mb-4 h3 font-weight-bold">Vocation</h2>
+          <p class="mb-4">Notre vocation est de mettre la finance au service de l’économie, l’économie au service de la société et la société au service de l’accomplissement de l’individu.<br>
+            Notre structure est une SCIC, Société Coopérative d'Intérêt Collectif, miroir de l’approche collaborative et du modèle 5R.</p>
+
+          <!-- <p> <a href="#" class="btn btn-primary">En savoir plus</a> </p> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {#--END ABOUT  -------------------------------------------------------------------------------------#}

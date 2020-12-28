@@ -1,0 +1,31 @@
+$primary: #6282c2; // Black
+$secondary: #6282c2 !important; //blue
+$body-bg: #fff !important; //white
+$text-body: #484d52 !important; //gray
+$body-color: $text-body !important;
+$border-radius: 8px !important;
+$special: #6282c2 !important; // blue
+//$black:#000000 !important;
+//$white: #ffffff !important;
+$yellow: #fde477 !important;
+$light-yellow: #fcf4c8 !important;
+$green: #57c79a !important;
+$light-green: #6ff8d4 !important;
+$dark-yellow: #e4d48e !important;
+$red: #ee3530 !important;
+$light-red: #f1857e !important;
+$gray: #989898;
+$warning: #57c79a;
+
+
+$theme-colors: ("special": $special,
+  "yellow": $yellow,
+  "blue": $special,
+  "green": $green,
+  "red": $red,
+  "gray": $gray,
+  "light-red": $light-red,
+  "light-green": $light-green,
+  "light-yellow": $light-yellow,
+  "dark-yellowww": $dark-yellow,
+);
