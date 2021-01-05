@@ -67,3 +67,5 @@ dist
 
 # secrets
 *secret*
+.editorconfig
+.nvmrc
