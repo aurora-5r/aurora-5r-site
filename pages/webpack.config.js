@@ -31,7 +31,7 @@ module.exports = (env, argv) => {
         filename: "main.[contenthash].css",
         chunkFilename: "[id].css",
       }),
-      new ManifestPlugin(),
+      new ManifestPlugin({ publicPath: "/scripts/" }),
       new CompressionPlugin({
         filename: "[path].gz",
         algorithm: "gzip",
@@ -39,19 +39,6 @@ module.exports = (env, argv) => {
         threshold: 10240,
         minRatio: 0.8,
       }),
-      /*
-      new CompressionPlugin({
-        deleteOriginalAssets: true
-        filename: '[path].br',
-        algorithm: 'brotliCompress',
-        test: /\.(js|css|html|svg)$/,
-        compressionOptions: {
-          level: 11,
-        },
-        threshold: 10240,
-        minRatio: 0.8,
-      }),
-*/
     ],
     module: {
       rules: [
@@ -66,7 +53,7 @@ module.exports = (env, argv) => {
 
         {
           test: /\.s(a|c)ss$/,
-          exclude: /\.module.(s(a|c)ss)$/,
+          exclude: /node_modules/,
           use: [
             { loader: MiniCssExtractPlugin.loader },
             {

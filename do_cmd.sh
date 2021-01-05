@@ -65,8 +65,8 @@ function ensure_container_exists {
         --detach \
         --name "${CONTAINER_NAME}" \
         --volume "$(pwd):/opt/site/" \
-        --publish 1313:1313 \
-        --publish 3000:3000 \
+        --publish 8080:8080 \
+        --publish 3001:3001 \
         "${IMAGE_NAME}" sh -c 'trap "exit 0" INT; while true; do sleep 30; done;'
         return 0
     fi
@@ -244,7 +244,10 @@ function build_site {
     
     if [[ ! -f "pages/dist/index.html" ]]; then
         build_pages
+    else
+        build_pages
     fi
+    
     mkdir -p dist
     rm -rf dist/*
     verbose_copy pages/dist/. dist/
@@ -279,11 +282,7 @@ function build_site {
     #python dump-docs-packages-metadata.py > "dist/_gen/packages-metadata.json"
     
     # Sanity checks
-    assert_file_exists dist/docs/index.html
-    assert_file_exists dist/docs/apache-airflow/index.html
-    assert_file_exists dist/docs/apache-airflow/1.10.7/tutorial.html
-    assert_file_exists dist/docs/apache-airflow/stable/tutorial.html
-    assert_file_exists dist/_gen/packages-metadata.json
+    assert_file_exists dist/index.html
 }
 
 function cleanup_environment {
@@ -351,10 +350,9 @@ prepare_environment
 
 # Check container commands
 if [[ "${CMD}" == "install-node-deps" ]] ; then
-    run_command "/opt/site/pages/" yarn install
+    run_command "/opt/site/pages/" npm install
     elif [[ "${CMD}" == "preview-pages" ]]; then
     ensure_node_module_exists
-    run_command "/opt/site/pages/" npm run index
     prepare_packages_metadata
     run_command "/opt/site/pages/" npm run preview
     elif [[ "${CMD}" == "build-pages" ]]; then
@@ -386,7 +384,7 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     fi
     elif [[ "${CMD}" == "shell" ]]; then
     prevent_docker
-    docker exec -ti "${CONTAINER_NAME}" bash
+    docker exec -ti "${CONTAINER_NAME}" /bin/bash
 else
     prevent_docker
     docker exec -ti "${CONTAINER_NAME}" "${CMD}" "$@"
