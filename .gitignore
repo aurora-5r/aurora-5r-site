@@ -64,3 +64,6 @@ typings/
 
 # eleventy.js build output
 dist
+
+# secrets
+*secret*

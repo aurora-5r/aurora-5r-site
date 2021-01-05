@@ -21,6 +21,7 @@ These are  ${0} commands used in various situations:
 
     build-site            Prepare dist directory with landing pages and documentation
     preview-landing-pages Starts the web server with preview of the website
+    build-doc            Builds doc from gsuite
     build-pages            Builds pages
     prepare-theme         Prepares and copies files needed for the proper functioning of the sphinx theme.
     shell                 Start shell
@@ -241,7 +242,18 @@ function assert_file_exists {
 
 function build_site {
     log "Building full site"
-    
+    build_doc
+    for collection in documents_archive/* ; do
+        # Process directories only,
+        if [ ! -d "${collection}" ]; then
+            continue;
+        fi
+        
+        collection_name="$(basename -- "${collection}")"
+        last_version=`ls -t ${collection}|head -n 1`
+        verbose_copy "documents_archive/${collection_name}/${last_version}/." "pages/src/${collection_name}"
+        
+    done
     if [[ ! -f "pages/dist/index.html" ]]; then
         build_pages
     else
@@ -251,38 +263,11 @@ function build_site {
     mkdir -p dist
     rm -rf dist/*
     verbose_copy pages/dist/. dist/
-    for pkg_path in docs-archive/*/ ; do
-        # Process directories only,
-        if [ ! -d "${pkg_path}" ]; then
-            continue;
-        fi
-        
-        package_name="$(basename -- "${pkg_path}")"
-        
-        # Is this documentation versioned?
-        if [ -f "${pkg_path}/stable.txt" ]; then
-            mkdir -p "docs-archive/${package_name}"
-            for ver_path in "docs-archive/${package_name}"/*/ ; do
-                version="$(basename -- "${ver_path}")"
-                verbose_copy "docs-archive/${package_name}/${version}/." "dist/docs/${package_name}/${version}"
-            done
-            stable_version="$(cat "docs-archive/${package_name}/stable.txt")"
-            verbose_copy "docs-archive/${package_name}/${stable_version}/." "dist/docs/${package_name}/stable"
-            create_redirect "dist/docs/${package_name}/index.html" "/docs/${package_name}/stable/index.html"
-        else
-            verbose_copy "docs-archive/${package_name}/." "dist/docs/${package_name}/"
-        fi
-    done
-    # This file may already have been created during building landing pages,
-    # but when building a full site, it's worth regenerate
-    log "Preparing packages-metadata.json"
-    log "NOT YET IMPLEMENTED"
+}
+function build_doc {
+    log "Building doc from gdrive"
+    python generateDoc/gstomd/generatedoc.py --config ./generatedoc.yaml
     
-    
-    #python dump-docs-packages-metadata.py > "dist/_gen/packages-metadata.json"
-    
-    # Sanity checks
-    assert_file_exists dist/index.html
 }
 
 function cleanup_environment {
@@ -361,6 +346,8 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     elif [[ "${CMD}" == "build-site" ]]; then
     ensure_node_module_exists
     build_site
+    elif [[ "${CMD}" == "build-doc" ]]; then
+    build_doc
     elif [[ "${CMD}" == "check-site-links" ]]; then
     ensure_node_module_exists
     ensure_that_website_is_build

@@ -18,6 +18,27 @@ SETTINGS_STRUCT = {
         'required': False,
         'default': 'pydrive_settings.yaml'
     },
+
+    'collections': {
+        'type': list,
+        'required': True,
+        'struct': {
+            'drive_id': {
+                'type': str,
+                'required': False,
+                'default': ""
+            },
+            'root_folder_id': {
+                'type': str,
+                'required': True
+            },
+            'root_folder_name': {
+                'type': str,
+                'required': False,
+                'default': ""
+            }, }
+
+    },
 }
 
 

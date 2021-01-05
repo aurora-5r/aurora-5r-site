@@ -2,15 +2,16 @@
 import unicodedata
 import re
 
-from gstomd.settings import LoadSettingsFile
-from gstomd.settings import ValidateSettings
-from gstomd.settings import SettingsError
-from gstomd.settings import InvalidConfigError
+from generateDoc.gstomd.settings import LoadSettingsFile
+from generateDoc.gstomd.settings import ValidateSettings
+from generateDoc.gstomd.settings import SettingsError
+from generateDoc.gstomd.settings import InvalidConfigError
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import os
 import zipfile
-
+from datetime import datetime
+from bs4 import BeautifulSoup
 import logging
 import uuid
 from markdownify import markdownify as md
@@ -52,8 +53,8 @@ def slugify(value, allow_unicode=False):
     else:
         value = unicodedata.normalize('NFKD', value).encode(
             'ascii', 'ignore').decode('ascii')
-    value = re.sub(r'[^\w\s-]', '', value.lower())
-    return re.sub(r'[-\s]+', '-', value).strip('-_')
+    value = re.sub(r'[^\w\s-]', '', value)
+    return re.sub(r'[-\s]+', '', value).strip('-_')
 
 
 class Node:
@@ -142,7 +143,7 @@ class Node:
         if self.type == "FOLDER":
             logger.debug("create folder %s", self.path)
 
-            os.mkdir(self.path)
+            os.makedirs(self.path)
             if self.children:
                 for child in self.children:
                     child.create_folders()
@@ -152,23 +153,32 @@ class Node:
         create files
         """
         if self.type == "DOC":
+            os.makedirs(self.path)
+            zip_path = self.path+"/"+os.path.basename(self.path)+".zip"
+            md_path = self.path+"/"+os.path.basename(self.path)+".md"
 
-            zip_path = self.path+".zip"
-            html_path = self.path+".html"
-            md_path = self.path+".md"
             logger.debug("write file %s", zip_path)
             f_zip = open(zip_path, "wb")
             f_zip.write(self.content_zip)
             f_zip.close()
             with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                zip_ref.extractall(os.path.dirname(zip_path))
+
+                files_names = zip_ref.namelist()
+                for file_name in files_names:
+                    if file_name.endswith('.html'):
+                        f_md = open(md_path, "w")
+                        html = zip_ref.read(file_name)
+                        parsed_html = BeautifulSoup(html)
+                        body = "%s" % (parsed_html.body)
+                        logger.debug("parsed :%s", parsed_html)
+
+                        logger.debug("body :%s", body)
+                        body_md = md(body)
+                        f_md.write(body_md)
+                        f_md.close()
+                    else:
+                        zip_ref.extract(file_name, os.path.dirname(md_path))
             os.remove(zip_path)
-            f_html = open(html_path, "r")
-            f_md = open(md_path, "w")
-            f_md.write(md(f_html.read()))
-            f_html.close()
-            f_md.close()
-            os.remove(html_path)
 
         if self.children:
             for child in self.children:
@@ -190,37 +200,33 @@ class Corpus():
         'dest_folder': './data'
     }
 
-    def __init__(self, settings_file='settings.yaml', root_folder_id='root'):
+    def __init__(self, pydrive_settings='pydrive_settings.yaml', drive_id='', root_folder_id='root', dest_folder='./data', root_folder_name='root'):
         """Create an instance of Corpus.
         :param settings_file: path of settings file. 'settings.yaml' by default.
         :type settings_file: str.
         """
-        try:
-            self.settings = LoadSettingsFile(settings_file)
-        except SettingsError:
-            self.settings = self.DEFAULT_SETTINGS
-        else:
-            if self.settings is None:
-                self.settings = self.DEFAULT_SETTINGS
-            else:
-                ValidateSettings(self.settings)
-        pydrive_settings = self.settings.get('pydrive_settings')
+        self.drive_id = drive_id
+        self.root_folder_id = root_folder_id
+        self.dest_folder = dest_folder
+        self.root_folder_name = root_folder_name
+
         self.ga = GoogleAuth(pydrive_settings)
         self.drive = GoogleDrive(self.ga)
         self.gscontent = {}
 
-    def get_source(self,  drive_id="root", root_folder_id=""):
+    def get_source(self):
         """
         Generate folder structure with files
-        Args:
-            drive_id : drive id in case of shared drive
-            root_folder_id (string): id of the root folder
+
         Returns:
             Node: tree
         """
 
         logger.debug("Start")
-
+        drive_id = self.drive_id
+        root_folder_id = self.root_folder_id
+        dest_folder = self.dest_folder
+        root_folder_name = self.root_folder_name
         root_drive = Node(
             path="./",
             basename="root",
@@ -282,8 +288,10 @@ class Corpus():
             else:
                 logger.warning("parent id %s not found", parent_id)
         root_folder.depth = 1
-        root_folder.path = "%s/%s" % (self.settings.get(
-            'dest_folder'), str(uuid.uuid4()))
+        now = datetime.now()
+        date_time = now.strftime("%Y.%m.%d.%H.%M.%S")
+        root_folder.path = "%s/%s/%s" % (dest_folder,
+                                         root_folder_name, date_time)
 
         root_folder.complement_children_path_depth()
         # get all files
@@ -323,7 +331,8 @@ class Corpus():
                     logger.debug("item metadata  %s", item.metadata)
                     item.FetchContent(mimetype='text/html')
                     node.content_md = md(item.content.getvalue())
-                    item.FetchContent(mimetype='application/zip')
+                    item.FetchContent(
+                        mimetype='application/zip', remove_bom=True)
                     node.content_zip = item.content.getvalue()
                 else:
                     logger.debug("NO fetch content for %s", node)
