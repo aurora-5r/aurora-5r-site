@@ -1,6 +1,0 @@
-dest_folder: "documents_archive"
-pydrive_settings: "generateDoc/pydrive_settings.yaml"
-collections:
-  - drive_id: "0AIZGD5MSHiIcUk9PVA"
-    root_folder_id: "1Ue7U59r_oBXnuAtIOFkb8KGeTKAEZrkf"
-    root_folder_name: "newposts"

@@ -251,6 +251,7 @@ function build_site {
         
         collection_name="$(basename -- "${collection}")"
         last_version=`ls -t ${collection}|head -n 1`
+        find  "pages/src/${collection_name}/"  -type f -name '*.md' -delete
         verbose_copy "documents_archive/${collection_name}/${last_version}/." "pages/src/${collection_name}"
         
     done
@@ -266,7 +267,7 @@ function build_site {
 }
 function build_doc {
     log "Building doc from gdrive"
-    python generateDoc/gstomd/generatedoc.py --config ./generatedoc.yaml
+    python -m gstomd --folder_id "1Ue7U59r_oBXnuAtIOFkb8KGeTKAEZrkf" --folder_name "newposts" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
     
 }
 
