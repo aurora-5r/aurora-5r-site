@@ -60,11 +60,6 @@ h5,
   color: rgba($white, 0.5);
 }
 
-.offcanvas-menu .site-wrap {
-  // position: absolute;
-  // overflow: hidden;
-}
-
 .site-wrap {
   &:before {
     transition: 0.3s all ease-in-out;
@@ -102,7 +97,6 @@ h5,
     content: "";
     top: 0;
     left: 0;
-    top: 0;
     right: 0;
     z-index: 21;
     background: rgba($black, 0.2);
@@ -162,10 +156,6 @@ h5,
 
 .line-height-1 {
   line-height: 1 !important;
-}
-
-.bg-black {
-  background: $black;
 }
 
 .form-control {

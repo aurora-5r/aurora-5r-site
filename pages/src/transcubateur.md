@@ -22,9 +22,6 @@ A l’inverse des incubateurs d’entreprise qui s’adressent à la création d
 
 * [Transition](https://fr.wikipedia.org/wiki/Transition)
 
-* [Incubation](https://fr.wikipedia.org/wiki/Incubation) 
+* [Incubation](https://fr.wikipedia.org/wiki/Incubation)
 
 * [AuRorA-5R](https://aurora-5r.fr/)  
-
- 
-

@@ -4,30 +4,24 @@
   "description": "Aurora-5r.fr",
   "main": "index.bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eleventy:default": "npx eleventy",
-    "eleventy:debug": "DEBUG=* npm run eleventy:default",
-    "eleventy:watch": "npx eleventy --watch",
-    "eleventy:serve": "npx eleventy --serve",
-    "scripts:prod": "webpack --mode=production",
-    "scripts:dev": "webpack --mode development ",
-    "scripts:watch": "webpack --watch --mode development ",
-    "copy": "sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/",
     "clean": "rm -rf  dist/*",
-    "sync": "sudo ./syncTest.sh",
+    "copy": "sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/",
     "dev": "run-p  scripts:watch eleventy:watch sync ",
-    "preview": "run-p  scripts:prod eleventy:serve ",
+    "eleventy:debug": "DEBUG=* npm run eleventy:default",
+    "eleventy:default": "npx eleventy",
+    "eleventy:serve": "npx eleventy --serve",
+    "eleventy:watch": "npx eleventy --watch",
+    "lint": "run-p lint:**",
+    "lint:css": "stylelint \"src/styles/*.scss\"",
+    "lint:js": "eslint .",
     "my-dev:debug": "DEBUG=* npm run my-dev",
-    "prod": "ELEVENTY_ENV=production run-s --print-label clean  scripts:prod eleventy:default"
-  },
-  "devDependencies": {
-    "compression-webpack-plugin": "^5.0.1",
-    "file-loader": "^6.0.0",
-    "imagemin": "^7.0.1",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.1",
-    "imagemin-svgo": "^8.0.0",
-    "light-server": "2.6.4"
+    "preview": "run-p  scripts:prod eleventy:serve ",
+    "prod": "ELEVENTY_ENV=production run-s --print-label clean  scripts:prod eleventy:default",
+    "scripts:dev": "webpack --mode development ",
+    "scripts:prod": "webpack --mode=production",
+    "scripts:watch": "webpack --watch --mode development ",
+    "sync": "sudo ./syncTest.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
@@ -65,5 +59,19 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-manifest-plugin": "^2.2.0"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^5.0.1",
+    "file-loader": "^6.0.0",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "imagemin-svgo": "^8.0.0",
+    "light-server": "2.6.4",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-scss": "^3.11.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.18.1"
   }
 }

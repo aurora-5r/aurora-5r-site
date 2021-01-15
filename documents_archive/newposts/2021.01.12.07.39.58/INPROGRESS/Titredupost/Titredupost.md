@@ -8,8 +8,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendi
 
 
 * Praesent egestas leo in pede.
-* Praesent blandit odio eu enim. 
-* Pellentesque sed dui ut augue blandit sodales. 
+* Praesent blandit odio eu enim.
+* Pellentesque sed dui ut augue blandit sodales.
 
 ### Titre
 

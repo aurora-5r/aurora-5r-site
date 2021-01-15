@@ -8,10 +8,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendi
 
 
 * Praesent egestas leo in pede.
-* Praesent blandit odio eu enim. 
-* Pellentesque sed dui ut augue blandit sodales. 
+* Praesent blandit odio eu enim.
+* Pellentesque sed dui ut augue blandit sodales.
 
 ### Titre
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat
-
