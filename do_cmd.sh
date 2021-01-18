@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#set -x
 set -euo pipefail
 
 WORKING_DIR="$(pwd)"
@@ -149,10 +149,10 @@ function prevent_docker {
 function relativepath {
     source=$1
     target=$2
-
+    
     common_part=$source # for now
     result="" # for now
-
+    
     while [[ "${target#$common_part}" == "${target}" ]]; do
         # no match, means that candidate common part is not correct
         # go up one level (reduce common part)
@@ -164,16 +164,16 @@ function relativepath {
             result="../$result"
         fi
     done
-
+    
     if [[ $common_part == "/" ]]; then
         # special case for root (no common path)
         result="$result/"
     fi
-
+    
     # since we now have identified the common part,
     # compute the non-common part
     forward_part="${target#$common_part}"
-
+    
     # and now stick all parts together
     if [[ -n $result ]] && [[ -n $forward_part ]]; then
         result="$result$forward_part"
@@ -188,7 +188,7 @@ function run_lint {
     script_working_directory=$1
     command=$2
     shift 2
-
+    
     DOCKER_PATHS=()
     for E in "${@}"; do
         ABS_PATH=$(cd "${WORKING_DIR}" && realpath "${E}")
@@ -214,7 +214,7 @@ function create_redirect {
     output_file="$1"
     target_location="$2"
     log "Creating redirect: ${output_file} => ${target_location}"
-
+    
     cat > "${output_file}" <<EOF
 <!DOCTYPE html>
 <html>
@@ -244,24 +244,25 @@ function build_site {
     log "Building full site"
     build_doc
     for collection in documents_archive/* ; do
+        
         # Process directories only,
         if [ ! -d "${collection}" ]; then
             continue;
         fi
-
+        
         collection_name="$(basename -- "${collection}")"
-        last_version=$(find "${collection}" -maxdepth 1 -printf "%T@ %Tc %p\n"  | sort -n|cut -s -d "/" -f 2|tail -n 1)
-
+        last_version=$(find "${collection}" -maxdepth 1 -printf "%T@ %Tc %p\n"  | sort -n|cut -s -d "/" -f 3|tail -n 1)
+        
         find  "pages/src/${collection_name}/"  -type f -name '*.md' -delete
         verbose_copy "documents_archive/${collection_name}/${last_version}/." "pages/src/${collection_name}"
-
+        
     done
     if [[ ! -f "pages/dist/index.html" ]]; then
         build_pages
     else
         build_pages
     fi
-
+    
     mkdir -p dist
     rm -rf dist/*
     verbose_copy pages/dist/. dist/
@@ -269,7 +270,7 @@ function build_site {
 function build_doc {
     log "Building doc from gdrive"
     python -m gstomd --folder_id "1Ue7U59r_oBXnuAtIOFkb8KGeTKAEZrkf" --folder_name "newposts" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
-
+    
 }
 
 function cleanup_environment {
@@ -279,12 +280,12 @@ function cleanup_environment {
         log "Container running. Killing the container."
         docker kill "${CONTAINER_NAME}"
     fi
-
+    
     if [[ $(docker container ls -a --filter="Name=${CONTAINER_NAME}" -q ) ]]; then
         log "Container exists. Removing the container."
         docker rm "${CONTAINER_NAME}"
     fi
-
+    
     if [[ $(docker images "${IMAGE_NAME}" -q) ]]; then
         log "Images exists. Deleting the image."
         docker rmi "${IMAGE_NAME}"
@@ -294,7 +295,7 @@ function cleanup_environment {
 function prepare_theme {
     log "Preparing theme files"
     log "NOT YET IMPLEMENTED"
-
+    
     # SITE_DIST="landing-pages/dist"
     # THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
     # mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
