@@ -207,7 +207,7 @@ function build_pages {
     log "Building landing pages"
     #run_command "/opt/site/pages/" npm run index
     prepare_packages_metadata
-    run_command "/opt/site/pages/" npm run prod
+    run_command "/opt/site/pages/" npm run build
 }
 
 function create_redirect {
@@ -242,7 +242,7 @@ function assert_file_exists {
 
 function build_site {
     log "Building full site"
-    build_doc
+    #build_doc
     for collection in documents_archive/* ; do
         
         # Process directories only,
@@ -270,6 +270,7 @@ function build_site {
 function build_doc {
     log "Building doc from gdrive"
     python -m gstomd --folder_id "1Ue7U59r_oBXnuAtIOFkb8KGeTKAEZrkf" --folder_name "newposts" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
+    python -m gstomd --folder_id "138LWTCi9tVcs3l0XESKtf-ze-5kHtjKA" --folder_name "offre" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
     
 }
 

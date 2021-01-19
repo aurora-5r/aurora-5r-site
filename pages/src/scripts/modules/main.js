@@ -14,7 +14,7 @@ AOS.init({
 
 jQuery(document).ready(function ($) {
   "use strict";
-
+  $(".owl-carousel").owlCarousel();
   $(".loader").delay(1000).fadeOut("slow");
   $("#overlayer").delay(1000).fadeOut("slow");
 

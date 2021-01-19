@@ -35,6 +35,7 @@
 }
 
 .site-blocks-cover {
+  padding-top: 150px;
   background-size: cover;
   background-size: 120% 200%;
   background-repeat: no-repeat;
@@ -70,7 +71,7 @@
     width: 100%;
   }
 
-  &,
+  /* &,
   & > .container > .row {
     min-height: 600px;
     height: calc(100vh);
@@ -82,7 +83,7 @@
       min-height: 400px;
       height: calc(20vh);
     }
-  }
+  } */
 
   h1 {
     font-size: 4rem;
@@ -937,15 +938,14 @@
 }
 
 .unit-4 {
-  padding: 30px;
+  padding: 10px;
   background: lighten(#eee, 1%);
   border-radius: 5px;
   transition: 0.3s all ease;
   position: relative;
   top: 0;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
   text-align: center;
-  padding-top: 50px;
 
   .unit-4-icon {
     position: absolute;
@@ -2464,5 +2464,190 @@ span {
     max-width: 100%;
     height: auto;
     background-color: white;
+  }
+}
+
+.unit-5 {
+  background: $dark-yellow;
+  box-shadow: 0 6px 10px;
+
+  border-radius: 5px;
+  transition: 0.3s all ease;
+  position: relative;
+  top: 0;
+  margin-bottom: 1em;
+  text-align: center;
+  width: 320px;
+  height: 160px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+
+  padding: 14px;
+  cursor: pointer;
+
+  h2 {
+    font-size: 18px;
+    color: $black;
+    font-family: roboto, sans-serif;
+  }
+
+  a {
+    font-size: 15px;
+    color: $black;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 20px -5px rgba($primary, 0.4);
+    top: -7px;
+  }
+}
+
+.unit-6 {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .box {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .our-services {
+    margin-top: 75px;
+    padding-bottom: 30px;
+    padding: 0 60px;
+    min-height: 198px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 25px 0 rgba(20, 27, 202, 0.17);
+  }
+
+  .our-services .icon {
+    margin-bottom: -21px;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  .icon {
+    background-color: rgba(35, 128, 121, 0);
+  }
+
+  .our-services:hover h4,
+  .our-services:hover p {
+    color: #fff;
+  }
+
+  .speedup:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #fb0054 0%, #f55b2a 100%);
+  }
+
+  .settings:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #34b5bf 0%, #210c59 100%);
+  }
+
+  .privacy:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #3615e7 0%, #44a2f6 100%);
+  }
+
+  .backups:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #fc6a0e 0%, #fdb642 100%);
+  }
+
+  .ssl:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #8d40fb 0%, #5a57fb 100%);
+  }
+
+  .database:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #27b88d 0%, #22dd73 100%);
+  }
+}
+.unit-7 {
+  padding: 30px;
+  background: $white;
+  border-radius: 5px;
+  transition: 0.3s all ease;
+  position: relative;
+  top: 0;
+  margin-bottom: 4em;
+  text-align: center;
+  padding-top: 50px;
+  box-shadow: 0 0 25px 0 rgba(20, 27, 202, 0.17);
+  .unit-7-icon {
+    position: absolute;
+    // top: -50%;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -50px;
+    .icon-wrap {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: $primary;
+      box-shadow: 0 4px 20px -5px rgba($primary, 0.4);
+      span {
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        color: $white !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  h3 {
+    font-size: 18px;
+    color: $black;
+    transition: 0.3s all ease;
+  }
+  p {
+    font-weight: 300;
+    // font-size: 15px;
+    transition: 0.3s all ease;
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    background: $primary;
+    box-shadow: 0 4px 20px -5px rgba($primary, 0.4);
+    top: -7px;
+    .icon-wrap {
+      background-color: $white;
+      span {
+        color: $primary !important;
+      }
+    }
+    h3 {
+      color: $white;
+    }
+    p {
+      font-weight: 300;
+      color: rgba($white, 0.7);
+      a {
+        color: $white;
+      }
+    }
   }
 }
