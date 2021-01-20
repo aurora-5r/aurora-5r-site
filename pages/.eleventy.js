@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode(
     "MyResponsiveImage",
     async (src, alt) => {
-      if (alt === undefined) {
+      if (alt == undefined) {
         // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error("Missing alt on myResponsiveImage from: ${src}");
       }
@@ -86,18 +86,18 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("posts", (collection) => {
     return collection
-      .getFilteredByGlob("./src/newposts/*/*.md")
+      .getFilteredByGlob("./src/newposts/**/*.md")
       .filter((_) => livePosts(_))
       .reverse();
   });
   eleventyConfig.addCollection("drafts", (collection) => {
     return collection
-      .getFilteredByGlob("./src/newposts/*/*.md")
+      .getFilteredByGlob("./src/newposts/**/*.md")
       .filter((_) => !livePosts(_))
       .reverse();
   });
-  eleventyConfig.addCollection("offre", (collection) => {
-    return collection.getFilteredByGlob("./src/offre/*/*.md").reverse();
+  eleventyConfig.addCollection("offres", (collection) => {
+    return collection.getFilteredByGlob("./src/offres/**/*.md").reverse();
   });
   return {
     dir: {

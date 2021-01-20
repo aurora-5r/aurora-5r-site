@@ -452,3 +452,62 @@ h5,
     1.2
   ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
+.markdown-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  p,
+  span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.63;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  pre span {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th {
+    background: #ccc;
+  }
+
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background: #efefef;
+  }
+
+  tr:hover {
+    background: #d1d1d1;
+  }
+
+  li {
+    color: #707070;
+  }
+}
