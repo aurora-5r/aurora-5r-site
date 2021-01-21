@@ -2,22 +2,20 @@
 
 {% block content %}
   <div class="site-section">
-    <div class="container sp pt-5" style="padding-top: 150px !important;">
+    <div class="container sp pt-5">
       <div class="row justify-content-md-center pt-100">
         <div class="col-md-10">
 
-          <div class="post-content">
-            <h1>
-              <a href="{{ url }}">{{ title }}</a>
-            </h1>
-            <quote>
+          <div class="markdown-content">
+            <h2 class="page-title">
+              {{ title }}
+            </h2>
+            <h2 class="page-subtitle">
               {{ question }}
-            </quote>
+            </h2>
 
-            <div class="markdown-content">
-              {{content | safe}}
+            {{content | safe}}
 
-            </div>
           </div>
         </div>
       </div>

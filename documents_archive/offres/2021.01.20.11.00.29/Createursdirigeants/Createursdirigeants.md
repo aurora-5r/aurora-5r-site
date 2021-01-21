@@ -6,8 +6,8 @@ question : Pourquoi Travailler avec nous sur vos projets de transitions ?
 
 ---
 
-AuRorA-5R ! comme un guide de « haute montagne », vous accompagne sur
----------------------------------------------------------------------
+AuRorA-5R comme un guide de « haute montagne », vous accompagne sur
+-------------------------------------------------------------------
 
 
 1.  L’évaluation de votre situation actuelle dans son contexte et co-imagine avec vous les champs des possibles en deux temps ( Analyses des Modèles actuels de valeurs : Risques, opportunités, position dans la Chaine de valeur; et dans l’idéation : nouveaux marchés, repositionnement, innovations,…), dans un cadre projet respectant des critères RSE à définir pour chaque possibles.

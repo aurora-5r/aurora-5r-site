@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy("src/images");
   // eleventyConfig.addPassthroughCopy("src/posts/images");
   eleventyConfig.addPassthroughCopy("src/newposts/**/*.png");
+  eleventyConfig.addPassthroughCopy("src/offres/**/*.png");
 
   eleventyConfig.addNunjucksAsyncShortcode(
     "MyResponsiveImage",
