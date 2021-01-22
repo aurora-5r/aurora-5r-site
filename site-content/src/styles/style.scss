@@ -1,0 +1,25 @@
+//$blue: #6282c2;
+$blue: #5676b6;
+$yellow: #fde477;
+$light-yellow: #fcf4c8;
+$dark-yellow: #e4d48e;
+$green: #57c79a;
+$light-green: #6ff8d4;
+$red: #ee3530;
+$light-red: #f1857e;
+$gray: #989898;
+
+$primary: $blue;
+$secondary: $gray;
+$special: $green;
+$warning: $yellow;
+$success: $green;
+$danger: $red;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "warning": $warning,
+  "danger": $danger,
+);

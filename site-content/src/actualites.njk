@@ -1,0 +1,22 @@
+---
+layout: "layouts/page.njk"
+eleventyNavigation:
+  key: Actualites
+  parent: En savoir plus
+title: Notre actualité
+---
+
+<ul>
+  {% for post in collections.posts %}
+    <li>
+      {{ post.date.toLocaleDateString('fr-FR') }}
+      <a href="{{ post.url | url }}">
+        {% if post.data.title %}{{ post.data.title }}
+        {% else %}
+          <code>{{ post.url }}</code>
+        {% endif %}
+      </a>
+      {{ post.data.summary }}
+    </li>
+  {% endfor %}
+</ul>

@@ -33,6 +33,7 @@ These are  ${0} commands used in various situations:
     cleanup               Delete the virtual environment in Docker
     stop                  Stop the environment
     help                  Display usage
+    check-a11y             check a11y compliance
 
 Unrecognized commands are run as programs in the container.
 
@@ -85,18 +86,18 @@ function ensure_container_running {
 
 function ensure_node_module_exists {
     log "Checking if node module exists"
-    if [[ ! -d pages/node_modules/ ]] ; then
+    if [[ ! -d site-content/node_modules/ ]] ; then
         log "Missing node dependencies. Start installation."
-        run_command "/opt/site/pages/" npm install
+        run_command "/opt/site/site-content/" npm install
         log "Dependencies installed."
     fi
 }
 
 function ensure_that_website_is_build {
-    log "Check if pages/dist/index.html file exists"
-    if [[ ! -f pages/dist/index.html ]] ; then
+    log "Check if site-content/dist/index.html file exists"
+    if [[ ! -f site-content/dist/index.html ]] ; then
         log "The website is not built. Start building."
-        run_command "/opt/site/pages/" npm run build
+        run_command "/opt/site/site-content/" npm run build
         log "The website builded."
     fi
 }
@@ -205,9 +206,20 @@ function prepare_packages_metadata {
 
 function build_pages {
     log "Building landing pages"
-    #run_command "/opt/site/pages/" npm run index
+    #run_command "/opt/site/site-content/" npm run index
     prepare_packages_metadata
-    run_command "/opt/site/pages/" npm run build
+    run_command "/opt/site/site-content/" npm run build
+    mkdir -p dist
+    rm -rf dist/*
+    verbose_copy site-content/dist/. dist/
+    if [[ -z "${URL_PREPROD+x}" ]]; then
+        echo "URL_PROD environment variable not set"
+        exit 0
+    else
+        log "Copy dist in /var/www/html for preprod tests"
+        sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/
+        sudo sed -i "s/https:\/\/aurora-5r.fr/http:\/\/"$URL_PREPROD"/g" /var/www/html/sitemap.xml
+    fi
 }
 
 function create_redirect {
@@ -253,24 +265,23 @@ function build_site {
         collection_name="$(basename -- "${collection}")"
         last_version=$(find "${collection}" -maxdepth 1 -printf "%T@ %Tc %p\n"  | sort -n|cut -s -d "/" -f 3|tail -n 1)
         
-        find  "pages/src/${collection_name}/"  -type f -name '*.md' -delete
-        verbose_copy "documents_archive/${collection_name}/${last_version}/." "pages/src/${collection_name}"
+        find  "site-content/src/${collection_name}/"  -type f -name '*.md' -delete
+        verbose_copy "documents_archive/${collection_name}/${last_version}/." "site-content/src/${collection_name}"
         
     done
-    if [[ ! -f "pages/dist/index.html" ]]; then
+    if [[ ! -f "site-content/dist/index.html" ]]; then
         build_pages
     else
         build_pages
     fi
     
-    mkdir -p dist
-    rm -rf dist/*
-    verbose_copy pages/dist/. dist/
+    
 }
 function build_doc {
     log "Building doc from gdrive"
     python -m gstomd --folder_id "1Ue7U59r_oBXnuAtIOFkb8KGeTKAEZrkf" --folder_name "newposts" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
     python -m gstomd --folder_id "138LWTCi9tVcs3l0XESKtf-ze-5kHtjKA" --folder_name "offres" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
+    python -m gstomd --folder_id "1YdJL_UCrcqyeyhaVRUPVO-kQZ1lEO_5e" --folder_name "pages" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
     
 }
 
@@ -297,6 +308,23 @@ function prepare_theme {
     log "Preparing theme files"
     log "NOT YET IMPLEMENTED"
     
+    # SITE_DIST="landing-pages/dist"
+    # THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
+    # mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
+    # cp ${SITE_DIST}/docs.*.js "${THEME_GEN}/js/docs.js"
+    # cp ${SITE_DIST}/scss/main.min.*.css "${THEME_GEN}/css/main.min.css"
+    # cp ${SITE_DIST}/scss/main-custom.min.*.css "${THEME_GEN}/css/main-custom.min.css"
+    # echo "Successful copied required files"
+}
+
+function check_a11y {
+    log "Checking a11y compliance... "
+    if [[ -z "${URL_PREPROD+x}" ]]; then
+        echo "you must set URL_PROD environment variable"
+        exit 1
+    fi
+    
+    pa11y-ci --sitemap "http://$URL_PREPROD"/sitemap.xml
     # SITE_DIST="landing-pages/dist"
     # THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
     # mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
@@ -339,11 +367,11 @@ prepare_environment
 
 # Check container commands
 if [[ "${CMD}" == "install-node-deps" ]] ; then
-    run_command "/opt/site/pages/" npm install
+    run_command "/opt/site/site-content/" npm install
     elif [[ "${CMD}" == "preview-pages" ]]; then
     ensure_node_module_exists
     prepare_packages_metadata
-    run_command "/opt/site/pages/" npm run preview
+    run_command "/opt/site/site-content/" npm run preview
     elif [[ "${CMD}" == "build-pages" ]]; then
     ensure_node_module_exists
     build_pages
@@ -355,23 +383,26 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     elif [[ "${CMD}" == "check-site-links" ]]; then
     ensure_node_module_exists
     ensure_that_website_is_build
-    run_command "/opt/site/pages/" ./check-links.sh
+    run_command "/opt/site/site-content/" ./check-links.sh
     elif [[ "${CMD}" == "prepare-theme" ]]; then
     ensure_that_website_is_build
     prepare_theme
+    elif [[ "${CMD}" == "check-a11y" ]]; then
+    ensure_that_website_is_build
+    check_a11y
     elif [[ "${CMD}" == "lint-js" ]]; then
     ensure_node_module_exists
     if [[ "$#" -eq 0 ]]; then
-        run_command "/opt/site/pages/" npm run lint:js
+        run_command "/opt/site/site-content/" npm run lint:js
     else
-        run_lint "/opt/site/pages/" ./node_modules/.bin/eslint "$@"
+        run_lint "/opt/site/site-content/" ./node_modules/.bin/eslint "$@"
     fi
     elif [[ "${CMD}" == "lint-css" ]]; then
     ensure_node_module_exists
     if [[ "$#" -eq 0 ]]; then
-        run_command "/opt/site/pages/" npm run lint:css
+        run_command "/opt/site/site-content/" npm run lint:css
     else
-        run_lint "/opt/site/pages/" ./node_modules/.bin/stylelint "$@"
+        run_lint "/opt/site/site-content/" ./node_modules/.bin/stylelint "$@"
     fi
     elif [[ "${CMD}" == "shell" ]]; then
     prevent_docker
