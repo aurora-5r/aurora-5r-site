@@ -282,6 +282,7 @@ function build_doc {
     python -m gstomd --folder_id "1Ue7U59r_oBXnuAtIOFkb8KGeTKAEZrkf" --folder_name "newposts" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
     python -m gstomd --folder_id "138LWTCi9tVcs3l0XESKtf-ze-5kHtjKA" --folder_name "offres" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
     python -m gstomd --folder_id "1YdJL_UCrcqyeyhaVRUPVO-kQZ1lEO_5e" --folder_name "pages" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
+    python -m gstomd --folder_id "1slLeBm-QpBCEqUk2CKyArNmqHrr-mBD_" --folder_name "presentations" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
     
 }
 
