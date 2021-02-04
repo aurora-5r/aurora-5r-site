@@ -1,4 +1,4 @@
-{% extends "base.njk" %}
+{% extends "layouts/base.njk" %}
 
 {% block content %}
   <div class="site-section">
@@ -9,7 +9,11 @@
             <h2 class="page-title">
               {{ title }}
             </h2>
+            <p class="lead">Temps de lecture :
+              {{ content | readingTime }}.
+            </p>
             {{content | safe}}
+
           </div>
         </div>
 

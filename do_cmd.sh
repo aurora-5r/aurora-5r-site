@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 #set -x
 set -euo pipefail
 
 WORKING_DIR="$(pwd)"
 MY_DIR="$(cd "$(dirname "$0")" && pwd)"
 pushd "${MY_DIR}" &>/dev/null || exit 1
+URL_PREPROD=3.20.47.46
 
 IMAGE_NAME=aurora-5r-site
 CONTAINER_NAME=aurora-5r-site-c
@@ -22,8 +23,8 @@ These are  ${0} commands used in various situations:
     build-site            Prepare dist directory with landing pages and documentation
     preview-pages Starts the web server with preview of the website
     build-doc            Builds doc from gsuite
+    copy-doc            copy last version of doc to site folder
     build-pages            Builds pages
-    prepare-theme         Prepares and copies files needed for the proper functioning of the sphinx theme.
     shell                 Start shell
     build-image           Build a Docker image with a environment
     install-node-deps     Download all the Node dependencies
@@ -150,10 +151,10 @@ function prevent_docker {
 function relativepath {
     source=$1
     target=$2
-    
+
     common_part=$source # for now
     result="" # for now
-    
+
     while [[ "${target#$common_part}" == "${target}" ]]; do
         # no match, means that candidate common part is not correct
         # go up one level (reduce common part)
@@ -165,16 +166,16 @@ function relativepath {
             result="../$result"
         fi
     done
-    
+
     if [[ $common_part == "/" ]]; then
         # special case for root (no common path)
         result="$result/"
     fi
-    
+
     # since we now have identified the common part,
     # compute the non-common part
     forward_part="${target#$common_part}"
-    
+
     # and now stick all parts together
     if [[ -n $result ]] && [[ -n $forward_part ]]; then
         result="$result$forward_part"
@@ -189,7 +190,7 @@ function run_lint {
     script_working_directory=$1
     command=$2
     shift 2
-    
+
     DOCKER_PATHS=()
     for E in "${@}"; do
         ABS_PATH=$(cd "${WORKING_DIR}" && realpath "${E}")
@@ -198,43 +199,31 @@ function run_lint {
     run_command "${script_working_directory}" "${command}" "${DOCKER_PATHS[@]}"
 }
 
-function prepare_packages_metadata {
-    log "Preparing packages-metadata.json"
-    log "NOT YET IMPLEMENTED"
-    #python dump-docs-packages-metadata.py > "landing-pages/site/static/_gen/packages-metadata.json"
-}
 
 function build_pages {
     log "Building landing pages"
-    #run_command "/opt/site/site-content/" npm run index
-    prepare_packages_metadata
     run_command "/opt/site/site-content/" npm run build
     mkdir -p dist
     rm -rf dist/*
     verbose_copy site-content/dist/. dist/
     if [[ -z "${URL_PREPROD+x}" ]]; then
-        echo "URL_PROD environment variable not set"
+        echo "URL_PREPROD environment variable not set"
         exit 0
     else
         log "Copy dist in /var/www/html for preprod tests"
         sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/
+
         sudo sed -i "s/https:\/\/aurora-5r.fr/http:\/\/"$URL_PREPROD"/g" /var/www/html/sitemap.xml
+        sudo sed -i "s/https:\/\/aurora-5r.fr/http:\/\/"$URL_PREPROD"/g" /var/www/html/robots.txt
+
+        for page in $(find /var/www/html/ -name "*.html"); do
+            sudo sed -i "s/https:\/\/aurora-5r.fr/http:\/\/"$URL_PREPROD"/g" ${page}
+        done
+
     fi
 }
 
-function create_redirect {
-    output_file="$1"
-    target_location="$2"
-    log "Creating redirect: ${output_file} => ${target_location}"
-    
-    cat > "${output_file}" <<EOF
-<!DOCTYPE html>
-<html>
-   <head><meta http-equiv="refresh" content="1; url=${target_location}" /></head>
-   <body></body>
-</html>
-EOF
-}
+
 
 function verbose_copy {
     source="$1"
@@ -251,40 +240,49 @@ function assert_file_exists {
         exit 1
     fi
 }
+function copy_doc {
+    for folder in $(ls -tp documents_archive/|tail -n +6) ; do
+        rm -rf documents_archive/${folder}
+    done
+    last_version=$(find documents_archive/ -maxdepth 1 -printf "%T@ %Tc %p\n"  | sort -n|cut -s -d "/" -f 2|tail -2|head -1)
+    log "copy_doc, last version ${last_version}"
 
-function build_site {
-    log "Building full site"
-    build_doc
-    for collection in documents_archive/* ; do
-        
+    for collection in documents_archive/${last_version}/03aurora5rfr/* ; do
+
         # Process directories only,
         if [ ! -d "${collection}" ]; then
             continue;
         fi
-        
+
         collection_name="$(basename -- "${collection}")"
-        last_version=$(find "${collection}" -maxdepth 1 -printf "%T@ %Tc %p\n"  | sort -n|cut -s -d "/" -f 3|tail -n 1)
-        
         find  "site-content/src/${collection_name}/"  -type f -name '*.md' -delete
-        verbose_copy "documents_archive/${collection_name}/${last_version}/." "site-content/src/${collection_name}"
-        
+        verbose_copy "${collection}/." "site-content/src/${collection_name}"
+
+
+
     done
+}
+function build_site {
+    log "Building full site"
+    build_doc
+    copy_doc
     if [[ ! -f "site-content/dist/index.html" ]]; then
         build_pages
     else
         build_pages
     fi
-    
-    
+
+
 }
 function build_doc {
     log "Building doc from gdrive"
-    python -m gstomd --folder_id "1Ue7U59r_oBXnuAtIOFkb8KGeTKAEZrkf" --folder_name "newposts" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
-    python -m gstomd --folder_id "138LWTCi9tVcs3l0XESKtf-ze-5kHtjKA" --folder_name "offres" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
-    python -m gstomd --folder_id "1YdJL_UCrcqyeyhaVRUPVO-kQZ1lEO_5e" --folder_name "pages" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
-    python -m gstomd --folder_id "1slLeBm-QpBCEqUk2CKyArNmqHrr-mBD_" --folder_name "presentations" --dest "documents_archive" --config "conf/pydrive_settings.yaml"
-    
+
+    VERSION=$(date +'%Y.%m.%d.%H.%M.%S')
+    python -m gstomd --folder_id "1HiByc1Lu3MmhinDzxlWtdPvox1RDILPE"  --dest "documents_archive/${VERSION}" --config "conf/pydrive_settings.yaml"
+
 }
+
+
 
 function cleanup_environment {
     container_status="$(docker inspect "${CONTAINER_NAME}" --format '{{.State.Status}}')"
@@ -293,46 +291,29 @@ function cleanup_environment {
         log "Container running. Killing the container."
         docker kill "${CONTAINER_NAME}"
     fi
-    
+
     if [[ $(docker container ls -a --filter="Name=${CONTAINER_NAME}" -q ) ]]; then
         log "Container exists. Removing the container."
         docker rm "${CONTAINER_NAME}"
     fi
-    
+
     if [[ $(docker images "${IMAGE_NAME}" -q) ]]; then
         log "Images exists. Deleting the image."
         docker rmi "${IMAGE_NAME}"
     fi
 }
 
-function prepare_theme {
-    log "Preparing theme files"
-    log "NOT YET IMPLEMENTED"
-    
-    # SITE_DIST="landing-pages/dist"
-    # THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
-    # mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
-    # cp ${SITE_DIST}/docs.*.js "${THEME_GEN}/js/docs.js"
-    # cp ${SITE_DIST}/scss/main.min.*.css "${THEME_GEN}/css/main.min.css"
-    # cp ${SITE_DIST}/scss/main-custom.min.*.css "${THEME_GEN}/css/main-custom.min.css"
-    # echo "Successful copied required files"
-}
+
 
 function check_a11y {
     log "Checking a11y compliance... "
     if [[ -z "${URL_PREPROD+x}" ]]; then
-        echo "you must set URL_PROD environment variable"
+        echo "you must set URL_PREPROD environment variable"
         exit 1
     fi
-    
+
     pa11y-ci --sitemap "http://$URL_PREPROD"/sitemap.xml
-    # SITE_DIST="landing-pages/dist"
-    # THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
-    # mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
-    # cp ${SITE_DIST}/docs.*.js "${THEME_GEN}/js/docs.js"
-    # cp ${SITE_DIST}/scss/main.min.*.css "${THEME_GEN}/css/main.min.css"
-    # cp ${SITE_DIST}/scss/main-custom.min.*.css "${THEME_GEN}/css/main-custom.min.css"
-    # echo "Successful copied required files"
+
 }
 
 if [[ "$#" -eq 0 ]]; then
@@ -371,7 +352,7 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     run_command "/opt/site/site-content/" npm install
     elif [[ "${CMD}" == "preview-pages" ]]; then
     ensure_node_module_exists
-    prepare_packages_metadata
+
     run_command "/opt/site/site-content/" npm run preview
     elif [[ "${CMD}" == "build-pages" ]]; then
     ensure_node_module_exists
@@ -381,13 +362,13 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     build_site
     elif [[ "${CMD}" == "build-doc" ]]; then
     build_doc
+    elif [[ "${CMD}" == "copy-doc" ]]; then
+    copy_doc
     elif [[ "${CMD}" == "check-site-links" ]]; then
     ensure_node_module_exists
     ensure_that_website_is_build
     run_command "/opt/site/site-content/" ./check-links.sh
-    elif [[ "${CMD}" == "prepare-theme" ]]; then
-    ensure_that_website_is_build
-    prepare_theme
+
     elif [[ "${CMD}" == "check-a11y" ]]; then
     ensure_that_website_is_build
     check_a11y

@@ -14,14 +14,49 @@ const embedYouTube = require("eleventy-plugin-youtube-embed");
 const Image = require("@11ty/eleventy-img");
 const sharp = require("sharp");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const readingTime = require("eleventy-plugin-reading-time");
+const readerBar = require("eleventy-plugin-reader-bar");
+const imagesResponsiver = require("eleventy-plugin-images-responsiver");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+
+const pluginTOC = require("eleventy-plugin-toc");
 
 module.exports = function (eleventyConfig) {
-  // eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/images");
   // eleventyConfig.addPassthroughCopy("src/posts/images");
+  const presets = {
+    default: {
+      sizes: `(max-width: 340px) 250px, 50vw`,
+      minWidth: 250,
+      maxWidth: 1200,
+      fallbackWidth: 725,
+      attributes: {
+        loading: "lazy",
+      },
+    },
+    "profile-img": {
+      fallbackWidth: 250,
+      minWidth: 250,
+      maxWidth: 250,
+      steps: 1,
+      sizes: "250px",
+      attributes: {
+        loading: "lazy",
+      },
+    },
+  };
+  eleventyConfig.addPlugin(imagesResponsiver, presets);
+  eleventyConfig.addPassthroughCopy("src/*/*/images/*.*");
+  eleventyConfig.setLibrary("md", markdownIt().use(markdownItAnchor));
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPassthroughCopy("src/newposts/**/*.png");
-  eleventyConfig.addPassthroughCopy("src/offres/**/*.png");
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ["h2", "h3"],
+    wrapper: "div",
+  });
 
+  eleventyConfig.addPlugin(readingTime);
+  eleventyConfig.addPlugin(readerBar);
   eleventyConfig.addNunjucksAsyncShortcode(
     "MyResponsiveImage",
     async (src, alt) => {
@@ -60,8 +95,6 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.addShortcode("first_image", (post) => extractFirstImage(post));
-
   eleventyConfig.addPlugin(embedYouTube, {
     embedClass: "post-video",
   });
@@ -74,7 +107,7 @@ module.exports = function (eleventyConfig) {
     author: "Laurent Maumet",
     twitter: "aurora-5r",
   });
-  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   eleventyConfig.addShortcode("bundledCss", function () {
     return manifest["main"]["css"]
@@ -89,13 +122,13 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("posts", (collection) => {
     return collection
-      .getFilteredByGlob("./src/newposts/**/*.md")
+      .getFilteredByGlob("./src/posts/**/*.md")
       .filter((_) => livePosts(_))
       .reverse();
   });
   eleventyConfig.addCollection("drafts", (collection) => {
     return collection
-      .getFilteredByGlob("./src/newposts/**/*.md")
+      .getFilteredByGlob("./src/posts/**/*.md")
       .filter((_) => !livePosts(_))
       .reverse();
   });
@@ -106,34 +139,6 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src",
       output: "dist",
-      // data: "_data",
     },
   };
 };
-
-/**
- * @param {*} doc A real big object full of all sorts of information about a document.
- * @returns {String} the markup of the first image.
- */
-function extractFirstImage(doc) {
-  if (!doc.hasOwnProperty("templateContent")) {
-    console.warn(
-      "❌ Failed to extract image: Document has no property `templateContent`."
-    );
-    return '<img class="center-block" src="/images/5r.png" alt="5R"></img>';
-  }
-
-  const content = doc.templateContent;
-
-  if (content.includes("<img")) {
-    const imgTagBegin = content.indexOf("<img");
-    const imgTagEnd = content.indexOf(">", imgTagBegin);
-    const res =
-      '<img class="center-block"' +
-      content.substring(imgTagBegin + 4, imgTagEnd + 1);
-    return res;
-    return content.substring(imgTagBegin, imgTagEnd + 1);
-  } else {
-    return '<img class="center-block" src="/images/5R.png" alt="5R"></img>';
-  }
-}

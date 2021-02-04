@@ -1,4 +1,4 @@
-{% extends "base.njk" %}
+{% extends "layouts/base.njk" %}
 
 {% block content %}
   <div class="site-section">
@@ -11,7 +11,8 @@
               <a href="{{ url }}">{{ title }}</a>
             </h1>
             <p class="lead">
-
+              Temps de lecture :
+              {{ content | readingTime }}.
               {# by
         {{ author}} #}
               {# <time class="postlist-date" datetime="{{ post.date | date('Y-MM-DD') }}">{{ post.date|date("DD MMMM Y", locale) }}</time>#}

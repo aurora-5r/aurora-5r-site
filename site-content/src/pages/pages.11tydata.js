@@ -2,9 +2,14 @@ module.exports = {
   eleventyComputed: {
     eleventyNavigation: {
       key: (data) => data.title,
-      parent: (data) => {
-        if (data.navigation) return data.navigation;
-        else return "main";
+      parent: (data) => data.parent,
+      title: (data) => {
+        if (data.titlenavigation) return data.titlenavigation;
+        else return data.title;
+      },
+      order: (data) => {
+        if (data.ordernavigation) return data.ordernavigation;
+        else return 0;
       },
     },
   },
