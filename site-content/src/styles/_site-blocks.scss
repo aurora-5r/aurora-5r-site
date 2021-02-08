@@ -1021,9 +1021,8 @@
 .h-entry {
   img {
     margin-bottom: 30px;
-    height: 200px;
-    width: auto;
-    weight: auto;
+    height: auto;
+    width: 200px;
     display: inline-block;
     text-align: center;
   }
@@ -1866,7 +1865,7 @@
       transition: 0.3s all ease-in-out;
       transform: scale(1);
       height: auto;
-      width: auto;
+      //width: 200px;
     }
 
     .social {
@@ -2664,7 +2663,7 @@ span {
   top: 0;
   //margin-bottom: 4em;
   margin-top: 4em;
-
+  border-color: $white;
   text-align: center;
   padding-top: 30px;
   box-shadow: 0 0 15px 0 rgba(20, 27, 202, 0.17);
@@ -2723,11 +2722,45 @@ span {
       color: $white;
     }
     p {
-      font-weight: 300;
       color: rgba($white, 0.7);
       a {
         color: $white;
       }
     }
   }
+}
+
+.unit-7-green {
+  box-shadow: 0 0 15px 0 rgba($success, 0.17) !important;
+  &:hover {
+    background: $success !important;
+    box-shadow: 0 4px 20px -5px rgba($success, 0.4) !important;
+    .icon-wrap {
+      background-color: $white !important;
+
+      span {
+        color: $success !important;
+      }
+    }
+  }
+}
+.icon-wrap-green {
+  background-color: $success !important;
+}
+.unit-7-yellow {
+  box-shadow: 0 0 15px 0 rgba($dark-yellow, 0.17) !important;
+  &:hover {
+    background: $dark-yellow !important;
+    box-shadow: 0 4px 20px -5px rgba($dark-yellow, 0.4) !important;
+    .icon-wrap {
+      background-color: $white !important;
+
+      span {
+        color: $dark-yellow !important;
+      }
+    }
+  }
+}
+.icon-wrap-yellow {
+  background-color: $dark-yellow !important;
 }

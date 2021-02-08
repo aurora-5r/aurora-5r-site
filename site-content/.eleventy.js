@@ -24,7 +24,6 @@ const pluginTOC = require("eleventy-plugin-toc");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
-  // eleventyConfig.addPassthroughCopy("src/posts/images");
   const presets = {
     default: {
       sizes: `(max-width: 340px) 250px, 50vw`,
@@ -35,7 +34,7 @@ module.exports = function (eleventyConfig) {
         loading: "lazy",
       },
     },
-    "profile-img": {
+    "small-img": {
       fallbackWidth: 250,
       minWidth: 250,
       maxWidth: 250,
@@ -57,43 +56,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(readerBar);
-  eleventyConfig.addNunjucksAsyncShortcode(
-    "MyResponsiveImage",
-    async (src, alt) => {
-      if (alt == undefined) {
-        // You bet we throw an error on missing alt (alt="" works okay)
-        throw new Error("Missing alt on myResponsiveImage from: ${src}");
-      }
-      let stats = await Image(src, {
-        widths: [25, 320, 640, 960, 1200, 1800, 2400],
-        formats: ["jpeg", "webp"],
-        urlPath: "/images/",
-        outputDir: "./dist/images/",
-      });
-      //let lowestSrc = stats[outputFormat][0];
-      let lowestSrc = stats["jpeg"][0];
-
-      let sizes = "100vw"; // Make sure you customize this!
-
-      // Iterate over formats and widths
-      return `<picture>
-     ${Object.values(stats)
-       .map((imageFormat) => {
-         return `  <source type="image/${
-           imageFormat[0].format
-         }" srcset="${imageFormat
-           .map((entry) => `${entry.url} ${entry.width}w`)
-           .join(", ")}" sizes="${sizes}">`;
-       })
-       .join("\n")}
-        <img
-          src="${lowestSrc.url}"
-          width="${lowestSrc.width}"
-          height="${lowestSrc.height}"
-          alt="${alt}">
-          </picture>`;
-    }
-  );
 
   eleventyConfig.addPlugin(embedYouTube, {
     embedClass: "post-video",

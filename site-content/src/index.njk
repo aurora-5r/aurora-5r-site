@@ -33,15 +33,15 @@ layout: "layouts/base.njk"
   </div>
 </div>
 
-<div class="site-section " id="questions-section2">
+<div class="site-section " id="offre-section">
   <div class="container">
     <div class="row card-deck align-items-stretch justify-content-center mb-4">
 
       {% for offre in collections.line1 %}
         <div class=" col-md-4" data-aos="fade-up">
-          <div class="card unit-7  h-75 ">
+          <div class="card unit-7 unit-7-{{offre.data.color}}  h-75 ">
             <div class="unit-7-icon mb-3">
-              <span class="icon-wrap" style="background-color:#{{offre.data.color}}">
+              <span class="icon-wrap icon-wrap-{{offre.data.color}}">
                 <span class="text-primary">𝝻</span></span>
             </div>
             <h3 class="card-title">{{offre.data.title}}
@@ -77,238 +77,230 @@ layout: "layouts/base.njk"
         </div>
       </div>
     </div>
-    {#--END WELCOME MESSAGE -------------------------------------------------------------------------------------#}
+  </div>
+</div>
 
-    {#--NEWS  -------------------------------------------------------------------------------------#}
+{#--END WELCOME MESSAGE -------------------------------------------------------------------------------------#}
 
-    <div class="site-section " id="blog-section">
-      <div class="container">
-        <div class="row mt-2 mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Actualités</h2>
-            <a href="/inscription" class="btn  btn-outline-dark">S'inscrire à la newsletter pour ne rien rater</a>
+{#--NEWS  -------------------------------------------------------------------------------------#}
+
+<div class="site-section " id="blog-section">
+  <div class="container">
+    <div class="row mt-2 mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-3">Actualités</h2>
+        <a href="/inscription" class="btn  btn-outline-dark">S'inscrire à la newsletter pour ne rien rater</a>
+      </div>
+    </div>
+
+    <div class="row ">
+
+      {% set atPost = 0 %}
+      {% set nb1 = collections.posts | length %}
+      {% for post in collections.posts | reverse %}
+        {% if atPost < 6 %}
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="h-entry">
+              <a href="{{post.url}}">
+                <img class="small-img" src="{{post.data.cover}}" alt="illustration de {{post.title}}">
+              </a>
+              <h3>
+                {{ post.data.title }}
+              </h3>
+              <div class="meta mb-4">{{ post.data.author }}
+                <span class="mx-2">-</span>
+                {{ post.date.toLocaleDateString('fr-FR') }}
+              </div>
+              <summary>
+                {{ post.data.summary }}
+              </summary>
+              <p>
+                <a href="{{post.url}}">Lire la suite...</a>
+              </p>
+            </div>
+          </div>
+          {% endif%}
+          {% set atPost = atPost + 1 %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+</div>
+{#--END NEWS  -------------------------------------------------------------------------------------#}
+
+{#--TEAM-------------------------------------------------------------------------------------#}
+<div class="site-section" id="our-team-section">
+  <div class="container">
+    <div class="row mb-5 justify-content-center text-center" data-aos="fade-up">
+      <div class="col-7 text-center  mb-5">
+        <h2 class="section-title">L'équipe</h2>
+        <p class="lead"></p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="person">
+          <div class="bio-img">
+            <figure><img src="images/PE.jpg" alt="Photo de Pierre-Emmanuel" width="500px">
+            </figure>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/pem-frot-1304g73/">
+                <p class="hiddentext" style="display: none;">Linkedin de Pierre-Emmanuel
+                </p>
+                <span class="icon-linkedin"></span>
+              </a>
+
+            </div>
+          </div>
+          <h2 class="text-black h1">Pierre-Emmanuel Frot</h2>
+          <span class="sub-title d-block mb-3">Fondateur</span>
+          <p></p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              <img src="images/L.jpeg" alt="Photo de Laurent" width="500px">
+            </figure>
+            <div class="social">
+              <a href="https://fr.linkedin.com/in/laurentmaumet">
+                <p class="hiddentext" style="display: none;">Linkedin de Laurent
+                </p>
+                <span class="icon-linkedin"></span>
+              </a>
+
+              <a href="https://twitter.com/lmau">
+                <p class="hiddentext" style="display: none;">Twitter de Laurent
+                </p>
+                <span class="icon-twitter"></span>
+              </a>
+            </div>
+          </div>
+          <h2 class="text-black h1">Laurent Maumet</h2>
+          <span class="sub-title d-block mb-3">Fondateur</span>
+          <p></p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              <img src="images/C.jpeg" alt="Photo de Cédric" width="500px">
+            </figure>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/cedric-stien-b1141aa/">
+                <p class="hiddentext" style="display: none;">Linkedin de Cédric
+                </p>
+                <span class="icon-linkedin "></span></a>
+            </div>
+          </div>
+          <h2 class="text-black h1">Cédric Stien</h2>
+          <span class="sub-title d-block mb-3">Fondateur</span>
+
+          <p>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{#--END TEAM  -------------------------------------------------------------------------------------#}
+
+{#--CONTACT  -------------------------------------------------------------------------------------#}
+<div class="site-section bg-light" id="contact-section">
+  <div class="container">
+    <div class="row  justify-content-center text-center" data-aos="fade-up"></div>
+    <div class="row justify-content-center text-center pt-3">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="mailto:contact@aurora-5r.fr" target="_blank" class="btn btn-primary">Ecrivez-nous</a>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="/inscription" class="btn btn-primary">Inscrivez-vous à la newsletter</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{#--END CONTACT  -------------------------------------------------------------------------------------#}
+
+<div class="site-section" id="fondateurs-section">
+  <div class="container">
+    <div class="row justify-content-center text-center" data-aos="fade-up">
+      <div class="col-7 text-center">
+        <h3>Membres Fondateurs</h3>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="h-entry">
+
+          <img src="images/logo-udimec.png" alt="logo udimec">
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="h-entry">
+          <img src="images/logo-INP.png" alt="logo inp">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="h-entry">
+
+          <img src="images/logoCCI.jpg" alt="logo CCI">
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="site-section" id="partenaires-section">
+  <div class="container">
+    <div class="row justify-content-center text-center" data-aos="fade-up">
+      <div class="col-7 text-center">
+        <h3>Partenaires</h3>
+      </div>
+    </div>
+    <div class="row align-items-stretch justify-content-center">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              <a href="https://www.alma.fr/">
+                <img src="images/logo-alma.svg" alt="logo alma">
+              </a>
+            </figure>
           </div>
         </div>
-
-        <div class="row ">
-
-          {% set atPost = 0 %}
-          {% set nb1 = collections.posts | length %}
-          {% for post in collections.posts | reverse %}
-            {% if atPost < 6 %}
-              {#  do your processing here or include it #}
-
-              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                <div class="h-entry">
-                  <a href="{{post.url}}">
-                    <img src="{{post.data.cover}}" alt="illustration de {{post.title}}" class="img-fluid">
-
-                  </a>
-
-                  <h3>
-
-                    {{ post.data.title }}
-                  </h3>
-                  <div class="meta mb-4">{{ post.data.author }}
-                    <span class="mx-2">&bullet;</span>
-                    {{ post.date.toLocaleDateString('fr-FR') }}
-
-                  </div>
-                  <summary>
-                    {{ post.data.summary }}
-                  </summary>
-                  <p>
-                    <a href="{{post.url}}">Lire la suite...</a>
-                  </p>
-                </div>
-              </div>
-              {% endif%}
-              {% set atPost = atPost + 1 %}
-            {% endfor %}
-
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="person">
+          <div class="bio-img">
+            <figure>
+              <a href="https://www.linkedin.com/in/pierric-d-0aa05557/">
+                <img src="images/logo-SDOD.png" alt="logo SDOD">
+              </a>
+            </figure>
           </div>
         </div>
       </div>
 
     </div>
-    {#--END NEWS  -------------------------------------------------------------------------------------#}
 
-    {#--TEAM-------------------------------------------------------------------------------------#}
-    <div class="site-section" id="our-team-section">
-      <div class="container">
-        <div class="row mb-5 justify-content-center text-center" data-aos="fade-up">
-          <div class="col-7 text-center  mb-5">
-            <h2 class="section-title">L'équipe</h2>
-            <p class="lead"></p>
-          </div>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="person">
-              <div class="bio-img">
-                <figure>
-
-                  <img src="images/PE.jpg" alt="Photo de Pierre-Emmanuel" class="img-fluid">
-                </figure>
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/pem-frot-1304g73/">
-                    <span class="icon-linkedin"></span></a>
-
-                </div>
-              </div>
-              <h2 class="text-black h1">Pierre-Emmanuel Frot</h2>
-              <span class="sub-title d-block mb-3">Fondateur</span>
-              <p></p>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="person">
-              <div class="bio-img">
-                <figure>
-
-                  <img src="images/L.jpeg" alt="Photo de Laurent" class="img-fluid" height="500px">
-
-                </figure>
-                <div class="social">
-                  <a href="https://fr.linkedin.com/in/laurentmaumet">
-                    <span class="icon-linkedin"></span>
-                  </a>
-
-                  <a href="https://twitter.com/lmau">
-                    <span class="icon-twitter"></span>
-                  </a>
-                </div>
-              </div>
-              <h2 class="text-black h1">Laurent Maumet</h2>
-              <span class="sub-title d-block mb-3">Fondateur</span>
-              <p></p>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="person">
-              <div class="bio-img">
-                <figure>
-
-                  <img src="images/C.jpeg" alt="Photo de Cédric" class="img-fluid" height="500px">
-                </figure>
-                <div class="social">
-
-                  <a href="https://www.linkedin.com/in/cedric-stien-b1141aa/">
-                    <span class="icon-linkedin "></span></a>
-                </div>
-              </div>
-              <h2 class="text-black h1">Cédric Stien</h2>
-              <span class="sub-title d-block mb-3">Fondateur</span>
-
-              <p>.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    {#--END TEAM  -------------------------------------------------------------------------------------#}
-
-    {#--CONTACT  -------------------------------------------------------------------------------------#}
-    <div class="site-section bg-light" id="contact-section">
-      <div class="container">
-        <div class="row  justify-content-center text-center" data-aos="fade-up"></div>
-        <div class="row justify-content-center text-center pt-3">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <a href="mailto:contact@aurora-5r.fr" target="_blank" class="btn btn-primary">Ecrivez-nous</a>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <a href="/inscription" class="btn btn-primary">Inscrivez-vous à la newsletter</a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-    {#--END CONTACT  -------------------------------------------------------------------------------------#}
-
-    <div class="site-section" id="fondateurs-section">
-      <div class="container">
-        <div class="row justify-content-center text-center" data-aos="fade-up">
-          <div class="col-7 text-center">
-            <h3>Membres Fondateurs</h3>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="person">
-              <div class="bio-img">
-                <figure>
-                  <img src="images/logo-udimec.png" alt="logo udimec" class="img-fluid" height="500px">
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="person">
-              <div class="bio-img">
-                <figure>
-                  <img src="images/logo-INP.png" alt="logo inp" class="img-fluid" height="500px">
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="person">
-              <div class="bio-img">
-                <figure>
-                  <img src="images/logoCCI.jpg" alt="logo CCI" class="img-fluid" height="500px">
-                </figure>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="site-section" id="partenaires-section">
-      <div class="container">
-        <div class="row justify-content-center text-center" data-aos="fade-up">
-          <div class="col-7 text-center">
-            <h3>Partenaires</h3>
-          </div>
-        </div>
-        <div class="row align-items-stretch justify-content-center">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="person">
-              <div class="bio-img">
-                <figure>
-                  <a href="https://www.alma.fr/">
-                    <img src="images/logo-alma.svg" alt="logo alma" class="img-fluid" height="500px">
-                  </a>
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="person">
-              <div class="bio-img">
-                <figure>
-                  <a href="https://www.linkedin.com/in/pierric-d-0aa05557/">
-
-                    <img src="images/logo-SDOD.png" alt="logo SDOD" class="img-fluid" height="500px">
-                  </a>
-                </figure>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
+  </div>
+</div>

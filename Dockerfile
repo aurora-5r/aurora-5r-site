@@ -45,18 +45,6 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 RUN curl -sL "https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64" > /usr/local/bin/jq \
     && chmod +x /usr/local/bin/jq
 
-
-
-# RUN HUGOHOME="$(mktemp -d)" \
-#     && export HUGOHOME \
-#     && curl -sL https://github.com/gohugoio/hugo/releases/download/v0.58.3/hugo_extended_0.58.3_Linux-64bit.tar.gz > "${HUGOHOME}/hugo.tar.gz" \
-#     && tar -xzvf "${HUGOHOME}/hugo.tar.gz" hugo \
-#     && mv hugo /usr/local/bin/hugo \
-#     && chmod +x /usr/local/bin/hugo \
-#     && rm -r "${HUGOHOME}"
-
-#FROM node:12-alpine
-#RUN apk add --no-cache automake
 RUN npm install -g @11ty/eleventy
 
 

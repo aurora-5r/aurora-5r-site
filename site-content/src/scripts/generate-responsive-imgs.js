@@ -48,11 +48,11 @@ const main = () => {
               break;
             }
           } else {
-            if (fs.existsSync(outputPath)) {
-              //file exists
-            } else {
-              await sharp(files[i]).resize(widths[j]).toFile(outputPath);
-            }
+            // if (fs.existsSync(outputPath)) {
+            //   //file exists
+            // } else {
+            await sharp(files[i]).resize(widths[j]).toFile(outputPath);
+            // }
           }
         }
       }

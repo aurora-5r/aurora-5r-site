@@ -7,6 +7,11 @@ MY_DIR="$(cd "$(dirname "$0")" && pwd)"
 pushd "${MY_DIR}" &>/dev/null || exit 1
 URL_PREPROD=3.20.47.46
 
+DOC_GDRIVE_PROD="1HiByc1Lu3MmhinDzxlWtdPvox1RDILPE"
+DOC_GDRIVE_DRAFT="10ZBg5_4L7gQirLI-UTFco-93sM-_3gRR"
+DOC_FOLDER_PROD="docs_from_gdrive"
+DOC_FOLDER_DRAFT="drafts_from_gdrive"
+
 IMAGE_NAME=aurora-5r-site
 CONTAINER_NAME=aurora-5r-site-c
 
@@ -114,6 +119,7 @@ function run_command {
     working_directory=$1
     shift
     if [[ -f /.dockerenv ]] ; then
+
         pushd "${working_directory}"
         exec "$@"
     else
@@ -123,6 +129,7 @@ function run_command {
             --workdir "${working_directory}" \
             "${CONTAINER_NAME}" "$@"
         else
+
             docker exec \
             --tty \
             --interactive \
@@ -210,7 +217,7 @@ function build_pages {
         echo "URL_PREPROD environment variable not set"
         exit 0
     else
-        log "Copy dist in /var/www/html for preprod tests"
+        log "Copy dist in /var/www/html/ for preprod tests"
         sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/
 
         sudo sed -i "s/https:\/\/aurora-5r.fr/http:\/\/"$URL_PREPROD"/g" /var/www/html/sitemap.xml
@@ -241,36 +248,32 @@ function assert_file_exists {
     fi
 }
 function copy_doc {
-    for folder in $(ls -tp documents_archive/|tail -n +6) ; do
-        rm -rf documents_archive/${folder}
+    release="$1"
+    for folder in $(ls -tp ${DOC_FOLDER_PROD}/|tail -n +6) ; do
+        rm -rf ${DOC_FOLDER_PROD}/${folder}
     done
-    last_version=$(find documents_archive/ -maxdepth 1 -printf "%T@ %Tc %p\n"  | sort -n|cut -s -d "/" -f 2|tail -2|head -1)
+    last_version=$(find ${DOC_FOLDER_PROD}/ -maxdepth 1 -printf "%T@ %Tc %p\n"  | sort -n|cut -s -d "/" -f 2|tail -2|head -1)
     log "copy_doc, last version ${last_version}"
 
-    for collection in documents_archive/${last_version}/03aurora5rfr/* ; do
-
+    for collection in ${DOC_FOLDER_PROD}/${last_version}/production/* ; do
         # Process directories only,
         if [ ! -d "${collection}" ]; then
             continue;
         fi
-
         collection_name="$(basename -- "${collection}")"
         find  "site-content/src/${collection_name}/"  -type f -name '*.md' -delete
+        find  "site-content/src/${collection_name}/"  -type f -name '*.png' -delete
+
         verbose_copy "${collection}/." "site-content/src/${collection_name}"
-
-
 
     done
 }
 function build_site {
     log "Building full site"
+
     build_doc
-    copy_doc
-    if [[ ! -f "site-content/dist/index.html" ]]; then
-        build_pages
-    else
-        build_pages
-    fi
+    copy_doc prod
+    build_pages
 
 
 }
@@ -278,7 +281,7 @@ function build_doc {
     log "Building doc from gdrive"
 
     VERSION=$(date +'%Y.%m.%d.%H.%M.%S')
-    python -m gstomd --folder_id "1HiByc1Lu3MmhinDzxlWtdPvox1RDILPE"  --dest "documents_archive/${VERSION}" --config "conf/pydrive_settings.yaml"
+    python -m gstomd --folder_id ${DOC_GDRIVE_PROD}  --dest ${DOC_FOLDER_PROD}/${VERSION} --config "conf/pydrive_settings.yaml"
 
 }
 
@@ -363,7 +366,7 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     elif [[ "${CMD}" == "build-doc" ]]; then
     build_doc
     elif [[ "${CMD}" == "copy-doc" ]]; then
-    copy_doc
+    copy_doc prod
     elif [[ "${CMD}" == "check-site-links" ]]; then
     ensure_node_module_exists
     ensure_that_website_is_build

@@ -62,9 +62,9 @@
 
                   {% set actionNav = collections.all | eleventyNavigation("Nos actions") %}
                   <li class="has-children">
-                    <a>
+                    <nav-title>
                       Nos actions
-                    </a>
+                    </nav-title>
                     <ul class="dropdown arrow-top">
                       {%- for nav in actionNav -%}
                         <li>
@@ -77,9 +77,11 @@
                   </li>
                   {% set actionNav = collections.all | eleventyNavigation("Nous rejoindre") %}
                   <li class="has-children">
-                    <a>
+                    <nav-title>
+
                       Nous rejoindre
-                    </a>
+                    </nav-title>
+
                     <ul class="dropdown arrow-top">
                       {%- for nav in actionNav -%}
                         <li>
@@ -92,9 +94,9 @@
                   </li>
                   {% set plusNav = collections.all | eleventyNavigation("En savoir plus") %}
                   <li class="has-children">
-                    <a>
-                      En Savoir plus
-                    </a>
+                    <nav-title>
+                      En savoir plus
+                    </nav-title>
                     <ul class="dropdown arrow-top">
                       {%- for nav in plusNav  -%}
                         <li>
@@ -147,7 +149,6 @@
       <div class="row mb-5">
         <div class="col-12">
           <p class="mb-0">
-            {% set bottomNav = collections.all | eleventyNavigation("bottom") %}
 
             {%- for nav in bottomNav | reverse -%}
               <a class="p-3" href="{{ nav.url | url }}">{{ nav.title }}</a>
@@ -174,20 +175,7 @@
 
 <!-- .site-wrap -->
 
-{# <script src="/scripts/modules/jquery-3.3.1.min.js"></script>
-<script src="/scripts/modules/jquery-ui.js"></script>
-<script src="/scripts//modules/popper.min.js"></script>
-<script src="/scripts//modules/bootstrap.min.js"></script>
-<script src="/scripts//modules/owl.carousel.min.js"></script>
-<script src="/scripts//modules/jquery.countdown.min.js"></script>
-<script src="/scripts//modules/bootstrap-datepicker.min.js"></script>
-<script src="/scripts//modules/jquery.easing.1.3.js"></script>
-<script src="/scripts//modules/jquery.fancybox.min.js"></script>
-<script src="/scripts//modules/jquery.sticky.js"></script> #}
-{# <script src="/scripts//modules/aos.js"></script> #}
-
 {% bundledJs %}
-{# <script src="/scripts//modules/main.js"></script> #}
 
 </body>
 </html>
