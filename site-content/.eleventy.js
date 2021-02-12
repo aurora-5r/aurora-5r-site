@@ -97,6 +97,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("offres", (collection) => {
     return collection.getFilteredByGlob("./src/offres/**/*.md").reverse();
   });
+  eleventyConfig.addCollection("bios", (collection) => {
+    return collection.getFilteredByGlob("./src/bios/**/*.md").reverse();
+  });
   return {
     dir: {
       input: "src",

@@ -93,31 +93,36 @@ layout: "layouts/base.njk"
       </div>
     </div>
 
-    <div class="row ">
+    {# <div class="row card-deck align-items-stretch justify-content-center mb-4"> #}
+    <div class=" card-deck mb-4">
 
       {% set atPost = 0 %}
       {% set nb1 = collections.posts | length %}
-      {% for post in collections.posts | reverse %}
+      {% for post in collections.posts %}
         {% if atPost < 6 %}
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <a href="{{post.url}}">
-                <img class="small-img" src="{{post.data.cover}}" alt="illustration de {{post.title}}">
-              </a>
-              <h3>
-                {{ post.data.title }}
-              </h3>
-              <div class="meta mb-4">{{ post.data.author }}
+          <div class="card unit-7">
+
+            <img class="card-img-top" src="{{post.url}}/images/{{post.data.cover}}" alt="illustration de {{post.title}}">
+            <div class="card-header">
+              <h3 class="card-title">{{ post.data.title }}</h3>
+            </div>
+            <div class="card-body">
+
+              <div class="meta">{{ post.data.author }}
                 <span class="mx-2">-</span>
                 {{ post.date.toLocaleDateString('fr-FR') }}
               </div>
               <summary>
                 {{ post.data.summary }}
               </summary>
+            </div>
+
+            <div class="card-footer">
               <p>
                 <a href="{{post.url}}">Lire la suite...</a>
               </p>
             </div>
+
           </div>
           {% endif%}
           {% set atPost = atPost + 1 %}
@@ -125,6 +130,7 @@ layout: "layouts/base.njk"
 
       </div>
     </div>
+
   </div>
 
 </div>
@@ -141,74 +147,30 @@ layout: "layouts/base.njk"
     </div>
 
     <div class="row">
+      {% for bio in collections.bios %}
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="person">
+            <div class="bio-img">
 
-      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="person">
-          <div class="bio-img">
-            <figure><img src="images/PE.jpg" alt="Photo de Pierre-Emmanuel" width="500px">
-            </figure>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/pem-frot-1304g73/">
-                <p class="hiddentext" style="display: none;">Linkedin de Pierre-Emmanuel
-                </p>
-                <span class="icon-linkedin"></span>
-              </a>
+              <figure><img src="{{ bio.url}}/images/{{bio.data.cover }}" alt="Photo de {{ bio.data.name }}" width="500px">
+              </figure>
+              <div class="social">
+                <a href="{{ bio.data.linkedin }}">
+                  <p class="hiddentext" style="display: none;">Linkedin de
+                    {{ bio.data.name }}
+                  </p>
+                  <span class="icon-linkedin"></span>
+                </a>
 
+              </div>
             </div>
+            <h2 class="text-black h1">{{ bio.data.name }}</h2>
+            <span class="sub-title d-block mb-3">{{ bio.data.title }}</span>
+            <p>{{ bio.data.bio }}</p>
+
           </div>
-          <h2 class="text-black h1">Pierre-Emmanuel Frot</h2>
-          <span class="sub-title d-block mb-3">Fondateur</span>
-          <p></p>
-
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="person">
-          <div class="bio-img">
-            <figure>
-              <img src="images/L.jpeg" alt="Photo de Laurent" width="500px">
-            </figure>
-            <div class="social">
-              <a href="https://fr.linkedin.com/in/laurentmaumet">
-                <p class="hiddentext" style="display: none;">Linkedin de Laurent
-                </p>
-                <span class="icon-linkedin"></span>
-              </a>
-
-              <a href="https://twitter.com/lmau">
-                <p class="hiddentext" style="display: none;">Twitter de Laurent
-                </p>
-                <span class="icon-twitter"></span>
-              </a>
-            </div>
-          </div>
-          <h2 class="text-black h1">Laurent Maumet</h2>
-          <span class="sub-title d-block mb-3">Fondateur</span>
-          <p></p>
-
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="person">
-          <div class="bio-img">
-            <figure>
-              <img src="images/C.jpeg" alt="Photo de Cédric" width="500px">
-            </figure>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/cedric-stien-b1141aa/">
-                <p class="hiddentext" style="display: none;">Linkedin de Cédric
-                </p>
-                <span class="icon-linkedin "></span></a>
-            </div>
-          </div>
-          <h2 class="text-black h1">Cédric Stien</h2>
-          <span class="sub-title d-block mb-3">Fondateur</span>
-
-          <p>.</p>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
   </div>

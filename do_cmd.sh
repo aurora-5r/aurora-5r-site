@@ -6,6 +6,7 @@ WORKING_DIR="$(pwd)"
 MY_DIR="$(cd "$(dirname "$0")" && pwd)"
 pushd "${MY_DIR}" &>/dev/null || exit 1
 URL_PREPROD=3.20.47.46
+SRS_CALCULATOR="../srs-calculator/dist"
 
 DOC_GDRIVE_PROD="1HiByc1Lu3MmhinDzxlWtdPvox1RDILPE"
 DOC_GDRIVE_DRAFT="10ZBg5_4L7gQirLI-UTFco-93sM-_3gRR"
@@ -14,6 +15,7 @@ DOC_FOLDER_DRAFT="drafts_from_gdrive"
 
 IMAGE_NAME=aurora-5r-site
 CONTAINER_NAME=aurora-5r-site-c
+
 
 function log {
     echo -e "$(date +'%Y-%m-%d %H:%M:%S'):INFO: ${*} " >&2;
@@ -30,6 +32,8 @@ These are  ${0} commands used in various situations:
     build-doc            Builds doc from gsuite
     copy-doc            copy last version of doc to site folder
     build-pages            Builds pages
+    deploy-pages            deploy pages
+
     shell                 Start shell
     build-image           Build a Docker image with a environment
     install-node-deps     Download all the Node dependencies
@@ -210,9 +214,25 @@ function run_lint {
 function build_pages {
     log "Building landing pages"
     run_command "/opt/site/site-content/" npm run build
+    deploy_pages
+}
+function deploy_pages {
+    log "Deploying landing pages"
     mkdir -p dist
     rm -rf dist/*
     verbose_copy site-content/dist/. dist/
+    echo ${SRS_CALCULATOR}
+    if [[ -n "${SRS_CALCULATOR}" ]]; then
+        log "Getting SRS_CALCULATOR from ${SRS_CALCULATOR}"
+        mkdir -p dist/srs-calculator
+        verbose_copy ${SRS_CALCULATOR}/. dist/srs-calculator/
+
+    else
+        log "no SRS_CALCULATOR  ${SRS_CALCULATOR}"
+
+    fi
+
+
     if [[ -z "${URL_PREPROD+x}" ]]; then
         echo "URL_PREPROD environment variable not set"
         exit 0
@@ -228,8 +248,14 @@ function build_pages {
         done
 
     fi
+    if [[ -z "${OVH_AURORA+x}" ]]; then
+        echo "OVH_AURORA environment variable not set"
+        exit 0
+    else
+        # rsync -rh --progress dist/* "${OVH_AURORA}"
+        exit 0
+    fi
 }
-
 
 
 function verbose_copy {
@@ -261,6 +287,7 @@ function copy_doc {
             continue;
         fi
         collection_name="$(basename -- "${collection}")"
+        mkdir -p "site-content/src/${collection_name}/"
         find  "site-content/src/${collection_name}/"  -type f -name '*.md' -delete
         find  "site-content/src/${collection_name}/"  -type f -name '*.png' -delete
 
@@ -360,6 +387,9 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     elif [[ "${CMD}" == "build-pages" ]]; then
     ensure_node_module_exists
     build_pages
+    elif [[ "${CMD}" == "deploy-pages" ]]; then
+    ensure_node_module_exists
+    deploy_pages
     elif [[ "${CMD}" == "build-site" ]]; then
     ensure_node_module_exists
     build_site

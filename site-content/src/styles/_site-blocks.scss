@@ -1021,8 +1021,8 @@
 .h-entry {
   img {
     margin-bottom: 30px;
-    height: auto;
-    width: 200px;
+    width: auto;
+    max-height: 200px;
     display: inline-block;
     text-align: center;
   }
@@ -2661,7 +2661,6 @@ span {
   transition: 0.3s all ease;
   position: relative;
   top: 0;
-  //margin-bottom: 4em;
   margin-top: 4em;
   border-color: $white;
   text-align: center;
@@ -2705,6 +2704,24 @@ span {
     transition: 0.3s all ease;
     line-height: 1.2;
   }
+  img {
+    width: auto !important;
+    height: 200px !important;
+    object-fit: cover !important;
+  }
+  summary {
+    height: 100px;
+    text-align: left;
+  }
+  .meta {
+    color: #767676;
+    font-size: 14px;
+  }
+  .card-header,
+  .card-footer {
+    background-color: #fff;
+  }
+
   *:last-child {
     margin-bottom: 0;
   }
@@ -2726,6 +2743,16 @@ span {
       a {
         color: $white;
       }
+    }
+    .card-header,
+    .card-footer {
+      background: $primary;
+    }
+    summary {
+      color: #fff;
+    }
+    .meta {
+      color: #fff;
     }
   }
 }

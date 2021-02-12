@@ -13,11 +13,16 @@
               {{ content | readingTime }}.
             </p>
             {{content | safe}}
-
+            <p>
+              <a class="btn  btn-outline-dark btn-sm float-right" href="https://docs.google.com/document/d/{{gsuiteid}}">Suggérer une modification</a>
+            </p>
           </div>
-        </div>
+          {% readerBar %}
 
+        </div>
       </div>
+
     </div>
   </div>
+</div>
 {% endblock content %}
