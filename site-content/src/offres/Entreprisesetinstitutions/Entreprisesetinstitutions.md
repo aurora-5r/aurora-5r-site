@@ -38,8 +38,8 @@ Concrètement, à quoi cela vous engage-t-il ?
 Pour devenir partenaire d’A𝝻RorA-5R. vous devez:
 
 
-1. Devenir sociétaire d’A𝝻RorA-5R. La part sociale est fixée à 200€ et le nombre de parts sociales minimum à souscrire dépend de la taille de votre société. Cela va de 2 parts pour les TPE à 50 pour les ETI et grandes entreprises. En tant que sociétaire, vous intégrerez le collège des Clients et partenaires de la SCIC qui dispose d’une poids de 15% et d’un à deux administrateurs ([statuts](https://www.google.com/url?q=https://aurora-5r.fr/statuts&sa=D&source=editors&ust=1614004591867000&usg=AOvVaw0-R0vsIfJlU1PwCWcVcyh7)).
-2. Signer et respecter la [charte partenaire](https://www.google.com/url?q=https://docs.google.com/document/d/e/2PACX-1vQwWUyI4X3eBLNEjgw5Xx-aHhT-uKhR94-Y5OSm9vX_atUSF9lhLXGendhROUV0JnPCvv_dhnt1WgMa/pub&sa=D&source=editors&ust=1614004591868000&usg=AOvVaw2Zl1QNSrFDPjTsgjAic65Q) principalement sur les aspects de responsabilité sociale et environnementale.
+1. Devenir sociétaire d’A𝝻RorA-5R. La part sociale est fixée à 200€ et le nombre de parts sociales minimum à souscrire dépend de la taille de votre société. Cela va de 2 parts pour les TPE à 50 pour les ETI et grandes entreprises. En tant que sociétaire, vous intégrerez le collège des Clients et partenaires de la SCIC qui dispose d’une poids de 15% et d’un à deux administrateurs ([statuts](https://www.google.com/url?q=https://aurora-5r.fr/statuts&sa=D&source=editors&ust=1614005132661000&usg=AOvVaw3qRKKu_J-ndhh3NKxo2a2g)).
+2. Signer et respecter la [charte partenaire](https://www.google.com/url?q=https://docs.google.com/document/d/e/2PACX-1vQwWUyI4X3eBLNEjgw5Xx-aHhT-uKhR94-Y5OSm9vX_atUSF9lhLXGendhROUV0JnPCvv_dhnt1WgMa/pub&sa=D&source=editors&ust=1614005132662000&usg=AOvVaw2Dtc3wPeByA2E-CtxNRjs4) principalement sur les aspects de responsabilité sociale et environnementale.
 3. Favoriser l’intervention de vos talents sur les projets d’A𝝻RorA-5R. via le dispositif de mise à disposition de compétences.
 
 ![](images/image2.png)
@@ -58,7 +58,7 @@ Si vous souhaitez aller plus loin dans votre support à la mission d’A𝝻RorA
 4. 
 5. Investir dans des parts sociales supplémentaires d’A𝝻RorA-5R.
 
-Lien vers la [charte partenaire](https://www.google.com/url?q=https://docs.google.com/document/d/e/2PACX-1vQwWUyI4X3eBLNEjgw5Xx-aHhT-uKhR94-Y5OSm9vX_atUSF9lhLXGendhROUV0JnPCvv_dhnt1WgMa/pub&sa=D&source=editors&ust=1614004591871000&usg=AOvVaw2D3fv3-gq2wdumTY-Ar0M_).
+Lien vers la [charte partenaire](https://www.google.com/url?q=https://docs.google.com/document/d/e/2PACX-1vQwWUyI4X3eBLNEjgw5Xx-aHhT-uKhR94-Y5OSm9vX_atUSF9lhLXGendhROUV0JnPCvv_dhnt1WgMa/pub&sa=D&source=editors&ust=1614005132664000&usg=AOvVaw1zRc1-Go59WUVzqEb4ECAr).
 
 Pour en savoir plus, n’hésitez pas à nous [contacter](https://aurora-5r.fr/pages/Contact)
 

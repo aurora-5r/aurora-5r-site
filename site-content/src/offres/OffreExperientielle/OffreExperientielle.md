@@ -1,8 +1,8 @@
 ---
-gsuiteid: 1H7f0_fCbCxkQMbUrnmp9iBaz5w7y5dz85kMBfcVeGtE
-title: Créateurs ou dirigeants
+gsuiteid: 1PTRS0tmkru7CgqTHpzyKrEFUSbWRNnChM6JDhXaB-5M
+title: Offre Expérientielle
 
-question : Pourquoi travailler avec nous sur vos projets de transitions ?
+question : Comment développer une offre expérientielle 
 
 tags:
 
@@ -16,12 +16,12 @@ color: yellow
 
 Avant de répondre à la question de pourquoi nous choisir pour vous accompagner sur des sujets aussi stratégiques que des projets de transition de votre entreprise, il est important de partager quelques éléments structurants.
 
-Qu’est que vous appelez transition?
------------------------------------
+Qu’est que vous appelez ex?
+---------------------------
 
 Une transition est un changement d’état, si possible souhaité mais parfois subi ou obligé. La vie d’une entreprise est jalonnée par ces successions de transitions; changement de dirigeant, acquisition, nouvelle technologie, mutation du marché, crise …
 
-Nous nommons projet de transition la mise en place de solutions et de modèles permettant de conjuguer performance de l’entreprise et de son écosystème avec sa résilience et sa responsabilité sociale et environnementale. Trop souvent, la notion de responsabilité sociale et environnementale est perçue comme une contrainte, antinomique avec les objectifs économiques de l’entreprise. Certes, cela amène des contraintes qui peuvent être fortes. C’est aussi source d’innovation et de créativité, avec à terme un positionnement renforcé de l’entreprise au sein de sa filière.([Agir Autrement](https://www.google.com/url?q=https://aurora-5r.fr/offres/AgirAutrement/&sa=D&source=editors&ust=1614002423873000&usg=AOvVaw3ECMuuOP7JiyZXMrks2ReN)).
+Nous nommons projet de transition la mise en place de solutions et de modèles permettant de conjuguer performance de l’entreprise et de son écosystème avec sa résilience et sa responsabilité sociale et environnementale. Trop souvent, la notion de responsabilité sociale et environnementale est perçue comme une contrainte, antinomique avec les objectifs économiques de l’entreprise. Certes, cela amène des contraintes qui peuvent être fortes. C’est aussi source d’innovation et de créativité, avec à terme un positionnement renforcé de l’entreprise au sein de sa filière.([Agir Autrement](https://www.google.com/url?q=https://aurora-5r.fr/offres/AgirAutrement/&sa=D&source=editors&ust=1614005125010000&usg=AOvVaw3ZQ1n-G7fGG2IpZzIaxgEp)).
 
 Chaque société a un point de départ différent et un cheminement propre selon sa filière, ses hommes, son historique, ses idées et ambitions … Notre vocation est de les guider et les seconder dans la préparation et l’accomplissement de cette voie vers de nouveaux horizons et sommets.
 
@@ -58,7 +58,7 @@ Nous pourrions lister nos multiples expériences et références, vous dire que 
 
 * Nous savons que nous ignorons nombre de choses. C’est pourquoi nous n’avons pas de consultant senior au sein de nos équipes mais allons chercher les meilleures expertises auprès de nos entreprises et centres de recherche partenaires en fonction des besoins de chaque projet, en complément de vos équipes.
 * Nous aimons travailler avec vous mais espérons que vous pourrez rapidement vous passer de nous. Aussi, vous êtes pleinement libres de recruter les jeunes diplômés, employés d’AuRorA-5R, pour poursuivre l’aventure au sein de vos équipes. Nous vous le recommandons et vous y aidons.
-* Nos objectifs propres ne sont pas économiques. Certes, nous aimerions être payés pour le travail effectué mais c’est uniquement pour pouvoir continuer notre mission et faire bénéficier le maximum d’entreprises de notre approche. En effet, [nos statuts](https://www.google.com/url?q=https://drive.google.com/file/d/17FEBHRKYNJvYjrOQzsJoRbZ8iE95zt6h/view?usp%3Dsharing&sa=D&source=editors&ust=1614002423875000&usg=AOvVaw0Q-WjiEjkDT_sGvqpffTn-) et notre forme administrative de SCIC ne permettent pas une valorisation financière des parts sociales et limitent très fortement leur rémunération. Conformément à notre attachement à un partage équilibré de la valeur, nous tenons à ce qu’un maximum de cette valeur bénéficie aux acteurs économiques des filières et des territoires engagés dans une transition résiliente et responsable.
+* Nos objectifs propres ne sont pas économiques. Certes, nous aimerions être payés pour le travail effectué mais c’est uniquement pour pouvoir continuer notre mission et faire bénéficier le maximum d’entreprises de notre approche. En effet, [nos statuts](https://www.google.com/url?q=https://drive.google.com/file/d/17FEBHRKYNJvYjrOQzsJoRbZ8iE95zt6h/view?usp%3Dsharing&sa=D&source=editors&ust=1614005125015000&usg=AOvVaw22eFOvTJbaIhoRGdTTzBqD) et notre forme administrative de SCIC ne permettent pas une valorisation financière des parts sociales et limitent très fortement leur rémunération. Conformément à notre attachement à un partage équilibré de la valeur, nous tenons à ce qu’un maximum de cette valeur bénéficie aux acteurs économiques des filières et des territoires engagés dans une transition résiliente et responsable.
 * Nous apprécions traiter des problèmes pas toujours bien identifiés, sujet à diverses injonctions contradictoires et offrant de multiples voies de résolution. Aussi, préférons-nous construire avec vous plutôt que de répondre à des cahiers des charges aussi bien conçus qu’ils soient, même si nous savons aussi le faire.
 * Notre principale méthode est l’écoute, la confiance et le discours de vérité. Nous devons reconnaître que travailler avec nous n’est pas toujours un long fleuve tranquille. En effet, nous partageons le positif comme le négatif, et n’hésitons pas à exprimer notre point de vue même si cela ne plaît pas toujours. Au-delà de la réalisation d’un projet, soyez prêt à vivre une véritable expérience humaine et apprenante. 
 
