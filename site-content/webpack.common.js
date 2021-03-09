@@ -2,12 +2,13 @@ const webpack = require("webpack");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const AssetsPlugin = require("assets-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: path.join(__dirname, "src/scripts", "index.js"),
 
   output: {
-    path: path.join(__dirname, "dist/scripts"),
+    path: path.join(__dirname, "dist/scripts/"),
     publicPath: "/scripts",
   },
 
@@ -58,6 +59,13 @@ module.exports = {
       path: path.join(process.cwd(), "dist/scripts"),
       prettyPrint: true,
       includeManifest: "manifest",
+    }),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [
+        "dist/**/*.js",
+        "dist/**/*.css",
+        "dist/scripts/*",
+      ],
     }),
   ],
 };

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row  justify-content-center">
+
+    {%- for box in boxes -%}
+      <div class="card-deck mx-2" data-aos="fade-up">
+        <a href="{{ box.url | url }}">
+          <div class="card unit-7 unit-7-{{box.data.color}}  h-75 " style="width:20rem">
+            <div class="unit-7-icon mb-3">
+              <span class="icon-wrap icon-wrap-{{box.data.color}}">
+                <span class="text-primary">𝝻</span></span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{{box.data.title}}
+              </h3>
+              {%- if box.data.headline | length -%}
+                <span class="card-subtitle mb-2 text-black">{{box.data.headline}}</span>
+              {%- endif -%}
+              <p class="card-text">
+                {{box.data.subtitle}}
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>

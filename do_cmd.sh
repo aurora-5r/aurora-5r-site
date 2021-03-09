@@ -5,17 +5,14 @@ set -euo pipefail
 WORKING_DIR="$(pwd)"
 MY_DIR="$(cd "$(dirname "$0")" && pwd)"
 pushd "${MY_DIR}" &>/dev/null || exit 1
-URL_PREPROD=3.20.47.46
+
 SRS_CALCULATOR="../srs-calculator/dist"
 
-DOC_GDRIVE_PROD="1HiByc1Lu3MmhinDzxlWtdPvox1RDILPE"
-DOC_GDRIVE_DRAFT="10ZBg5_4L7gQirLI-UTFco-93sM-_3gRR"
 DOC_FOLDER_PROD="docs_from_gdrive"
-DOC_FOLDER_DRAFT="drafts_from_gdrive"
 
 IMAGE_NAME=aurora-5r-site
 CONTAINER_NAME=aurora-5r-site-c
-
+PREPROD_FOLDER=aurora5r
 
 function log {
     echo -e "$(date +'%Y-%m-%d %H:%M:%S'):INFO: ${*} " >&2;
@@ -27,13 +24,11 @@ usage: ${0} <command> [<args>]
 
 These are  ${0} commands used in various situations:
 
-    build-site            Prepare dist directory with landing pages and documentation
+    build-site            Build site and push it to prod and preprod
     preview-pages Starts the web server with preview of the website
     build-doc            Builds doc from gsuite
     copy-doc            copy last version of doc to site folder
     build-pages            Builds pages
-    deploy-pages            deploy pages
-
     shell                 Start shell
     build-image           Build a Docker image with a environment
     install-node-deps     Download all the Node dependencies
@@ -77,7 +72,7 @@ function ensure_container_exists {
         --detach \
         --name "${CONTAINER_NAME}" \
         --volume "$(pwd):/opt/site/" \
-        --publish 8080:8080 \
+        --publish 8081:8081 \
         --publish 3001:3001 \
         "${IMAGE_NAME}" sh -c 'trap "exit 0" INT; while true; do sleep 30; done;'
         return 0
@@ -106,9 +101,9 @@ function ensure_node_module_exists {
 function ensure_that_website_is_build {
     log "Check if site-content/dist/index.html file exists"
     if [[ ! -f site-content/dist/index.html ]] ; then
-        log "The website is not built. Start building."
-        run_command "/opt/site/site-content/" npm run build
-        log "The website builded."
+        log "The website is not built."
+        exit 1
+
     fi
 }
 
@@ -212,48 +207,63 @@ function run_lint {
 
 
 function build_pages {
-    log "Building landing pages"
-    run_command "/opt/site/site-content/" npm run build
-    deploy_pages
+    RELEASE=$1
+    log "Building pages for ${RELEASE}"
+    copy_doc ${RELEASE}
+    run_command "/opt/site/site-content/" rm -rf dist
+    if [[ "${RELEASE}" == "preproduction" ]]; then
+        run_command "/opt/site/site-content/" npm run dev
+    else
+        run_command "/opt/site/site-content/" npm run build
+
+
+    fi
+    deploy_pages ${RELEASE}
+
 }
 function deploy_pages {
     log "Deploying landing pages"
+    RELEASE=$1
+
     mkdir -p dist
-    rm -rf dist/*
-    verbose_copy site-content/dist/. dist/
+    mkdir -p dist/${RELEASE}
+    rm -rf dist/${RELEASE}/*
+
     echo ${SRS_CALCULATOR}
     if [[ -n "${SRS_CALCULATOR}" ]]; then
         log "Getting SRS_CALCULATOR from ${SRS_CALCULATOR}"
-        mkdir -p dist/srs-calculator
-        verbose_copy ${SRS_CALCULATOR}/. dist/srs-calculator/
-
+        mkdir -p dist/${RELEASE}/srs-calculator
+        verbose_copy ${SRS_CALCULATOR}/. dist/${RELEASE}/srs-calculator/
     else
         log "no SRS_CALCULATOR  ${SRS_CALCULATOR}"
-
     fi
+    verbose_copy site-content/dist/. dist/${RELEASE}/
+    if [[ "${RELEASE}" == "preproduction" ]]; then
+        if [[ -z "${URL_PREPROD+x}" ]]; then
+            echo "URL_PREPROD environment variable not set"
+            exit 0
+        else
+            log "Copy dist in /var/www/html/${PREPROD_FOLDER} for preprod tests"
+            sudo mkdir -p /var/www/html/${PREPROD_FOLDER}
+            sudo rm -rf /var/www/html/${PREPROD_FOLDER}/*;sudo cp -rp dist/${RELEASE}/* /var/www/html/${PREPROD_FOLDER}
 
+            sudo sed -i "s/https:\/\/${URL_PROD}/http:\/\/${URL_PREPROD}\//g" /var/www/html/${PREPROD_FOLDER}/sitemap.xml
+            sudo sed -i "s/https:\/\/${URL_PROD}/http:\/\/${URL_PREPROD}\//g" /var/www/html/${PREPROD_FOLDER}/robots.txt
 
-    if [[ -z "${URL_PREPROD+x}" ]]; then
-        echo "URL_PREPROD environment variable not set"
-        exit 0
-    else
-        log "Copy dist in /var/www/html/ for preprod tests"
-        sudo rm -rf /var/www/html/*;sudo cp -rp dist/* /var/www/html/
+            for page in $(find /var/www/html/${PREPROD_FOLDER} -name "*.html"); do
+                sudo sed -i "s/https:\/\/${URL_PROD}/http:\/\/${URL_PREPROD}\//g" ${page}
 
-        sudo sed -i "s/https:\/\/aurora-5r.fr/http:\/\/"$URL_PREPROD"/g" /var/www/html/sitemap.xml
-        sudo sed -i "s/https:\/\/aurora-5r.fr/http:\/\/"$URL_PREPROD"/g" /var/www/html/robots.txt
+            done
 
-        for page in $(find /var/www/html/ -name "*.html"); do
-            sudo sed -i "s/https:\/\/aurora-5r.fr/http:\/\/"$URL_PREPROD"/g" ${page}
-        done
-
-    fi
-    if [[ -z "${OVH_AURORA+x}" ]]; then
-        echo "OVH_AURORA environment variable not set"
-        exit 0
-    else
-        # rsync -rh --progress dist/* "${OVH_AURORA}"
-        exit 0
+        fi
+        elif [[ "${RELEASE}" == "production" ]]; then
+        if [[ -z "${SSH_PROD+x}" ]]; then
+            echo "SSH_PROD environment variable not set"
+            exit 0
+        else
+            #rsync -rh --progress dist/${RELEASE}/* ${SSH_PROD}
+            exit 0
+        fi
     fi
 }
 
@@ -273,42 +283,53 @@ function assert_file_exists {
         exit 1
     fi
 }
-function copy_doc {
-    release="$1"
-    for folder in $(ls -tp ${DOC_FOLDER_PROD}/|tail -n +6) ; do
-        rm -rf ${DOC_FOLDER_PROD}/${folder}
-    done
-    last_version=$(find ${DOC_FOLDER_PROD}/ -maxdepth 1 -printf "%T@ %Tc %p\n"  | sort -n|cut -s -d "/" -f 2|tail -2|head -1)
-    log "copy_doc, last version ${last_version}"
 
-    for collection in ${DOC_FOLDER_PROD}/${last_version}/production/* ; do
+
+function copy_doc {
+    RELEASE="$1"
+    log "copy_doc for ${RELEASE}"
+
+
+    for collection in ${DOC_FOLDER_PROD}/production/* ; do
         # Process directories only,
         if [ ! -d "${collection}" ]; then
             continue;
         fi
         collection_name="$(basename -- "${collection}")"
         mkdir -p "site-content/src/${collection_name}/"
-        find  "site-content/src/${collection_name}/"  -type f -name '*.md' -delete
-        find  "site-content/src/${collection_name}/"  -type f -name '*.png' -delete
+        find  "site-content/src/${collection_name}/"  -maxdepth 1 -mindepth 1 -type d -exec  rm -rf {} +
 
         verbose_copy "${collection}/." "site-content/src/${collection_name}"
 
     done
+    if [[ "${RELEASE}" == "production" ]]; then
+        log "remove drafts"
+        find  "site-content/src/"  -type d -name 'drafts' -exec  rm -rf {} +
+    fi
 }
 function build_site {
     log "Building full site"
 
     build_doc
-    copy_doc prod
-    build_pages
+    log "... for preproduction"
+
+    copy_doc preproduction
+    build_pages preproduction
+
+    log "... for production"
+
+    copy_doc production
+    build_pages production
 
 
 }
+
+
 function build_doc {
     log "Building doc from gdrive"
+    rm -rf "${DOC_FOLDER_PROD}/*"
 
-    VERSION=$(date +'%Y.%m.%d.%H.%M.%S')
-    python -m gstomd --folder_id ${DOC_GDRIVE_PROD}  --dest ${DOC_FOLDER_PROD}/${VERSION} --config "conf/pydrive_settings.yaml"
+    python -m gstomd --folder_id ${DOC_GDRIVE_PROD}  --dest "${DOC_FOLDER_PROD}" --config "conf/pydrive_settings.yaml"
 
 }
 
@@ -346,6 +367,15 @@ function check_a11y {
 
 }
 
+
+# - - - - - MAIN
+if [[ ! -f conf/conf-secret.sh ]] ; then
+    log "Missing configuration file conf/conf-secret.sh"
+    exit 1
+fi
+
+. ./conf/conf-secret.sh
+
 if [[ "$#" -eq 0 ]]; then
     echo "You must provide at least one command."
     echo
@@ -382,21 +412,20 @@ if [[ "${CMD}" == "install-node-deps" ]] ; then
     run_command "/opt/site/site-content/" npm install
     elif [[ "${CMD}" == "preview-pages" ]]; then
     ensure_node_module_exists
-
     run_command "/opt/site/site-content/" npm run preview
-    elif [[ "${CMD}" == "build-pages" ]]; then
+    elif [[ "${CMD}" == "build-pages-preprod" ]]; then
     ensure_node_module_exists
-    build_pages
-    elif [[ "${CMD}" == "deploy-pages" ]]; then
+    build_pages preproduction
+    elif [[ "${CMD}" == "build-pages-prod" ]]; then
     ensure_node_module_exists
-    deploy_pages
+    build_pages production
     elif [[ "${CMD}" == "build-site" ]]; then
     ensure_node_module_exists
     build_site
+
     elif [[ "${CMD}" == "build-doc" ]]; then
     build_doc
-    elif [[ "${CMD}" == "copy-doc" ]]; then
-    copy_doc prod
+
     elif [[ "${CMD}" == "check-site-links" ]]; then
     ensure_node_module_exists
     ensure_that_website_is_build

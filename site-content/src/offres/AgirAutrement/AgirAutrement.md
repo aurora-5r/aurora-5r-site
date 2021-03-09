@@ -2,7 +2,7 @@
 gsuiteid: 15Xj6g-zBIMi2YONcG7Qgq16NK1-VPvY5QkiTmXTsQPo
 title: Agir autrement
 
-question : Quelles sont notre vision et notre mission?
+subtitle: Quelles sont notre vision et notre mission?
 
 tags:
 
@@ -24,7 +24,7 @@ Notre société fait face à des défis environnementaux (dérèglement climatiq
 
 Deux “écoles” s’affrontent (en mettant de côté les climatosceptiques et les collapsologues). Certains pensent qu’il est possible d’y répondre technologiquement sans changer les fondamentaux du système actuel (les tenants de la croissance verte) quand d’autres considèrent qu’il est indispensable de repenser le système en mettant l’économie au second plan (les décroissants). Ceux qui prônent l’économie verte sont fréquemment taxés d’être dans l’affichage et le greenwashing quand ceux préconisant une modération de la consommation et des usages sont accusés de vouloir renvoyer notre société au temps de la lampe à huile. 
 
-Cette focalisation du débat autour de la croissance met de côté l’essentielle remplacement progressif des activités non durables par des modèles durables, que cela impacte ou non la croissance. Bien sûr, cela aura des conséquences importantes sur la richesse moyenne disponible par individu, nécessitant des adaptations des modèles économiques et sociétaux, qui ne seront pas forcément au détriment de la qualité de vie. Accepterions-nous de voyager avec une compagnie aérienne ou des avions d’un constructeur qui place son objectif de croissance économique au-dessus de la sécurité des vols ? Et pourtant c’est ce que nous faisons aujourd’hui avec le changement climatique et les autres problèmes environnementaux, en mettant en priorité la croissance.
+Cette focalisation du débat autour de la croissance met de côté l'essentiel remplacement progressif des activités non durables par des modèles durables, que cela impacte ou non la croissance. Bien sûr, cela aura des conséquences importantes sur la richesse moyenne disponible par individu, nécessitant des adaptations des modèles économiques et sociétaux, qui ne seront pas forcément au détriment de la qualité de vie. Accepterions-nous de voyager avec une compagnie aérienne ou des avions d’un constructeur qui place son objectif de croissance économique au-dessus de la sécurité des vols ? Et pourtant c’est ce que nous faisons aujourd’hui avec le changement climatique et les autres problèmes environnementaux, en mettant en priorité la croissance.
 
 ![](images/image2.png)
 
@@ -34,7 +34,7 @@ Si les grandes entreprises ont les moyens humains et financiers pour s’adapter
 
 ### Des nouveaux modèles sont à inventer.
 
-Sur la base de ce constat, A𝝻RorA-5R. avocation de permettre l’émergence de nouveaux modèles et solutions répondant à ces défis, en s’appuyant sur les acteurs du territoire avec une approche systémique. Notre mission est d’accompagner les projets de transitions des TPE/PMEs, ETIs et start-ups pour augmenter leur résilience , développer la responsabilité des filières , et tisser sur le territoire des réseaux dans lesquels chaque acteur développe son autonomie et sa responsabilité en conscience dans ses comportements d’achat et de consommation.
+Sur la base de ce constat, A𝝻RorA-5R. a vocation de permettre l’émergence de nouveaux modèles et solutions répondant à ces défis, en s’appuyant sur les acteurs du territoire avec une approche systémique. Notre mission est d’accompagner les projets de transitions des TPE/PMEs, ETIs et start-ups pour augmenter leur résilience , développer la responsabilité des filières , et tisser sur le territoire des réseaux dans lesquels chaque acteur développe son autonomie et sa responsabilité en conscience dans ses comportements d’achat et de consommation.
 
 Notre expérience nous a montré qu’au cœur de ces modèles réside la manière de partager la valeur entre acteurs des filières et des territoires, afin que chacun ait les moyens d’agir autrement. Une répartition équilibrée et transparente de la valeur est le fondement de la constitution de réseaux résilients et responsables dans lesquels les transitions sont vues comme des opportunités, fondées sur la confiance entre les parties prenantes., Nous nommons cette volonté d’incuber les transitions des filières et des territoires, la transcubation.
 

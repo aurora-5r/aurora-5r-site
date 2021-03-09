@@ -1,10 +1,8 @@
 ---
 gsuiteid: 1yHQL2oXYrQ1Wt7Ursksum1Kf1gWvbGEdFKYGh61c8Eg
-explication: Vous pouvez modifier..
-
 title: Jeunes diplômés
 
-question : Pourquoi nous rejoindre ? 
+subtitle: Pourquoi nous rejoindre ? 
 
 tags:
 

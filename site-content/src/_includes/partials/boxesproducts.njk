@@ -1,0 +1,21 @@
+{% set boxes = collections.line1 %}
+
+<div class="row card-deck align-items-stretch justify-content-center mb-4">
+
+  {% for box in boxes %}
+    <div class=" col-md-4" data-aos="fade-up">
+      <div class="card unit-7 unit-7-{{box.data.color}}  h-75 ">
+        <div class="unit-7-icon mb-3">
+          <span class="icon-wrap icon-wrap-{{box.data.color}}">
+            <span class="text-primary">𝝻</span></span>
+        </div>
+        <h3 class="card-title">{{box.data.title}}
+        </h3>²²
+
+        <p class="card-text">
+          <a href="{{box.url |url }}">{{box.data.subtitle}}</a>
+        </p>
+
+      </div>
+    </div>
+  {% endfor %}

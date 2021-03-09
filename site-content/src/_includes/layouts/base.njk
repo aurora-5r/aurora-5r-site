@@ -5,7 +5,7 @@
 
   <head>
     <title>AuRorA-5R</title>
-    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="shortcut icon" href="{{ '/images/logo.png' |url}}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -44,7 +44,7 @@
 
             <div class="col-6 col-md-3 col-xl-4  d-block">
               <h1 class="mb-0 site-logo">
-                <a href="/index.html" class="text-black h2 mb-0">A<span class="text-primary">𝝻</span>RorA<span class="text-primary">-5R.</span>
+                <a href="{{ '/index.html' | url }}" class="text-black h2 mb-0">A<span class="text-primary">𝝻</span>RorA<span class="text-primary">-5R.</span>
                 </a>
               </h1>
             </div>
@@ -63,6 +63,21 @@
                   <li class="has-children">
                     <nav-title>
                       Nos actions
+                    </nav-title>
+                    <ul class="dropdown arrow-top">
+                      {%- for nav in actionNav -%}
+                        <li>
+                          <a class="nav-link" href="{{ nav.url | url }}">{{ nav.title }}</a>
+
+                        </li>
+                      {%- endfor -%}
+
+                    </ul>
+                  </li>
+                  {% set actionNav = collections.all | eleventyNavigation("Nos offres") %}
+                  <li class="has-children">
+                    <nav-title>
+                      Nos offres
                     </nav-title>
                     <ul class="dropdown arrow-top">
                       {%- for nav in actionNav -%}
@@ -136,7 +151,7 @@
   <div>
     {% block content %}
 
-      {{ content|safe }}
+      {{ content | safe }}
 
     {% endblock content %}
   </div>

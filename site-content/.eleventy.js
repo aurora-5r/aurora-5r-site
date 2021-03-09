@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const livePosts = (p) => p.date <= now && !p.data.draft;
 const now = new Date();
+const isProduction = process.env.NODE_ENV === `production`;
 
 const manifestPath = path.resolve(__dirname, "dist", "scripts", "webpack.json");
 const manifest = JSON.parse(
@@ -11,19 +12,22 @@ const manifest = JSON.parse(
 );
 const pluginSEO = require("eleventy-plugin-seo");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
-const Image = require("@11ty/eleventy-img");
-const sharp = require("sharp");
+
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const readingTime = require("eleventy-plugin-reading-time");
 const readerBar = require("eleventy-plugin-reader-bar");
 const imagesResponsiver = require("eleventy-plugin-images-responsiver");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
 
 const pluginTOC = require("eleventy-plugin-toc");
 
+function sortByOrder(values) {
+  return values.slice().sort((a, b) => a.data.order - b.data.order)
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addFilter('sortByOrder', sortByOrder)
+
   const presets = {
     default: {
       sizes: `(max-width: 340px) 250px, 50vw`,
@@ -45,18 +49,14 @@ module.exports = function (eleventyConfig) {
       },
     },
   };
-  eleventyConfig.addPlugin(imagesResponsiver, presets);
-  eleventyConfig.addPassthroughCopy("src/*/*/images/*.*");
-  eleventyConfig.setLibrary("md", markdownIt().use(markdownItAnchor));
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(pluginTOC, {
-    tags: ["h2", "h3"],
-    wrapper: "div",
-  });
+  if (process.env.ELEVENTY_ENV === "production") {
+    eleventyConfig.addPlugin(imagesResponsiver, presets);
+  }
 
+  eleventyConfig.addPassthroughCopy("src/**/images/*.*");
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(readerBar);
-
   eleventyConfig.addPlugin(embedYouTube, {
     embedClass: "post-video",
   });
@@ -64,16 +64,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSEO, {
     title: "AuRorA-5R",
     description:
-      "Transcubateur. AuRorA-5R accompagne les PME de la région AURA dans leurs projets innovants pour des transitions responsables",
+      "Transcubateur. AuRorA-5R accompagne les PME et les acteurs du territoire de la région AURA dans leurs projets innovants pour des transitions responsables",
     url: "https://aurora-5r.fr",
     author: "Laurent Maumet",
-    twitter: "aurora-5r",
   });
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   eleventyConfig.addShortcode("bundledCss", function () {
     return manifest["main"]["css"]
-      ? `<link href="${manifest["main"]["css"]}" rel="stylesheet" />`
+      ? `<link href="${manifest["main"]["css"]}  " rel="stylesheet" />`
       : "";
   });
 
@@ -82,28 +81,29 @@ module.exports = function (eleventyConfig) {
       ? `<script src="${manifest["main"]["js"]}" async></script>`
       : "";
   });
+
   eleventyConfig.addCollection("posts", (collection) => {
     return collection
       .getFilteredByGlob("./src/posts/**/*.md")
       .filter((_) => livePosts(_))
       .reverse();
   });
-  eleventyConfig.addCollection("drafts", (collection) => {
-    return collection
-      .getFilteredByGlob("./src/posts/**/*.md")
-      .filter((_) => !livePosts(_))
-      .reverse();
-  });
-  eleventyConfig.addCollection("offres", (collection) => {
-    return collection.getFilteredByGlob("./src/offres/**/*.md").reverse();
-  });
+
+
   eleventyConfig.addCollection("bios", (collection) => {
     return collection.getFilteredByGlob("./src/bios/**/*.md").reverse();
+  });
+  eleventyConfig.addCollection("recrutements", (collection) => {
+    return collection.getFilteredByGlob("./src/recrutements/**/*.md").reverse();
   });
   return {
     dir: {
       input: "src",
       output: "dist",
     },
+    pathPrefix: isProduction ? `/` : `/aurora5r/`,
+    templateFormats: ["njk", "md"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
   };
 };
