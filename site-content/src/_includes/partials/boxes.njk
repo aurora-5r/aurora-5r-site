@@ -7,14 +7,16 @@
           <div class="card unit-7 unit-7-{{box.data.color}}  h-75 " style="width:20rem">
             <div class="unit-7-icon mb-3">
               <span class="icon-wrap icon-wrap-{{box.data.color}}">
-                <span class="text-primary">𝝻</span></span>
+                {%- if box.data.initial | length -%}
+                  <span class="text-primary {{box.data.initial}}"></span>
+                {%- else -%}
+                  <span class="text-primary">𝝻</span>
+                {%- endif -%}
+              </span>
             </div>
             <div class="card-body">
               <h3 class="card-title">{{box.data.title}}
               </h3>
-              {%- if box.data.headline | length -%}
-                <span class="card-subtitle mb-2 text-black">{{box.data.headline}}</span>
-              {%- endif -%}
               <p class="card-text">
                 {{box.data.subtitle}}
               </p>

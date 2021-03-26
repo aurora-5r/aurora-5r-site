@@ -1,16 +1,16 @@
 ---
 gsuiteid: 1-gfpVLSMKsfB8YCs_e0yQJK3fhN-tdNzMLTfO1USBIU
-title: Des valeurs partagées pour partager de la valeur
+title: Des valeurs partagées
 
 author: Cédric, Pierre-Emmanuel
 
-date: 2021-28-01
+date: 2021-03-18
 
-summary: à compléter
+summary: L’importance de partager des valeurs entre partenaires pour partager la valeur
 
 draft: False
 
-cover: /images/5r.png
+cover: image1.jpg
 
 category: idées
 
@@ -26,9 +26,13 @@ Deux risques se profilent alors pour ces acteurs fragilisés:
 
 - l’apparition de nouveaux acteurs plus compétitifs soit par leur localisation dans des zones à bas coûts ou par des offres plus innovantes, 
 
-- une crise économique affectant leur filière, telle que celle liée à la pandémie. Dans ce cas, les gouvernements n’ont souvent d’autres choix que de venir d’une manière ou d’une autre à ces grands donneurs d’ordre, afin de préserver au mieux l’intégrité de la filière, sans pour autant que cette aide ne se répercute sur les fournisseurs des rangs inférieurs, ceux-ci étant au contraire soumis à un accroissement de la pression concurrentielle, sur le principe qu’il est nécessaire que les efforts soient partagés.
+- une crise économique affectant leur filière, telle que celle liée à la pandémie. Dans ce cas, les gouvernements n’ont souvent d’autres choix que de venir d’une manière ou d’une autre à ces grands donneurs d’ordre, afin de préserver au mieux l’intégrité de la filière, sans pour autant que cette aide ne se répercute sur les fournisseurs des rangs inférieurs. Ces derniers sont au contraire soumis à un accroissement de la pression concurrentielle, sur le principe qu’il est nécessaire que les efforts soient partagés.
 
 Accroître la résilience économique d’un territoire implique de permettre à ses acteurs de réduire leur dépendance à des acteurs dominants, en leur permettant d’accéder directement aux utilisateurs finaux de leurs offres ou produits et ainsi d’obtenir une juste rémunération de leurs savoir-faires et propriétés immatérielles, en rapport avec la valeur créée au sein la filière.
 
 C’est un des objectifs majeurs poursuivis par les équipes d’AuRorA-5R dans les projets que nous sélectionnons et exécutons avec les PMEs, en alliant innovation et positionnement dans la chaîne de valeur afin de mieux répartir la valeur créée entre les différents acteurs d’une même filière.
+
+![](images/image1.jpg)
+
+<a href="https://www.vecteezy.com/free-photos/war">War Stock photos by Vecteezy</a>
 

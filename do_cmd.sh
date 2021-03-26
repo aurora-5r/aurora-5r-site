@@ -261,7 +261,7 @@ function deploy_pages {
             echo "SSH_PROD environment variable not set"
             exit 0
         else
-            #rsync -rh --progress dist/${RELEASE}/* ${SSH_PROD}
+            rsync -rh --progress --delete dist/${RELEASE}/* ${SSH_PROD}
             exit 0
         fi
     fi

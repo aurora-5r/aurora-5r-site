@@ -20,7 +20,7 @@ La vidéo de notre intervention lors du Festival Transfo 2020 “Réussir la tra
 
 ![](images/image1.png)
 
-Le support de présentation est disponible ici : [support](https://www.google.com/url?q=https://docs.google.com/presentation/d/e/2PACX-1vT3_aJq_EEYmbYY5jRpeQDtcEjdbL84qjIWsM8oTZwmeii7TutVgvEbF9VybNqHG5XdldQbrAMzql1d/pub?start%3Dfalse%26slide%3Did.g89c76ed8f8_0_205&sa=D&source=editors&ust=1615287053555000&usg=AOvVaw3TdmgStvfqmffuMY9xBsOY)
+Le support de présentation est disponible ici : [support](https://www.google.com/url?q=https://docs.google.com/presentation/d/e/2PACX-1vT3_aJq_EEYmbYY5jRpeQDtcEjdbL84qjIWsM8oTZwmeii7TutVgvEbF9VybNqHG5XdldQbrAMzql1d/pub?start%3Dfalse%26slide%3Did.g89c76ed8f8_0_205&sa=D&source=editors&ust=1616752856799000&usg=AOvVaw1bTXtSMzyweQv6QpBOe773)
 
-[https://www.youtube.com/watch?v=58VXKdUsBVc](https://www.google.com/url?q=https://www.youtube.com/watch?v%3D58VXKdUsBVc&sa=D&source=editors&ust=1615287053555000&usg=AOvVaw18TSsHudwsD18giuv5Bf84)
+[https://www.youtube.com/watch?v=58VXKdUsBVc](https://www.google.com/url?q=https://www.youtube.com/watch?v%3D58VXKdUsBVc&sa=D&source=editors&ust=1616752856799000&usg=AOvVaw3_f44-piBICrnc3UAWaQij)
 

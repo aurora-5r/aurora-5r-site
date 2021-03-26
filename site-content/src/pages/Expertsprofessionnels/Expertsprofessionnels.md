@@ -2,7 +2,7 @@
 gsuiteid: 1gX9G4RU5G73pDmsF9TEZQxYyczxG4YQMnN3yFskN4lA
 title: Experts et professionnels
 
-subtitle: La vision d’A𝝻RorA-5R me parle, comment contribuer à votre aventure ? 
+subtitle: La vocation d’A𝝻RorA-5R me parle, comment contribuer à votre mission ? 
 
 tags:
 
@@ -12,7 +12,7 @@ parent: Nous rejoindre
 
 ---
 
-Vous avez une dizaine d’années d’activité professionnelle. Vous êtes sensibles aux problématiques du 21ème siècle: réchauffement climatique, disparition de la biodiversité, pollution galopante, raréfaction de certaines ressources naturelles, accroissement des inégalités, autocratie augmentée grâce aux technologies numériques … Vous voulez agir pour construire ce fameux monde d’après, dont on parle tant, mais que si peu d’acteurs construisent réellement mais vous vous interrogez sur la manière de faire?
+Vous avez une dizaine d’années d’activité professionnelle. Vous êtes sensibles aux problématiques du 21ème siècle. Vous voulez agir et vous vous interrogez sur la manière de faire.
 
 Rejoindre une équipe projet d’A𝝻RorA-5R. peut être une réponse.
 

@@ -8,7 +8,7 @@ module.exports = {
         else return data.title;
       },
       order: (data) => {
-        if (data.ordernavigation) return data.ordernavigation;
+        if (data.order) return data.order;
         else return 0;
       },
     },

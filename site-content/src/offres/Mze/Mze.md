@@ -20,7 +20,7 @@ color: green
 
 ---
 
-Note méthode M𝝻ze permet d’appréhender la structure d’un marché ou d’une filière afin d’en comprendre les grandes dynamiques et les variables critiques. Cela permet d’établir différents scénarios , puis d’identifier et de sélectionner avec le porteur les projets de transition les plus pertinents.
+Note méthode M𝝻ze permet d’appréhender la structure d’un marché ou d’une filière en rupture ou en émergence afin d’en comprendre les grandes dynamiques et les variables critiques. Cela permet d’établir différents scénarios, puis d’identifier et de sélectionner avec le porteur les projets de transition les plus pertinents.
 
 Nous sélectionnons un flux pertinent, physique ou non, et modélisons comment il s'intègre au sein de la filière.
 
@@ -58,6 +58,4 @@ Nous notons les différents projets envisageables (positionnement ou solution) s
 ![](images/image2.png)
 
 Temps de réalisation: 2 à 6 mois selon la complexité de la filière
-
-Coût estimatif: 10 à 100k€
 

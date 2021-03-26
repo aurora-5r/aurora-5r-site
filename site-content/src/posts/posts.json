@@ -1,4 +1,4 @@
 {
-  "layout": "layouts/page.njk",
+  "layout": "layouts/posts.njk",
   "cover": "image1.png"
 }

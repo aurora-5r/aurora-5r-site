@@ -38,8 +38,6 @@ A la fin de cette étape, vous disposez d’un ultime point d’étape avant de 
 
 Temps de réalisation: 2 à 6 mois selon la nature des pilotes choisis
 
-Coût estimatif: 50 à 200k€ - financement partiel possible
-
 Réalisation et déploiement du projet
 ------------------------------------
 
@@ -59,8 +57,7 @@ Nos équipes interviennent sur 6 axes principaux :
 5. Organisation: compétences à intégrer, méthodes et processus
 6. Moyens de financements, dépôt et suivi des dossiers
 
-Temps de réalisation: jusqu’à 18 mois selon la complexité du projet  
-Coût estimatif: 100 à 500k€ - financement partiel possible
+Temps de réalisation: jusqu’à 18 mois selon la complexité du projet
 
 ![](images/image2.png)
 

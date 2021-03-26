@@ -2,7 +2,7 @@
 gsuiteid: 15Xj6g-zBIMi2YONcG7Qgq16NK1-VPvY5QkiTmXTsQPo
 title: Agir autrement
 
-subtitle: Quelles sont notre vision et notre mission?
+subtitle: Quelles est notre vocation?
 
 tags:
 
@@ -16,37 +16,23 @@ color: green
 
 ---
 
-“Dieu se rit des hommes qui se plaignent des conséquences, alors qu’ils en chérissent les causes” aphorisme prêté à Bossuet
-
-### Nos constats sur le monde actuel.
-
-Notre société fait face à des défis environnementaux (dérèglement climatique, chute de la biodiversité …) et sociétaux directement liés aux modèles économiques et industriels déployés dans les dernières décennies.
-
-Deux “écoles” s’affrontent (en mettant de côté les climatosceptiques et les collapsologues). Certains pensent qu’il est possible d’y répondre technologiquement sans changer les fondamentaux du système actuel (les tenants de la croissance verte) quand d’autres considèrent qu’il est indispensable de repenser le système en mettant l’économie au second plan (les décroissants). Ceux qui prônent l’économie verte sont fréquemment taxés d’être dans l’affichage et le greenwashing quand ceux préconisant une modération de la consommation et des usages sont accusés de vouloir renvoyer notre société au temps de la lampe à huile. 
-
-Cette focalisation du débat autour de la croissance met de côté l'essentiel remplacement progressif des activités non durables par des modèles durables, que cela impacte ou non la croissance. Bien sûr, cela aura des conséquences importantes sur la richesse moyenne disponible par individu, nécessitant des adaptations des modèles économiques et sociétaux, qui ne seront pas forcément au détriment de la qualité de vie. Accepterions-nous de voyager avec une compagnie aérienne ou des avions d’un constructeur qui place son objectif de croissance économique au-dessus de la sécurité des vols ? Et pourtant c’est ce que nous faisons aujourd’hui avec le changement climatique et les autres problèmes environnementaux, en mettant en priorité la croissance.
-
-![](images/image2.png)
-
-Malgré l’apparition de nouvelles technologies, principalement autour du numérique, il n’y a à ce jour aucun modèle connu pour se payer le luxe de se limiter au paradigme de la croissance verte et des adaptations incrémentales. Bien sûr, l’innovation technologique peut être porteuse de solutions, mais elle est aussi source de modèles peu responsables et de ruptures rapides fragilisant certaines filières et territoires de par leur grande vitesse de déploiement.
-
-Si les grandes entreprises ont les moyens humains et financiers pour s’adapter, soit organiquement, soit par acquisition, à tous ces défis, cela est bien plus difficile pour les TPE/PMEs et parfois les ETIs. Et pourtant, ce sont probablement ces structures qui, de par leur agilité et leur moindre financiarisation, seraient le plus à même, avec les compétences, ressources et moyens nécessaires, de concevoir et mettre en œuvre ces nouvelles approches, au même titre que les start-ups dont le modèle est si souvent vanté et favorisé.
-
 ### Des nouveaux modèles sont à inventer.
 
-Sur la base de ce constat, A𝝻RorA-5R. a vocation de permettre l’émergence de nouveaux modèles et solutions répondant à ces défis, en s’appuyant sur les acteurs du territoire avec une approche systémique. Notre mission est d’accompagner les projets de transitions des TPE/PMEs, ETIs et start-ups pour augmenter leur résilience , développer la responsabilité des filières , et tisser sur le territoire des réseaux dans lesquels chaque acteur développe son autonomie et sa responsabilité en conscience dans ses comportements d’achat et de consommation.
+Notre société fait face à des défis environnementaux (dérèglement climatique, chute de la biodiversité …) et sociétaux (innovation technologique, économie mondialisée…). Sur la base de ce constat, A𝝻RorA-5R. a vocation de faire émerger de nouveaux modèles et solutions répondant à ces défis, en s’appuyant sur les acteurs du territoire. 
 
-Notre expérience nous a montré qu’au cœur de ces modèles réside la manière de partager la valeur entre acteurs des filières et des territoires, afin que chacun ait les moyens d’agir autrement. Une répartition équilibrée et transparente de la valeur est le fondement de la constitution de réseaux résilients et responsables dans lesquels les transitions sont vues comme des opportunités, fondées sur la confiance entre les parties prenantes., Nous nommons cette volonté d’incuber les transitions des filières et des territoires, la transcubation.
+Pour cela, notre mission est d’accompagner les entreprises et institutions faisant face à des ruptures de marchés afin d’augmenter leur résilience, développer la responsabilité des filières, et tisser sur le territoire des réseaux dans lesquels chaque acteur développe son autonomie et sa responsabilité en conscience dans ses comportements d’achat et de consommation.
 
-A ce titre, notre politique est de mettre en open source le maximum de données et d’information pour que chacun puisse les utiliser et ainsi accélérer le mouvement vers un monde résilient et responsable. Nous nous tenons à disposition pour aider et soutenir tout projet similaire à celui d’AuRorA-5R qui voudrait voir le jour dans une autre région ou dans un autre pays.
+Notre expérience nous a montré qu’au cœur de ces modèles réside la manière de partager la valeur entre acteurs des filières et des territoires, afin que chacun ait les moyens d’agir autrement. Une répartition équilibrée et transparente de la valeur est le fondement de la constitution de réseaux résilients et responsables dans lesquels les transitions sont vues comme des opportunités, fondées sur la confiance entre les parties prenantes. Nous nommons cette volonté d’incuber les transitions des filières et des territoires, la [transcubation](https://www.google.com/url?q=https://aurora-5r.fr/pages/Transcubateur/&sa=D&source=editors&ust=1616752866643000&usg=AOvVaw3ajAl8g5l17pw-HxgGRcqC).
+
+A ce titre, notre politique est de mettre en open source le maximum de données et d’information pour que chacun puisse les utiliser et ainsi accélérer le mouvement vers un monde résilient et responsable. Nous nous tenons à disposition pour aider et soutenir tout projet similaire à celui d’A𝝻RorA-5R. qui voudrait voir le jour dans une autre région ou dans un autre pays.
 
 ![](images/image4.png)
 
 ### 4 dispositifs complémentaires pour agir autrement.
 
 
-1. A𝝻RorA-5R. est le centre du dispositif. Cette entité conçoit, structure, et réalise les projets de transitions avec les PMEs, ETIs ou des start-ups. Nous avons voulu que sa forme administrative et sa gouvernance reflètent sa mission. C’est pourquoi nous avons choisi une Société Coopérative d' Intérêt Collectif (SCIC).
-2. Time4𝝻r-kids., en cours de création, est un fonds sur royalties, qui a pour objectif d’offrir aux PMEs un moyen de se lancer dans leurs transitions tout en partageant risques et bénéfices. Le principe sous-jacent est de fixer le remboursement du financement sur la base d’un pourcentage des ventes réalisées suite au projet, sur une durée déterminée.
+1. A𝝻RorA-5R. est le centre du dispositif. Cette entité conçoit, structure, et réalise les projets de transitions avec entreprises et institutions. Nous avons voulu que sa forme administrative et sa gouvernance reflètent sa mission. C’est pourquoi nous avons choisi une Société Coopérative d' Intérêt Collectif (SCIC).
+2. Time4𝝻r-kids., en cours de création, est un club d’investissement sur royalties, qui a pour objectif d’offrir aux PMEs un moyen d’aider au financement de leur transition tout en partageant risques et bénéfices. Le principe sous-jacent est de fixer le remboursement du financement sur la base d’un pourcentage des ventes réalisées suite au projet, sur une durée déterminée.
 3. 𝝻X-ium. est une entité développant des outils et plateformes numériques, qui remettent l'expérience et la pleine connaissance au cœur de l’acte d’achat et qui favorisent une répartition de valeur équilibrée au sein de la chaîne de valeur.
 4. TEη-School. est un cursus certifiant, en cours de développement, par Grenoble-INP, un des membres fondateurs d’A𝝻RorA-5R., qui a pour objectif d’enseigner et de capitaliser ces nouveaux modèles, outils et manières de faire. Ce cursus sera à la fois accessible aux étudiants (ingénieurs, managers …) en cours de diplomation, et via la formation continue. 
 
@@ -78,4 +64,18 @@ Au même titre que nous plaçons la confiance et la collaboration comme des pier
 Ce mélange entre discipline et génération construit sur la confiance et le respect mutuel, permet à chacun de s’enrichir au contact des autres, d’apporter la créativité et les savoir-faire nécessaires, et in fine d’assurer la pertinence et la performance de l’équipe tout au long de la réalisation du projet. De par le style de gouvernance des projets chaque personne ayant participé à un projet d’A𝝻RorA-5R. aura parcouru un morceau de sa propre transition dans son développement et son épanouissement personnel, ainsi que dans la construction de son parcours professionnel. Nos méthodes et outils de management de l’innovation et de gestion de projet agile et pragmatique, s’appuient sur le développement de l’autonomie et donnent à chacun la possibilité de renforcer son assertivité et d’apporter sa contribution, et ainsi de participer pleinement au succès collectif.
 
 ![](images/image5.png)
+
+### Pour en savoir plus sur les sous-jacents de notre positionnement
+
+D’une manière générale, deux “écoles” s’affrontent (en mettant de côté les climatosceptiques et les collapsologues). Certains pensent qu’il est possible d’y répondre technologiquement sans changer les fondamentaux du système actuel (les tenants de la croissance verte) quand d’autres considèrent qu’il est indispensable de repenser le système en mettant l’économie au second plan (les décroissants). Ceux qui prônent l’économie verte sont fréquemment taxés d’être dans l’affichage et le greenwashing quand ceux préconisant une modération de la consommation et des usages sont accusés de vouloir renvoyer notre société au temps de la lampe à huile. 
+
+Cette focalisation du débat autour de la croissance met de côté l'essentiel, c’est à dire le remplacement progressif des activités non durables par des modèles durables, que cela impacte ou non la croissance. Bien sûr, cela aura des conséquences importantes sur la richesse moyenne disponible par individu, nécessitant des adaptations des modèles économiques et sociétaux, qui ne seront pas forcément au détriment de la qualité de vie. Accepterions-nous de voyager avec une compagnie aérienne ou des avions d’un constructeur qui place son objectif de croissance économique au-dessus de la sécurité des vols ? Et pourtant c’est ce que nous faisons aujourd’hui avec le changement climatique et les autres problèmes environnementaux, en mettant en priorité la croissance.
+
+![](images/image2.png)
+
+Malgré l’apparition de nouvelles technologies, principalement autour du numérique, il n’y a à ce jour aucun modèle connu pour se payer le luxe de se limiter au paradigme de la croissance verte et des adaptations incrémentales. Bien sûr, l’innovation technologique peut être porteuse de solutions, mais elle est aussi source de modèles peu responsables et de ruptures rapides fragilisant certaines filières et territoires de par leur grande vitesse de déploiement.
+
+Si les grandes entreprises ont les moyens humains et financiers pour s’adapter, soit organiquement, soit par acquisition, à tous ces défis, cela est bien plus difficile pour les TPE/PMEs et parfois les ETIs. Et pourtant, ce sont probablement ces structures qui, de par leur agilité et leur moindre financiarisation, seraient le plus à même, avec les compétences, ressources et moyens nécessaires, de concevoir et mettre en œuvre ces nouvelles approches, au même titre que les start-ups dont le modèle est si souvent vanté et favorisé.
+
+“Dieu se rit des hommes qui se plaignent des conséquences, alors qu’ils en chérissent les causes” aphorisme prêté à Bossuet
 

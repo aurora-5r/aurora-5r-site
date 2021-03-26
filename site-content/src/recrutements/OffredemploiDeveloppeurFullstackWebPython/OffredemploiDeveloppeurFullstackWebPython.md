@@ -18,7 +18,7 @@ Grâce à ces projets, nous bâtissons une école "terrain" des transitions avec
 Quelle est la mission du job et les compétences recherchées ?
 -------------------------------------------------------------
 
-Avant toute chose nous recherchons des personnes qui ont des motivations pour développer leur curiosité, l'esprit d’initiative, leurs réseaux, leurs talents pour proposer des options systémiques, et une posture assertive et empathique !
+Avant toute chose nous recherchons des personnes qui ont des motivations pour développer leur curiosité, l'esprit d’initiative, leurs réseaux, leurs talents et une posture assertive et empathique !
 
 Le job consiste à épauler Laurent pour développer un tout nouveau service (inventer comment faire du commerce expérientiel et responsable) qui sera mis en production dans le courant de l’année 2021. 
 

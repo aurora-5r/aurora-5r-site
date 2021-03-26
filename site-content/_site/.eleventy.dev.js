@@ -73,7 +73,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(pluginSEO, {
     title: "AuRorA-5R",
-    description: "Transcubateur. AuRorA-5R accompagne les PME et les acteurs du territoire de la région AURA dans leurs projets innovants pour des transitions responsables",
+    description: "AuRorA-5R accompagne les acteurs du territoire de la région AURA pour valoriser les incertitudes des marchés en rupture, en faisant l’expérience de la confiance.",
     url: "https://aurora-5r.fr",
     author: "Laurent Maumet"
   });
@@ -88,6 +88,9 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/posts/**/*.md").filter(function (_) {
       return livePosts(_);
     }).reverse();
+  });
+  eleventyConfig.addCollection("newsletters", function (collection) {
+    return collection.getFilteredByGlob("./src/newsletters/**/*.md").reverse();
   });
   eleventyConfig.addCollection("bios", function (collection) {
     return collection.getFilteredByGlob("./src/bios/**/*.md").reverse();

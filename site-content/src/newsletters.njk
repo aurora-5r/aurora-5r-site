@@ -1,0 +1,28 @@
+---
+layout: "layouts/page-no-reading.njk"
+eleventyNavigation:
+  key: Newsletters
+  parent: En savoir plus
+title: Newsletters
+---
+
+Retrouvez sur cette page les éditions précédentes de notre newsletter.
+<br>
+<br>
+
+<ul>
+  {% for newsletter in collections.newsletters %}
+    <li>
+      {{ newsletter.date.toLocaleDateString('fr-FR') }}
+      <a href="{{ newsletter.url | url }}">
+        {% if newsletter.data.title %}{{ newsletter.data.title }}
+        {% else %}
+          <code>{{ newsletter.url }}</code>
+        {% endif %}
+      </a>
+
+    </li>
+  {% endfor %}
+</ul>
+
+<a href="/inscription" class="btn btn-outline-primary">Pour revevoir les prochaines éditions, inscrivez-vous</a>

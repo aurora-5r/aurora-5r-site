@@ -17,13 +17,12 @@ layout: "layouts/base.njk"
 
             </h1>
             <h2>
-              Transcubateur de Territoires et de Filières.
+              Valoriser les incertitudes des marchés en rupture, en faisant l’expérience de la confiance.
             </h2>
             <p>
-              Vivre les incertitudes des Transitions, en faisant l’expérience de la confiance.
-
+              <a href="/pages/AuRorA5R2minutes/" class="btn  btn-outline-dark">AuRorA-5R en 2 minutes
+              </a>
             </p>
-
           </div>
 
         </div>
@@ -74,24 +73,21 @@ layout: "layouts/base.njk"
         {% set atPost = 0 %}
         {% set nb1 = collections.posts | length %}
         {% for post in collections.posts %}
-          {% if atPost < 6 %}
+          {% if atPost < 3 %}
             <div class="card-deck mx-2" style="margin-bottom:3rem;">
-              <div class="card unit-7" style="width:20rem;">
+              <div class="card unit-8" style="width:20rem;">
                 <img class="card-img-top" src="{{post.url | url}}/images/{{post.data.cover}}" alt="illustration de {{post.title}}">
-                <div class="card-header">
+                <div class="card-body">
                   <h3 class="card-title">{{ post.data.title }}</h3>
                   <div class="meta">{{ post.data.author }}
                     <span class="mx-2">-</span>
                     {{ post.date.toLocaleDateString('fr-FR') }}
                   </div>
-                </div>
-                <div class="card-body">
 
                   <p>
                     {{ post.data.summary }}
                   </p>
-                </div>
-                <div class="card-footer">
+
                   <p>
                     <a href="{{post.url |url }}">Lire la suite...</a>
                   </p>

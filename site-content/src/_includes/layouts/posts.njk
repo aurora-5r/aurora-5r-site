@@ -7,8 +7,9 @@
         <div class="col-md-10">
 
           <div class="markdown-content">
-            <h1>
-              <a href="{{ url }}">{{ title }}</a>
+            <h1 class="page-title">
+
+              {{ title }}
             </h1>
             <p class="lead">
               Temps de lecture :
@@ -16,14 +17,17 @@
               {# by
         {{ author}} #}
               {# <time class="postlist-date" datetime="{{ post.date | date('Y-MM-DD') }}">{{ post.date|date("DD MMMM Y", locale) }}</time>#}
+            </p>
+            <h2 class="page-subtitle">
+              {{ summary }}
+            </h2>
+            <p>
+              {{content | safe}}
 
-              <p>
-                {{content | safe}}
-
-              </p>
-            </div>
+            </p>
           </div>
         </div>
       </div>
     </div>
-  {% endblock content %}
+  </div>
+{% endblock content %}
