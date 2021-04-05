@@ -12,12 +12,9 @@
     "dev": "cross-env NODE_ENV=development  $npm_execpath run dev:webpack && $npm_execpath run dev:eleventy",
     "dev:eleventy": "eleventy",
     "dev:webpack": "webpack --config webpack.dev.js",
-    "lint": "run-p lint:**",
-    "lint:css": "stylelint \"site/assets/scss/**/*.scss\"",
-    "lint:js": "eslint .",
-    "start": "$npm_execpath run start:webpack &&  $npm_execpath run start:eleventy",
-    "start:eleventy": "npx eleventy --serve",
-    "start:webpack": "webpack --watch   --config webpack.dev.js --hot"
+    "preview": "$npm_execpath run preview:webpack &&  $npm_execpath run preview:eleventy",
+    "preview:eleventy": "npx eleventy --serve",
+    "preview:webpack": "webpack --watch   --config webpack.dev.js --hot"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
