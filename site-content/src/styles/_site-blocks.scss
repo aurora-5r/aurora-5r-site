@@ -2940,3 +2940,15 @@ span {
     }
   }
 }
+
+
+.unit-9 {
+  background: $white;
+  border-radius: 5px;
+  transition: 0.3s all ease;
+  position: relative;
+  border-color: $white;
+  box-shadow: 0 4px 20px -5px rgba($primary, 1);
+  background: rgba($primary, 0.10) !important;
+  margin-bottom: 5px;
+}
