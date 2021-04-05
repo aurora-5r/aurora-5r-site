@@ -8,8 +8,6 @@ pushd "${MY_DIR}" &>/dev/null || exit 1
 
 DOC_FOLDER_PROD="docs_from_gdrive"
 
-IMAGE_NAME=aurora-5r-site
-CONTAINER_NAME=aurora-5r-site-c
 PREPROD_FOLDER=aurora5r
 
 function log {
@@ -28,39 +26,19 @@ These are  ${0} commands used in various situations:
     copy-doc            copy last version of doc to site folder
     build-pages            Builds pages
     check-site-links      Checks if the links are correct in the website
-    lint-css              Lint CSS files
-    lint-js               Lint Javascript files
-    cleanup               Delete the virtual environment in Docker
     help                  Display usage
     check-a11y             check a11y compliance
 
-Unrecognized commands are run as programs in the container.
-
-For example, if you want to display a list of files, you
-can execute the following command:
-
-    $0 ls
-
-The following command can also be performed from the Docker environment:
-install-node-deps, preview, build-site, lint-css, lint-js.
-
-The lint-css and lint-js accept paths in arguments. If no path is given, the script
-will be executed for all supported files
-
 EOF
 }
-
-
-
-
-
 
 function run_command {
     log "Running command: $*"
     working_directory=$1
     shift
-        pushd "${working_directory}"
-        exec "$@"
+    pushd "${working_directory}"
+    "$@"
+    popd
 }
 
 
@@ -111,6 +89,8 @@ function build_pages {
     log "Building pages for ${RELEASE}"
     copy_doc ${RELEASE}
     run_command "./site-content/" rm -rf dist
+
+
     if [[ "${RELEASE}" == "preproduction" ]]; then
         run_command "./site-content/" npm run dev
     else
@@ -122,7 +102,7 @@ function build_pages {
 
 }
 function deploy_pages {
-    log "Deploying landing pages"
+    log "Deploying  pages"
     RELEASE=$1
 
     mkdir -p dist
@@ -146,7 +126,7 @@ function deploy_pages {
             for page in $(find /var/www/html/${PREPROD_FOLDER} -name "*.html"); do
                 sudo sed -i "s/https:\/\/${URL_PROD}/http:\/\/${URL_PREPROD}\//g" ${page}
 
-            done
+             done
 
         fi
         elif [[ "${RELEASE}" == "production" ]]; then
@@ -271,4 +251,4 @@ if  [[ "${CMD}" == "help" ]]; then
     check_a11y
 fi
 
-popd &>/dev/null || exit 1
+
