@@ -79,27 +79,25 @@ De l’importance des usages et des rendements
 
 Le seul intérêt de capter et stocker de l’énergie est de permettre la démultiplication des capacités d’action de l’humanité par l’emploi d’objet et de machines. Soutenir notre modèle économique et social implique donc d’avoir assez d’énergie à disposition pour ces usages.
 
-Savoir si un grain de blé planté produit 5 , 10 ou 50 grains de blé n’a d’intérêt que pour déterminer le nombre de grains de blé nécessaire pour produire du pain. Ce nombre déterminera la capacité de survie d’une famille ainsi que leur qualité de vie. Si la production de grain de blé est de 50:1 mais que la chaîne de transformation pour fabriquer du pain demande un investissement de 5 grains et un rendement de 20%, il restera 10 grains en fin de chaîne avec un nombre de grains investi de 6 et donc un gain net sera de 4. Si la production de grains est de 10:1 mais que la chaîne de transformation coûte un grain de blé avec un rendement de 90%, le résultat est que 9 grains de blé sont disponibles en fin de chaîne pour un coût de 2 et donc un résultat net de 7.
+Savoir si un grain de blé planté produit 5, 10 ou 50 grains de blé n’a d’intérêt que pour déterminer le nombre de grains de blé disponible pour produire du pain. Ce nombre déterminera la capacité de survie d’une famille ainsi que leur qualité de vie. Si la production de grain de blé est de 50:1 mais que la chaîne de transformation pour fabriquer du pain demande un investissement de 5 grains et un rendement de 20%, il ne restera que 10 grains en fin de chaîne avec un nombre de grains investi de 6 et donc un gain net sera de 4. Si la production de grains est de 10:1 mais que la chaîne de transformation coûte un grain de blé avec un rendement de 90%, le résultat est que 9 grains de blé seront disponibles en fin de chaîne pour un coût de 2 et donc un résultat net de 7.
 
-En somme, il est parfaitement possible d’utiliser des énergies avec un EROIst plus faible à condition que leur chaîne de transformation et de transmission jusqu’au point d’usage soit plus optimale et efficace
+En somme, il est parfaitement possible d’utiliser des énergies avec un EROIst plus faible à condition que leur chaîne de transformation et de transmission jusqu’au point d’usage soit plus optimale et efficace.
 
 Un meilleur ratio EROIpou/EROIst revient à décaler vers la droite le point de bascule sur la courbe du Net Energy Cliff alors qu’un plus mauvais ratio revient à décaler ce point vers la gauche. Notre modèle économique et social peut donc parfaitement subsister sur la base d’énergies primaires présentant EROIst inférieur à 8 à condition que leur EROIpou/EROIst soit plus élevé.
 
-Prenons par exemple le sujet de la mobilité automobile:
+Quelques exemples
+=================
 
-
-* le pétrole présente un EROIst autour de 25. Par contre sa chaîne de conversion en énergie mécanique (l’usage est de faire parcourir à la voiture une certaine distance) est autour de 20% principalement du fait du faible rendement des moteurs thermiques. Le EROIpou se situe donc autour de 1,5 et le ratio EROIpou/EROIst de 0,06.
-* le solaire PV présente un EROIst autour de 5. La chaîne de conversion avec des batteries Li-Ion présente un rendement de 70% et un EROIpou autour de 1. Le ratio EROIpou/EROIst est donc de 0,2. Par contre, en passant par une électrolyse de l’hydrogène et des fuel cells, le rendement est autour de 30% et l’EROIpou inférieur à 0,2. La ratio EROIpou/EROIst est donc inférieur 0,04.
-
-Malgré un ratio de 5 entre l’EROIst du pétrole et du solaire, 
+La mobilité automobile
+----------------------
 
 Énergie investit
 
 Energie utile
 
-Source Primaire
+Source Primaire Pétrole
 
-Pétrole - EROI 25
+EROI ~25
 
 1
 
@@ -109,7 +107,7 @@ Transport et raffinage
 
 Rendement 95%
 
-1
+0,2
 
 23,8
 
@@ -117,7 +115,7 @@ Transport et stockage
 
 Perte de 5%
 
-1
+<0,1
 
 22,6
 
@@ -125,93 +123,106 @@ Moteur thermique
 
 Rendement 25%
 
-0,6
+<0,1
 
 5,6
 
-EROI thermique se situe donc autour de 1,6 malgré un faible rendement de moins de 25%. Le modèle est tenable de par le faible EROI de la source primaire qu’est le pétrole. Le modèle devient bien plus problématique si le pétrole provient du fracking ou de sables bitumeux qui ont des EROI entre 3 et 7.
+EROIut thermique se situe autour de 4,3 lié à un faible rendement inférieur à 25% (principalement de par le mauvais rendement des moteurs thermiques). Ce modèle ne fonctionne que de par le faible EROIst de la source primaire qu’est le pétrole. Le modèle devient bien plus problématique avec un pétrole provenent du fracking ou de sables bitumeux avec des EROIst entre 3 et 7.
 
 Énergie investit
 
 Energie utile
 
-Source Primaire
+Source Primaire  
+Solaire PV
 
-PV = EROI 5
+EROI ~7
 
 1
 
-5
+7
 
 Transport
 
 Perte 10%
 
-1
+<0,1
 
-4,5
+6,3
 
 Stockage batterie
 
-Perte 12%
+Perte 15%
 
-0,8
+ESOI ~30
 
-4
+~0,2
+
+5,3
 
 Moteur électrique
 
 Rendement 90%
 
-0,4
+<0,1
 
-3,6
+4,8
 
-EROI batterie se situe légèrement au-dessus de 1 grâce à un très bon rendement de 70%, compensant le faible EROI de la source primaire.
+EROIut est d’environ 3,7 grâce à un très bon rendement de 70%, compensant le relativement faible EROIst de la source primaire (ici de 7). 
 
 Énergie investit
 
 Energie utile
 
-Source Primaire
+Source Primaire   
+Solaire PV
 
-PV = EROI 5
+EROI ~7
 
 1
 
-5
+7
 
 Electrolyse hydrogène
 
 Rendement 80%
 
-1,5
+<0,1
 
-4
+5,6
 
 Compression et transport
 
 Perte 15%
 
-1
+<0,1
 
-3,4
+4,8
 
 Fuel Cell
 
 Rendement 50%
 
-0,8
+<0,1
 
-1,7
+2,4
 
 Moteur électrique
 
 Rendement 90%
 
-0,4
+<0,1
 
-1,5
+2,2
 
-L’EROI de la filière hydrogène (electrolyse à la fuel cell) est estimée entre 0,25 (1:4) et 0,2 (1:5). L’EROI de la mobilité hydrogène et solaire se situe donc sous les 0,2 de la combinaison d’un rendement faible de 35%, d’un faible EROI de la source primaire, et d’un très faible EROI de la chaîne de transformation, stockage et livraison au point d’usage.
+L’ESOI de la filière hydrogène (electrolyse à la fuel cell) est assez élevée (autour de 60). Néanmoins l’EROIut d’une mobilité fondée sur le couple hydrogène et solaire atteint 1,8 à cause d’un rendement faible de 35%, couplé au faible EROI de la source primaire.
+
+Le bilan énergétique entre une mobilité alimentée par une énergie fossile dont l’EROIst ne cesse de chuter le pétrole et une mobilité électrique combinant solaire et batterie ne cesse de se réduire. Le rendement du cycle hydrogène pénalise cette filière, qui reste néanmoins une solution éventuellement attractive, éventuellement dans une approche hybride batterie et hydrogène, pour parcourir de très longues distances sans possibilité de recharge (aérien, maritime …).
+
+Il est étonnant que l’option combinant recharge et remplacement de batteries ne soit pas plus étudiée par la filière automobile, même si elle accroît les contraintes en termes de design et requiert une standardisation entre les marques. En effet, elle permettrait d’optimiser le bilan énergétique de la filière en:
+
+
+* offrant des batteries de capacité différente selon la distance à parcourir,
+* résolvant le problème du temps de recharge (si le temps de remplacement est court) pour les longs trajets,
+* réduire les pics de charge à certains points de forte affluence périodique ou saisonnière
 
