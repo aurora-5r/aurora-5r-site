@@ -10,7 +10,9 @@ bio : "
 
 J’accompagne ceux qui osent leur évolution vers un Leadership authentique et ainsi “embarquent” des collectifs responsables dans lesquels chacun peut se positionner librement pour que l'improbable puisse alors se manifester : développer une activité économique et industrielle responsable et résiliente "
 
+cover: image1.jpg
+
 ---
 
-![](images/image1.png)
+![](images/image1.jpg)
 

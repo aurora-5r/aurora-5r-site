@@ -1,10 +1,10 @@
 ---
 gsuiteid: 17lGLyTPwkN2ob-P85Eyih-LrE39UUY9cEZlRAfO8yVI
-title: Xpos𝝻r
+title: Evaluation de résilience et exposition aux ruptures et émergences 
 
-subtitle: Je veux mesurer mon exposition à des marchés en rupture
+subtitle: Je veux mieux appréhender l’exposition de ma société à des ruptures ou émergences de marché et sa capacité d’adaptation
 
-headline: Analyse de votre résilience
+headline: Xpos𝝻r 
 
 initial: icon-spinner
 
@@ -20,18 +20,26 @@ color: red
 
 ---
 
-De nombreux outils et sociétés permettent aux entreprises de mesurer et de suivre leur performance, qui est généralement économique et financière. Piloter cette performance est certes un élément nécessaire mais pas suffisant, parce que lié à un contexte et un environnement donné.
+Notre méthode s’appuie sur un outil développée par A𝝻RorA-5R. permettant au-travers d’un système de scoring de mesurer rapidement l’intensité des évolutions éventuelles de son écosystème (Exposition) et sa capacité d’adaptation à ces changements (Resilience).![](images/image1.png)
 
- 
+L’objectif de cet outil n’est pas d’avoir une mesure parfaite mais une vision synthétique de la situation de l’entreprise, de ses points forts et faibles, afin d’aider à déterminer les axes de transition les plus importants et pertinents à considérer.
 
-Notre offre Xpos𝝻r est une méthode développée par A𝝻RorA-5R. permettant au-travers d’un système de scoring de mesurer rapidement l’intensité des évolutions éventuelles de son écosystème (Ecosystem Exposure) et sa capacité d’adaptation à ces changements (Strategic Resilience).![](images/image1.png)
+Nous mettons gratuitement cet outil à disposition des entreprises pour qu’elles puissent faire leur auto-évaluation d’une manière totalement anonyme.
 
-L’objectif n’est pas d’avoir une mesure parfaite mais une vision synthétique de la situation de l’entreprise ou du territoire, de ses points forts et faibles, afin de pouvoir déterminer les axes de transition les plus importants et pertinents à considérer.
+L’analyse de résilience et d’exposition Xpos𝝻r a pour vocation:
 
-La méthode Xpos𝝻r démarre par un questionnaire, suivi d’une première session d’une demi ou une journée sur site, puis d’une session de restitution, de partage des résultats et d’approfondissement pendant laquelle seront identifiées les perspectives possibles de transitions.
+
+* d’aider les dirigeants à mieux évaluer la capacité de leur société à faire face à un changement d’environnement économique et la probabilité qu’un tel changement se produise.
+* de déterminer des pistes de travail permettant de répondre ou de tirer avantage à ces changements
+
+Elle est conduite en 4 temps:
+
+
+* Il est demandé à différentes personnes de l’entreprise de remplir l’outil Xpos𝝻r 
+* Une journée d’échanges et questions/réponses organisée sur site
+* Une phase d’approfondissement de l’analyse et de formalisation des pistes
+* Une restitution de l’analyse avec un échange sur les pistes envisagées et leur mise en oeuvre
 
 Temps de réalisation: 2 à 3 semaines  
-Possibilité de session de suivi (½ journée) additionnelle et éventuellement répétitive
-
-Pour les créateurs, nous adaptons l’approche pour confronter le projet avec le marché et ses tendances, afin d’en éprouver le business model. Cela se fait par 2 sessions d’½ journée.
+Possibilité de session de suivi (½ journée) additionnelle et éventuellement répétitive.
 

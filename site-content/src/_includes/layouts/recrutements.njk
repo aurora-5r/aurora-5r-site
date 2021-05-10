@@ -12,31 +12,19 @@
 
             {{content | safe}}
 
-            <div class="list-group">
+            <div class="list-group mb-1 px-0">
 
               {% for offre in collections.recrutements %}
-                <a href="{{ offre.url |url }}" class="list-group-item list-group-item-action flex-column align-items-start active">
+
+                <a href="{{ offre.url |url }}" class="list-group-item list-group-item-action list-group-item-light mb-1">
                   <div class="d-flex w-100 justify-content-between">
-                    <p class="mb-0 mt-0">
-                      {{ offre.data.title}}
-
-                      {{ offre.data.type}}
-                      -
-                      {{ offre.data.location}}
-                    </p>
+                    <h5 class="mb-0 mt-0">{{ offre.data.title}}</h5>
+                    <span class="badge bg-primary text-white rounded-pill mb-0 mt-0">{{ offre.data.type}}</span>
                   </div>
+                  <p class="mb-0 mt-0">
+                    {{ offre.data.location}}
+                  </p>
                 </a>
-
               {% endfor %}
-
             </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-{% endblock content %}
+          {% endblock content %}>

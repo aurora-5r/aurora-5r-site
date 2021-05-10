@@ -12,15 +12,12 @@
     "dev": "cross-env NODE_ENV=development  $npm_execpath run dev:webpack && $npm_execpath run dev:eleventy",
     "dev:eleventy": "eleventy",
     "dev:webpack": "webpack --config webpack.dev.js",
-    "lint": "run-p lint:**",
-    "lint:css": "stylelint \"site/assets/scss/**/*.scss\"",
-    "lint:js": "eslint .",
-    "start": "$npm_execpath run start:webpack &&  $npm_execpath run start:eleventy",
-    "start:eleventy": "npx eleventy --serve",
-    "start:webpack": "webpack --watch   --config webpack.dev.js --hot"
+    "preview": "$npm_execpath run preview:webpack &&  $npm_execpath run preview:eleventy",
+    "preview:eleventy": "npx eleventy --serve",
+    "preview:webpack": "webpack --watch   --config webpack.dev.js --hot"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^0.3.0",
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
@@ -39,6 +36,8 @@
     "css-loader": "^4.2.2",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
+    "eleventy-plugin-reader-bar": "^0.2.0",
+    "eleventy-plugin-reading-time": "0.0.1",
     "eleventy-plugin-seo": "^0.5.1",
     "eleventy-plugin-toc": "^1.1.0",
     "eleventy-plugin-youtube-embed": "^1.4.7",

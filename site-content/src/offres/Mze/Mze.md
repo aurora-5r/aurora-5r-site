@@ -1,10 +1,10 @@
 ---
 gsuiteid: 1BJA43jwsl3aYXjDQVpet6_XxJ1_2RDKAO3SY97xl20Q
-title: M𝝻ze
+title: Analyse et modélisation de marchés en gestation ou mutation 
 
-subtitle: Je me questionne sur la dynamique d’évolution de ma filière
+subtitle: Comprendre les dynamiques de marchés aux acteurs et modèles en évolution rapide pour mieux se positionner et créer de la valeur
 
-headline: Positionnement stratégique
+headline: M𝝻ze
 
 initial: icon-map
 
