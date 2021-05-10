@@ -1,6 +1,6 @@
 {
   "name": "aurora-5r",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Aurora-5r.fr",
   "repository": "aurora-5r/aurora-5r-site",
   "main": "index.bundle.js",
@@ -12,7 +12,7 @@
     "dev": "cross-env NODE_ENV=development  $npm_execpath run dev:webpack && $npm_execpath run dev:eleventy",
     "dev:eleventy": "eleventy",
     "dev:webpack": "webpack --config webpack.dev.js",
-    "preview": "$npm_execpath run preview:webpack &&  $npm_execpath run preview:eleventy",
+    "preview": "npm-run-all --parallel preview:*",
     "preview:eleventy": "npx eleventy --serve",
     "preview:webpack": "webpack --watch   --config webpack.dev.js --hot"
   },
