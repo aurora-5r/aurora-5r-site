@@ -1,6 +1,6 @@
 {
   "name": "aurora-5r",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Aurora-5r.fr",
   "repository": "aurora-5r/aurora-5r-site",
   "main": "index.bundle.js",
