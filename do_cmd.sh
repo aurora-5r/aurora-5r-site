@@ -20,11 +20,12 @@ usage: ${0} <command> [<args>]
 
 These are  ${0} commands used in various situations:
 
-    build-site            Build site and push it to prod and preprod
+    build-site-prod            Build site and push it to prod
+    build-site-preprod            Build site and push it to preprod
     preview-pages Starts the web server with preview of the website
     build-doc            Builds doc from gsuite
-    copy-doc            copy last version of doc to site folder
-    build-pages            Builds pages
+    build-pages-preprod            Builds pages for preprod
+    build-pages-prod  Builds pages for prod
     check-site-links      Checks if the links are correct in the website
     help                  Display usage
     check-a11y             check a11y compliance
@@ -42,8 +43,14 @@ function run_command {
 }
 
 
-
-
+function check_release {
+  if [[ $1  =~ ^(production|preproduction)$ ]]; then
+   return true
+  else
+    echo "RELEASE not in  production|preproduction"
+    exit 0
+  fi
+}
 function relativepath {
     source=$1
     target=$2
@@ -82,10 +89,9 @@ function relativepath {
     echo "$result"
 }
 
-
-
 function build_pages {
     RELEASE=$1
+    check_release ${RELEASE}
     log "Building pages for ${RELEASE}"
     copy_doc ${RELEASE}
     run_command "./site-content/" rm -rf dist
@@ -104,6 +110,8 @@ function build_pages {
 function deploy_pages {
     log "Deploying  pages"
     RELEASE=$1
+    check_release ${RELEASE}
+
 
     mkdir -p dist
     mkdir -p dist/${RELEASE}
@@ -140,7 +148,6 @@ function deploy_pages {
     fi
 }
 
-
 function verbose_copy {
     source="$1"
     target="$2"
@@ -149,9 +156,10 @@ function verbose_copy {
     cp -R "$source" "$target"
 }
 
-
 function copy_doc {
     RELEASE="$1"
+    check_release ${RELEASE}
+
     log "copy_doc for ${RELEASE}"
 
 
@@ -173,18 +181,14 @@ function copy_doc {
     fi
 }
 function build_site {
-    log "Building full site"
+  RELEASE="$1"
+  check_release ${RELEASE}
 
-    build_doc
-    log "... for preproduction"
+    log "Building full site for ${RELEASE}"
+    if [${RELEASE} !=]
 
-    copy_doc preproduction
-    build_pages preproduction
-
-    log "... for production"
-
-    copy_doc production
-    build_pages production
+    copy_doc ${RELEASE}
+    build_pages ${RELEASE}
 
 
 }
@@ -193,7 +197,6 @@ function build_site {
 function build_doc {
     log "Building doc from gdrive"
     rm -rf "${DOC_FOLDER_PROD}/*"
-
     python -m gstomd --folder_id ${DOC_GDRIVE_PROD}  --dest "${DOC_FOLDER_PROD}" --config "conf/pydrive_settings.yaml"
 
 }
@@ -241,8 +244,10 @@ if  [[ "${CMD}" == "help" ]]; then
     build_pages preproduction
     elif [[ "${CMD}" == "build-pages-prod" ]]; then
     build_pages production
-    elif [[ "${CMD}" == "build-site" ]]; then
-    build_site
+    elif [[ "${CMD}" == "build-site-preprod" ]]; then
+    build_site  preproduction
+    elif [[ "${CMD}" == "build-site-prod" ]]; then
+    build_site production
     elif [[ "${CMD}" == "build-doc" ]]; then
     build_doc
     elif [[ "${CMD}" == "check-site-links" ]]; then

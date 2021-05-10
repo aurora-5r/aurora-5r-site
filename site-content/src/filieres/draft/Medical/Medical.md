@@ -20,9 +20,9 @@ color: red
 
 7% des déchets mondiaux sont produits par le système médical de par le développement des produits à usage unique et de ses emballages plastiques associés. (synthèse d’article fait par Alexandre Nerot)
 
-Un rapport de 2016 estimait que les maladies nosocomiales pourraient dans le monde tuer 10 millions de patients par an et coûter 100 000 milliards de dollars US d'ici [2050](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/2050&sa=D&source=editors&ust=1618751449700000&usg=AOvVaw0O-YIKBeakfV8sVcBALyhh) (Wikipedia)
+Un rapport de 2016 estimait que les maladies nosocomiales pourraient dans le monde tuer 10 millions de patients par an et coûter 100 000 milliards de dollars US d'ici [2050](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/2050&sa=D&source=editors&ust=1620647448426000&usg=AOvVaw0N1PEW4mfNbOCBWHeWwVw2) (Wikipedia)
 
-En France, d'après l'[institut de veille sanitaire](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Institut_de_veille_sanitaire&sa=D&source=editors&ust=1618751449700000&usg=AOvVaw2mvO1GTgjjR7M1OnJb2QIe), environ un patient hospitalisé sur vingt [contracterait une infection nosocomiale, ce qui engendrerait environ 4 200 décès par an, soit plus que les accidents de la route](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Infection_nosocomiale%23cite_note-2&sa=D&source=editors&ust=1618751449700000&usg=AOvVaw1b507oc8WQQyV40N_txajI)
+En France, d'après l'[institut de veille sanitaire](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Institut_de_veille_sanitaire&sa=D&source=editors&ust=1620647448426000&usg=AOvVaw08doEbqS6qHay3MkvVkA4M), environ un patient hospitalisé sur vingt [contracterait une infection nosocomiale, ce qui engendrerait environ 4 200 décès par an, soit plus que les accidents de la route](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Infection_nosocomiale%23cite_note-2&sa=D&source=editors&ust=1620647448427000&usg=AOvVaw1kg7Kw-kkHMt9e2GnD0qj-)
 
 L’usage unique est un moyen de lutter contre les maladies nosocomiales, mais elle génère aussi des déchets.
 

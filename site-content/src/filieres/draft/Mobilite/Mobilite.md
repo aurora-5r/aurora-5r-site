@@ -26,10 +26,10 @@ L’énergie ne se produit et ne se consomme pas. Elle se capte, se stocke et se
 Nous pouvons donc distinguer deux sources d’énergie:
 
 
-* l’énergie transférée et que nous parvenons à capter, qui vient principalement du Soleil (vent, thermique, photovoltaïque, courant …), plus faiblement de la Terre (géothermie, nucléaire), et encore plus faiblement de la Lune (marée)
-* l’énergie stockée et que nous transformons, dans lesquelles se rangent les énergies fossiles et biologiques, qui sont des stocks d’énergie captée, ainsi que l’hydrogène ou les batteries.
+* l’énergie cosmologique, née du Big Bang, que nous parvenons à capter, qui vient principalement du rayonnement solaire (vent, solaire thermique ou photovoltaïque, courants marins…), de la chaleur de la Terre (géothermie … ), ou encore des effets de gravitation de la Lune (marée)
+* l’énergie captée et stockée par le vivant, dans lesquelles se rangent les énergies fossiles et biologiques, ou stockée de manière naturelle ou artificielle dans laquelle se range le nucléaire, l’hydrogène ou les batteries.
 
-L’énergie captée dépend en quantité de sa source émettrice. Tant que le Soleil brillera, l’énergie qu’il émettra sera disponible pour être captée. A l’échelle humaine, cette source est donc inépuisable. La limite n’est donc pas dans la source, mais dans les moyens de la capter.
+La disponibilité de l’énergie cosmologique dépend de sa source émettrice. Tant que le Soleil brillera, l’énergie qu’il émettra sera disponible pour être captée. A l’échelle humaine, cette source est donc inépuisable. La limite n’est donc pas dans la source, mais dans les moyens de la capter.
 
 L’énergie stockée, tout comme une batterie, dépend de la capacité de stockage ainsi que de la vitesse de recharge. L’énergie hydraulique est rechargée en quelques mois grâce au cycle de l’eau, via le captage de l’énergie solaire nécessaire à l’évaporation. L’énergie stockée par la biomasse se recharge en quelques jours ou quelques années. La recharge des énergies fossiles, elle, nécessite des millions d’années d’accumulation et de transformation de biomasse.
 
@@ -45,14 +45,31 @@ Pour résumer, notre civilisation ne fonctionne que de par son alimentation par 
 
 Nous débrancher de la batterie fossile requiert donc à la fois de capter une grande puissance d’énergie et de pouvoir en stocker tout ou partie, afin d’en permettre l’utilisation en fonction des usages souhaités.
 
-L’EROI st
-=========
+EROI et rendement énergétique
+=============================
 
-Au même titre qu’il est nécessaire de planter une graine de blé pour récolter un épi, il est nécessaire d’utiliser de l’énergie pour construire, alimenter, opérer, maintenir et déconstruire les systèmes permettant de capter ou stocker l’énergie. Ce ratio entre énergie disponible en sortie et énergie nécessaire pour ce faire est appelée EROIst ou EROEIst
+Une histoire de blé et de pain. Depuis des siècles, l’homme plante du blé pour se nourrir de pain. Sa subsistance est liée à la quantité de pain disponible et indirectement à la quantité de blé produite selon le rendement du processus de transformation du blé en farine puis en pain. La quantité de blé produite dépend du rendement de l’espèce de blé, du lieu, de la nature de la terre et d’autres paramètres qui peuvent se résumer à combien de grains sont produits pour un grain planté.
+
+En énergie, la transformation du blé en pain s’appelle le rendement énergétique tandis que la quantité de grains produite pour un grain planté s’appelle l’EROI.
 
 ![](images/image6.png)
 
-En somme un EROI de 10 veut dire qu’un grain de blé planté permet de récolter 10 grains de blé. La production nette est donc de 9 grains. Un EROI de 1, c’est un grain de blé utilisé pour un grain produit donc une production nette nulle. Il suffit de convertir un grain de blé en puissance énergétique (MWh) pour appliquer le principe à l’énergie.
+Comparons 3 processus de production de pain.
+
+
+* le 1er bénéficie d’une plantation de blé productive puisque pour chaque tonne de grains plantés, sont récoltés 25 tonnes. Le processus de transformation permet d’obtenir 5 tonnes de pain,
+* le 2nd a une production plus faible puisque pour chaque tonne plantée, sont récoltés uniquement 8 tonnes. Néanmoins en bout de chaînes, sont obtenus 5,5 tonnes de pain,
+* le 3ème a une production de grains identique au 2nd mais un processus qui ne lui permet que d’obtenir 2,5 tonnes de pain.
+
+En regardant l’ensemble de la chaîne, on s’aperçoit que le 1er et 2nd process sont proches alors que le 3ème peut poser un problème pour la subsistance de la population puisqu’il sera nécessaire de doubler la production de grains pour atteindre les mêmes quantités de pain.
+
+Ce même raisonnement s’applique à l’énergie: le 1er est la voiture thermique, le 2nd la voiture électrique alimentée par le couple solaire PV/ batterie et le 3ème la voiture à hydrogène, avec un hydrogène vert fabriqué par une électrolyse de l’eau alimentée par des installations solaires PV.
+
+Le pétrole actuel a un EROI autour de 25 (de 2 à 50 selon l’origine du pétrole) mais un rendement en terme de process d’environ 20%, principalement pénalisé par le faible rendement du moteur thermique (forte déperdition calorifique).
+
+Le solaire PV a un EROI de 8 (de 5 à 10 selon les lieux) mais le couple batterie/moteur électrique donne un rendement de près de 70% alors que le process électrolyse/fuel cell/moteur électrique a un rendement de moins de 30%.
+
+En résumé, plus l’EROI d’une énergie est faible, plus les rendements des processus doivent être élevés.
 
 L’EROI d’une ferme solaire sera calculée en estimant l’énergie captée et mise à disposition pendant les 20 ou 30 ans d’exploitation de l’installation et en la divisant par l’énergie nécessaire pour la production des différents équipements nécessaires (panneaux solaires, structures métalliques, inverters, câbles électriques …), leur installation, leur maintenance et parfois leur déconstruction (ce n’est pas toujours le cas mais peut avoir un impact fort pour certaines sources du type nucléaire). L’EROI dépend donc de multiples facteurs pouvant le faire varier sensiblement pour une même source. Il est à noter que l’efficacité des panneaux solaires (le taux de conversion de l’énergie solaire en énergie électrique) ne rentre pas en compte, l’énergie solaire provenant d’une source considérée comme inépuisable et donc gratuite. 
 
