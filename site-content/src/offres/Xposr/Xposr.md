@@ -1,10 +1,10 @@
 ---
 gsuiteid: 17lGLyTPwkN2ob-P85Eyih-LrE39UUY9cEZlRAfO8yVI
-title: Evaluation de résilience et exposition aux ruptures et émergences 
+headline: Evaluation de résilience et exposition aux ruptures et émergences 
 
 subtitle: Je veux mieux appréhender l’exposition de ma société à des ruptures ou émergences de marché et sa capacité d’adaptation
 
-headline: Xpos𝝻r 
+title: Xpos𝝻r 
 
 initial: icon-spinner
 

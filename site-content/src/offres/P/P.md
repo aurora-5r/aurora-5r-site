@@ -1,10 +1,10 @@
 ---
 gsuiteid: 1lp0JIr5n-zz76NgXIHSDdaMI0iX9Q50-rqXXorA34oQ
-title: Accompagnement pour réaliser des projets collaboratifs jusqu’à la mise sur le marché
+headline: Accompagnement pour réaliser des projets collaboratifs jusqu’à la mise sur le marché
 
 subtitle: Je me lance dans mon projet de transition.
 
-headline: 𝝻P
+title: 𝝻P
 
 initial: icon-rocket
 
