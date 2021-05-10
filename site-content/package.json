@@ -1,8 +1,8 @@
 {
   "name": "aurora-5r",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Aurora-5r.fr",
-  "repository": "laurentmau/aurora-5r-site",
+  "repository": "aurora-5r/aurora-5r-site",
   "main": "index.bundle.js",
   "scripts": {
     "eleventy:default": "npx eleventy",
