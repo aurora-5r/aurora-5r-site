@@ -1,10 +1,10 @@
 ---
 gsuiteid: 1Y0-txBw9Lr7YujDCJmNjOPPvQvMZMUxNCRWdC7XWJhs
-title: Solution numérique C2B au service des réseaux et des circuits courts et locaux
+headline: Solution numérique C2B au service des réseaux et des circuits courts et locaux
 
 subtitle: Allier la puissance du commerce numérique avec l’expérience et la différenciation de réseaux fonctionnant en circuits courts 
 
-headline: 𝝻Xium 
+title: 𝝻Xium 
 
 initial: icon-expand
 
