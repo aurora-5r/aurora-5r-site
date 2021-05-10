@@ -236,6 +236,7 @@ if  [[ "${CMD}" == "help" ]]; then
     exit 0
 
     elif [[ "${CMD}" == "preview-pages" ]]; then
+    copy_doc preproduction
     run_command "./site-content/" npm run preview
     elif [[ "${CMD}" == "build-pages-preprod" ]]; then
     build_pages preproduction
