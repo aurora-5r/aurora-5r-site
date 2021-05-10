@@ -45,7 +45,7 @@ function run_command {
 
 function check_release {
   if [[ $1  =~ ^(production|preproduction)$ ]]; then
-   return true
+   return
   else
     echo "RELEASE not in  production|preproduction"
     exit 0
@@ -184,12 +184,9 @@ function build_site {
   RELEASE="$1"
   check_release ${RELEASE}
 
-    log "Building full site for ${RELEASE}"
-    if [${RELEASE} !=]
-
-    copy_doc ${RELEASE}
-    build_pages ${RELEASE}
-
+  log "Building full site for ${RELEASE}"
+  build_doc
+  build_pages ${RELEASE}
 
 }
 
