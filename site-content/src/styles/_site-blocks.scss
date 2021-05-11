@@ -2692,6 +2692,13 @@ span {
     transition: 0.3s all ease;
     margin-top: 30px !important;
   }
+  h4 {
+    font-size: 1.5rem;
+    color: $black;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: 0.3s all ease;
+  }
 
   p {
     font-weight: 500;
@@ -2741,7 +2748,7 @@ span {
       }
     }
 
-    h3 {
+    h3,h4 {
       color: $white;
     }
 
