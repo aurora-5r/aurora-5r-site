@@ -25,17 +25,17 @@ Sur la forme, ce site est pour nous un laboratoire d’application du numérique
 Un site léger et performant.
 ----------------------------
 
-En utilisant le générateur de site [eleventy](https://www.google.com/url?q=https://www.11ty.dev/&sa=D&source=editors&ust=1620650597083000&usg=AOvVaw0pxRkheblFFJ-97WWHI5Gq) le site est léger et peu gourmand en puissance machine (sans base de données en particulier).
+En utilisant le générateur de site [eleventy](https://www.google.com/url?q=https://www.11ty.dev/&sa=D&source=editors&ust=1620663658597000&usg=AOvVaw0UVNdsFfcZ9mSb4NDLNx_R) le site est léger et peu gourmand en puissance machine (sans base de données en particulier).
 
 La collaboration et la mise à jour facile avant tout.
 -----------------------------------------------------
 
-Un de nos objectifs est que le site soit mis à jour en permanence en lien direct avec la documentation que nous produisons. Nous utilisons les outils de collaboration Google Suite qui nous permettent de produire ensemble ces documents. Nous avons développé un outil ( [GsuiteToMd](https://www.google.com/url?q=https://pypi.org/project/GsuiteToMd/1.0/&sa=D&source=editors&ust=1620650597084000&usg=AOvVaw0ZroxpdhWNlE4fjK55KDUf) ) qui convertit directement ces documents au format markdown compréhensible par eleventy, notre site est ainsi mis à jour directement sans manipulations techniques.
+Un de nos objectifs est que le site soit mis à jour en permanence en lien direct avec la documentation que nous produisons. Nous utilisons les outils de collaboration Google Suite qui nous permettent de produire ensemble ces documents. Nous avons développé un outil ( [GsuiteToMd](https://www.google.com/url?q=https://pypi.org/project/GsuiteToMd/1.0/&sa=D&source=editors&ust=1620663658598000&usg=AOvVaw1T1UysZNGQSZTEEXI2LD3u) ) qui convertit directement ces documents au format markdown compréhensible par eleventy, notre site est ainsi mis à jour directement sans manipulations techniques.
 
 Un score “lighthouse” tout vert !
 ---------------------------------
 
 ![](images/image1.png)
 
-[Lighthouse](https://www.google.com/url?q=https://developers.google.com/web/tools/lighthouse&sa=D&source=editors&ust=1620650597085000&usg=AOvVaw2W52mAqTSC9xojr6gjkMO6) est un outil d’audit des performances des sites web qui donne une note sur 100 selon 4 axes, et le résultat est au rendez-vous.
+[Lighthouse](https://www.google.com/url?q=https://developers.google.com/web/tools/lighthouse&sa=D&source=editors&ust=1620663658599000&usg=AOvVaw2WZbZmqYn0zRGfWIFlAxwq) est un outil d’audit des performances des sites web qui donne une note sur 100 selon 4 axes, et le résultat est au rendez-vous.
 

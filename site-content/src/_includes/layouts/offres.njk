@@ -13,6 +13,7 @@
             <p class="lead">Temps de lecture :
               {{ content | readingTime }}.
             </p>
+
             {% if topboxes | length %}
               {%- set boxes = collections.offres -%}
               {%- include 'partials/boxes2.njk' -%}
@@ -23,9 +24,15 @@
                 {{ subtitle }}
               </h2>
             {% endif %}
+            {% if topbouton | length %}
+              <a href="{{ topboutonlink }}" class="btn btn-block  btn-primary">{{ topbouton }}</a>
 
+            {% endif %}
             {{content | safe}}
+            {% if topbouton | length %}
+              <a href="{{ topboutonlink }}" class="btn btn-block  btn-primary">{{ topbouton }}</a>
 
+            {% endif %}
             <p>
               <a class="btn  btn-outline-dark btn-sm float-right" href="https://docs.google.com/document/d/{{gsuiteid}}">Suggérer une modification</a>
             </p>
