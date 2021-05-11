@@ -127,9 +127,9 @@ h5,
 
     &:hover {
       top: -2px;
-      background: $primary;
-      border-color: $primary;
-      color: $white;
+      background: $white;
+      border-color: $white;
+      color: $primary;
       box-shadow: 0 5px 30px -5px rgba($primary, 0.7) !important;
     }
   }
