@@ -2,19 +2,21 @@
   <div class="card-deck">
 
     {%- for box in boxes | sortByOrder -%}
-      <a href="{{ box.url | url }}">
 
-        <div class="card unit-7 unit-7-{{box.data.color}} " style="width:20rem;">
-          <div class="unit-7-icon">
-            <span class="icon-wrap icon-wrap-{{box.data.color}}">
-              {%- if box.data.initial | length -%}
-                <span class="text-primary {{box.data.initial}}"></span>
-              {%- else -%}
-                <span class="text-primary">𝝻</span>
-              {%- endif -%}
-            </span>
-          </div>
+      <div class="card unit-7 unit-7-{{box.data.color}} " style="width:20rem;">
+        <div class="unit-7-icon">
+          <span class="icon-wrap icon-wrap-{{box.data.color}}">
+            {%- if box.data.initial | length -%}
+              <span class="text-primary {{box.data.initial}}"></span>
+            {%- else -%}
+              <span class="text-primary">𝝻</span>
+            {%- endif -%}
+          </span>
+        </div>
+        <a href="{{ box.url | url }}">
+
           <div class="card-body">
+
             <h3 class="card-title">{{box.data.headline}}</h3>
           </div>
           <div class="card-footer">
@@ -24,8 +26,9 @@
               </h4>
             {%- endif -%}
           </div>
-        </div>
-      </a>
+        </a>
+
+      </div>
     {%- endfor -%}
 
   </div>
