@@ -26,6 +26,8 @@ function sortByOrder(values) {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/content");
+
   eleventyConfig.addFilter('sortByOrder', sortByOrder)
 
   const presets = {

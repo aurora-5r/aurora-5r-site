@@ -50,5 +50,5 @@ Le stagiaire sera rémunéré et bénéficiera de tickets restaurant.
 Pour postuler
 -------------
 
-Merci de nous faire parvenir ([contact@aurora-5r.fr](mailto:contact@aurora-5r.fr)) une présentation des points qui vous motivent pour nous rejoindre et de remplir ce formulaire : [https://forms.gle/NNkVKGQAitLrNqxi9](https://www.google.com/url?q=https://forms.gle/NNkVKGQAitLrNqxi9&sa=D&source=editors&ust=1620663640425000&usg=AOvVaw11heawxMAVY4534qMbqvss)
+Merci de nous faire parvenir ([contact@aurora-5r.fr](mailto:contact@aurora-5r.fr)) une présentation des points qui vous motivent pour nous rejoindre et de remplir ce formulaire : [https://forms.gle/NNkVKGQAitLrNqxi9](https://www.google.com/url?q=https://forms.gle/NNkVKGQAitLrNqxi9&sa=D&source=editors&ust=1622280619251000&usg=AOvVaw3owe-IUkuAPfBP07lae9Oa)
 
