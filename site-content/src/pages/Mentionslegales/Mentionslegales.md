@@ -16,7 +16,7 @@ AuRorA-5R est une entreprise de structure juridique SCIC.
 ÉDITEUR
 -------
 
-Le site [https://aurora-5r.fr](https://www.google.com/url?q=https://aurora-5r.fr&sa=D&source=editors&ust=1620663680660000&usg=AOvVaw3qskRbUNUFjP3pr5_Afl1D) présente l’activité de la société AURORA-5R .
+Le site [https://aurora-5r.fr](https://www.google.com/url?q=https://aurora-5r.fr&sa=D&source=editors&ust=1622280658792000&usg=AOvVaw0F1GvXMqvieOfd83S-1Bne) présente l’activité de la société AURORA-5R .
 
 Immatriculée au RCS le 13-01-201
 
@@ -35,5 +35,5 @@ HÉBERGEUR
 
 OVH
 
-Ce site a été créé à partir du template Imagine de [Colorlib](https://www.google.com/url?q=https://colorlib.com/&sa=D&source=editors&ust=1620663680662000&usg=AOvVaw1XqKl0dp4SYVEjCAuCJv81).
+Ce site a été créé à partir du template Imagine de [Colorlib](https://www.google.com/url?q=https://colorlib.com/&sa=D&source=editors&ust=1622280658794000&usg=AOvVaw1KSWVp1FV9zuj-4eLlTKV5).
 

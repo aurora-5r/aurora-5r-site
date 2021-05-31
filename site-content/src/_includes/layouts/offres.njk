@@ -13,11 +13,22 @@
             <p class="lead">Temps de lecture :
               {{ content | readingTime }}.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            {% if topboxes | length %}
-              {%- set boxes = collections.offres -%}
-              {%- include 'partials/boxes2.njk' -%}
-            {% endif %}
+    {% if topboxes | length %}
+      {%- set boxes = collections.offres -%}
+      <div class="container">
+
+        {%- include 'partials/boxes2.njk' -%}
+      </div>
+    {% endif %}
+    <div class="container sp pt-5">
+      <div class="row justify-content-md-center pt-100">
+        <div class="col-md-10">
+          <div class=" reader-bar-start markdown-content">
 
             {% if subtitle | length %}
               <h2 class="page-subtitle">
