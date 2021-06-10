@@ -1,0 +1,33 @@
+---
+layout: "layouts/page-no-reading.njk"
+eleventyNavigation:
+  key: Events
+  parent: En savoir plus
+title: Nos événements.
+---
+
+Retrouvez sur cette page les événements que nous organisons.
+<br>
+<br>
+<div id="eventbrite-widget-container-158885716455"></div>
+
+<script src="https://www.eventbrite.fr/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function () {
+        console.log('Order complete!');
+    };
+
+    window
+        .EBWidgets
+        .createWidget({
+            // Required
+            widgetType: 'checkout',
+            eventId: '158885716455',
+            iframeContainerId: 'eventbrite-widget-container-158885716455',
+
+            // Optional
+            iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+            onOrderComplete: exampleCallback // Method called when an order has successfully completed
+        });
+</script>
