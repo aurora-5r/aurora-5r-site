@@ -1,14 +1,13 @@
 ---
-gsuiteid: 1lp0JIr5n-zz76NgXIHSDdaMI0iX9Q50-rqXXorA34oQ
-headline: Accompagnement pour réaliser des projets collaboratifs jusqu’à la mise sur le marché
-
-subtitle: Je me lance dans mon projet de transition.
+gsuiteid: 1BJA43jwsl3aYXjDQVpet6_XxJ1_2RDKAO3SY97xl20Q
+headline: Elaboration et accompagnement des stratégies de transition  
+subtitle: J’ai besoin de projeter mon organisation dans son futur en appréhendant l’évolution des marchés et en élaborant une stratégie de transition 
 
 title: 𝝻P
 
-initial: icon-rocket
+initial: icon-map
 
-order: 3
+order: 2
 
 tags:
 
@@ -16,52 +15,46 @@ tags:
 
 parent: Nos offres
 
-color: blue
+color: green
 
 ---
 
-Phase pilote
-------------
+Notre méthode 𝝻P permet d’appréhender la structure d’un marché ou d’une filière en rupture ou en émergence afin d’en comprendre les grandes dynamiques et les variables critiques. Cela permet d’établir différents scénarios, puis d’identifier et de sélectionner avec le porteur les projets de transition les plus pertinents.
 
-Ça y est, vous avez pris votre décision et êtes fixés sur le projet de transition dans lequel vous voulez vous investir. Malgré tout le soin apporté aux phases amont, il est indispensable de valider les hypothèses faites, les concepts proposés et de planifier l'exécution du projet, avant de mobiliser l’intégralité des ressources et des investissements.
+Nous sélectionnons un flux pertinent, physique ou non, et modélisons comment il s'intègre au sein de la filière.
 
-Pour cela, l’équipe d’A𝝻RorA-5R. conduit, avec vos équipes, une phase pilote essentielle contenant:
+Pour cela, nous
 
 
-1. la réalisation d’un ou plusieurs pilotes (proof of concept ou démonstrateur);
-2. le retour client / utilisateur permettant d’affiner le potentiel marché et les différents business models;
-3. la validation des paramètres techniques, industriels et économiques;
-4. la définition du plan projet;
-5. la mobilisation des moyens de financements pouvant supporter le projet avec le dépôt et suivi des dossiers associés.
-
-A la fin de cette étape, vous disposez d’un ultime point d’étape avant de vous engager dans l’exécution du projet, avec les investissements associés.
-
-Temps de réalisation: 2 à 6 mois selon la nature des pilotes choisis
-
-Réalisation et déploiement du projet
-------------------------------------
-
-Dans cette dernière étape nous vous accompagnons dans la réalisation du projet jusqu’à sa mise en œuvre, souvent synonyme de commercialisation.
-
-Notre méthode de gestion de projet s’éloigne des standards du management de projet classique de type PMI (même si nous en utilisons certains outils) pour privilégier une approche itérative dynamique sur la base de réalisation de prototypes et d’essais et d’une forte parallélisation des tâches, permettant un apprentissage permanent et l’adoption de solutions pragmatiques. Le projet est géré par un cercle de management principal et décomposé en différents modules gérés par leur propres cercles, avec des délégations claires et reportant quasi quotidiennement au cercle principal dans un mode agile. Le mode de décision est fondé sur le consentement, ce qui assure la fluidité du système.
+1. décomposons la filière en sous-filière pertinente et en phases de process;
+2. cartographions les variables, leurs impacts et interactions;
+3. établissons divers scénarios en faisant varier l’intensité des interactions et les valeurs d’entrées
+4. listons les acteurs ayant une influence sur les variables
+5. évaluons votre propre capacité à les influencer
 
 ![](images/image1.png)
 
-Nos équipes interviennent sur 6 axes principaux :
+Ce travail permet de bien visualiser et comprendre comment un marché ou une filière opère, ses évolutions possibles et les facteurs conduisant à ce que telle ou telle évolution se produise. Cette approche est d’autant plus structurante que la filière est récente et peu mature, donc propice à des évolutions rapides et brusques, le passé et les tendances du présent ne reflétant alors pas forcément ce que sera le futur.
+
+Un tableau de synthèse est proposé permettant de sélectionner les sous-branches et/ou phases de process semblant les plus pertinentes. Des études complémentaires sont menées sur cette sélection incluant:
 
 
-1. Technologique: intégration, optimisation de hardware
-2. Numérique: utilisation et intégration de solutions numériques
-3. Positionnement: gestion des intermédiaires, accès aux utilisateurs finaux, prescription
-4. Modèle commercial: mix produit/service, mix hardware/software, mode de vente (plateforme numérique, direct …)
-5. Organisation: compétences à intégrer, méthodes et processus
-6. Moyens de financements, dépôt et suivi des dossiers
+1. les différentes technologies et solutions envisageables et leur degré de maturité;
+2. la chaîne de valeur et leurs acteurs critiques;
+3. les compétiteurs présents et éventuellement futures;
+4. le dimensionnement du marché accessible
 
-Temps de réalisation: jusqu’à 18 mois selon la complexité du projet
+En parallèle, nous réalisons des séances d’idéation avec vos équipes permettant de:
+
+
+1. proposer différents positionnement et business models;
+2. imaginer diverses solutions techniques;
+3. évaluer les efforts nécessaires (investissement, ressources …) pour atteindre ces positionnements ou développer ces solutions;
+4. les interactions éventuelles entre les positionnements et les solutions
+
+Nous notons les différents projets envisageables (positionnement ou solution) sur leur attractivité et l’effort nécessaire . Nous établissons un graphique de synthèse appuyant visuellement la priorisation et la sélection du ou des projets de transition à lancer.
 
 ![](images/image2.png)
 
-Pour en savoir plus, n’hésitez pas à nous [contacter](https://aurora-5r.fr/pages/Contact)
-
- 
+Temps de réalisation: 2 à 6 mois selon la complexité de la filière
 

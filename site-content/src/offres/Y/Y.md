@@ -1,10 +1,10 @@
 ---
 gsuiteid: 17lGLyTPwkN2ob-P85Eyih-LrE39UUY9cEZlRAfO8yVI
-headline: Evaluation de résilience et exposition aux ruptures et émergences 
+headline: Evaluation des capacités de résilience et de l’ exposition aux transitions et émergences 
 
 subtitle: Je veux mieux appréhender l’exposition de ma société à des ruptures ou émergences de marché et sa capacité d’adaptation
 
-title: Xpos𝝻r 
+title: Y𝝻
 
 initial: icon-spinner
 
@@ -30,7 +30,7 @@ L’objectif de cet outil n’est pas d’avoir une mesure parfaite mais une vis
 
 Nous mettons gratuitement cet outil à disposition des entreprises pour qu’elles puissent faire leur auto-évaluation d’une manière totalement anonyme.
 
-L’analyse de résilience et d’exposition Xpos𝝻r a pour vocation:
+L’analyse de résilience et d’exposition Y𝝻 a pour vocation:
 
 
 * d’aider les dirigeants à mieux évaluer la capacité de leur société à faire face à un changement d’environnement économique et la probabilité qu’un tel changement se produise.
@@ -39,7 +39,7 @@ L’analyse de résilience et d’exposition Xpos𝝻r a pour vocation:
 Elle est conduite en 4 temps:
 
 
-* Il est demandé à différentes personnes de l’entreprise de remplir l’outil Xpos𝝻r 
+* Il est demandé à différentes personnes de l’entreprise de remplir l’outil Y𝝻 
 * Une journée d’échanges et questions/réponses organisée sur site
 * Une phase d’approfondissement de l’analyse et de formalisation des pistes
 * Une restitution de l’analyse avec un échange sur les pistes envisagées et leur mise en oeuvre
