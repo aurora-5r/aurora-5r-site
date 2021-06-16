@@ -1,24 +1,16 @@
 .primary-gradient {
   background: rgba(66, 134, 244, 1);
-  background: -moz-linear-gradient(left,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
-  background: -webkit-gradient(left top,
-      right top,
-      color-stop(0%, rgba(66, 134, 244, 1)),
-      color-stop(100%, rgba(66, 226, 244, 1)));
-  background: -webkit-linear-gradient(left,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
-  background: -o-linear-gradient(left,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
-  background: -ms-linear-gradient(left,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
-  background: linear-gradient(to right,
-      rgba(66, 134, 244, 1) 0%,
-      rgba(66, 226, 244, 1) 100%);
+  background: -moz-linear-gradient(left, rgba(66, 134, 244, 1) 0%, rgba(66, 226, 244, 1) 100%);
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(66, 134, 244, 1)),
+    color-stop(100%, rgba(66, 226, 244, 1))
+  );
+  background: -webkit-linear-gradient(left, rgba(66, 134, 244, 1) 0%, rgba(66, 226, 244, 1) 100%);
+  background: -o-linear-gradient(left, rgba(66, 134, 244, 1) 0%, rgba(66, 226, 244, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(66, 134, 244, 1) 0%, rgba(66, 226, 244, 1) 100%);
+  background: linear-gradient(to right, rgba(66, 134, 244, 1) 0%, rgba(66, 226, 244, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4286f4', endColorstr='#42e2f4', GradientType=1);
 }
 
@@ -409,7 +401,7 @@
       margin-left: 0 !important;
     }
 
-    >a {
+    > a {
       padding-left: 0 !important;
       background: none !important;
       padding-right: 0 !important;
@@ -499,7 +491,7 @@
         font-size: 25px;
       }
 
-      >span {
+      > span {
         position: absolute;
         line-height: 0;
         top: 50%;
@@ -560,21 +552,27 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: -moz-linear-gradient(top,
-          transparent 0%,
-          transparent 18%,
-          rgba(0, 0, 0, 0.8) 99%,
-          rgba(0, 0, 0, 0.8) 100%);
-      background: -webkit-linear-gradient(top,
-          transparent 0%,
-          transparent 18%,
-          rgba(0, 0, 0, 0.8) 99%,
-          rgba(0, 0, 0, 0.8) 100%);
-      background: linear-gradient(to bottom,
-          transparent 0%,
-          transparent 18%,
-          rgba(0, 0, 0, 0.8) 99%,
-          rgba(0, 0, 0, 0.8) 100%);
+      background: -moz-linear-gradient(
+        top,
+        transparent 0%,
+        transparent 18%,
+        rgba(0, 0, 0, 0.8) 99%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      background: -webkit-linear-gradient(
+        top,
+        transparent 0%,
+        transparent 18%,
+        rgba(0, 0, 0, 0.8) 99%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 18%,
+        rgba(0, 0, 0, 0.8) 99%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
     }
   }
@@ -659,7 +657,7 @@
         opacity: 1;
       }
 
-      >span {
+      > span {
         position: absolute;
         left: 55%;
         top: 50%;
@@ -671,7 +669,6 @@
 
 .block-25 {
   ul {
-
     &,
     li {
       padding: 0;
@@ -757,7 +754,7 @@
     border-radius: 50%;
     color: $white;
 
-    >span {
+    > span {
       position: absolute;
       transform: translate(-50%, -50%);
       left: 50%;
@@ -780,7 +777,6 @@
 
 .site-block-27 {
   ul {
-
     &,
     li {
       padding: 0;
@@ -803,7 +799,6 @@
       }
 
       &.active {
-
         a,
         span {
           background: $primary;
@@ -845,21 +840,27 @@
     top: 0;
     left: 0;
     right: 0;
-    background: -moz-linear-gradient(top,
-        transparent 0%,
-        transparent 18%,
-        rgba(0, 0, 0, 0.8) 99%,
-        rgba(0, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient(top,
-        transparent 0%,
-        transparent 18%,
-        rgba(0, 0, 0, 0.8) 99%,
-        rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom,
-        transparent 0%,
-        transparent 18%,
-        rgba(0, 0, 0, 0.8) 99%,
-        rgba(0, 0, 0, 0.8) 100%);
+    background: -moz-linear-gradient(
+      top,
+      transparent 0%,
+      transparent 18%,
+      rgba(0, 0, 0, 0.8) 99%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      transparent 0%,
+      transparent 18%,
+      rgba(0, 0, 0, 0.8) 99%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 18%,
+      rgba(0, 0, 0, 0.8) 99%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
   }
 
@@ -1053,7 +1054,7 @@
     border-radius: 50%;
     margin: 0 auto !important;
 
-    >span {
+    > span {
       font-size: 35px;
       color: $white;
       position: absolute;
@@ -1245,7 +1246,6 @@
 }
 
 .custom-pagination {
-
   a,
   span {
     width: 40px;
@@ -1304,7 +1304,7 @@
     display: block;
     transition: 0.1s all ease;
 
-    >span {
+    > span {
       line-height: 0;
       font-size: 40px;
     }
@@ -1337,7 +1337,8 @@
     .icon {
       color: $white;
 
-      span {}
+      span {
+      }
     }
 
     .number {
@@ -1920,7 +1921,6 @@
 
 .form-subscribe {
   .btn {
-
     &:hover,
     &:active,
     &:focus {
@@ -2092,7 +2092,7 @@
 .nav-column span,
 .nav-column .right-nav span,
 form.search-form,
-#menu ul>li>a,
+#menu ul > li > a,
 #menu ul ul,
 #menu ul ul::after,
 #menu ul ul li a,
@@ -2175,7 +2175,7 @@ span {
   padding-bottom: 90px;
 }
 
-.accordion-section .panel-default>.panel-heading {
+.accordion-section .panel-default > .panel-heading {
   border: 0;
   background: #f4f4f4;
   padding: 0;
@@ -2330,7 +2330,6 @@ span {
 /*small device style*/
 
 @media (max-width: 767px) {
-
   .timeline-nodes:nth-child(odd) h3,
   .timeline-nodes:nth-child(odd) p {
     text-align: left;
@@ -2467,7 +2466,6 @@ span {
     font-size: 14px;
     line-height: 1.71;
   }
-
 
   table {
     border-collapse: collapse;
@@ -2651,7 +2649,7 @@ span {
   text-align: center;
   padding: 0px !important;
   box-shadow: 0 4px 20px -5px rgba($primary, 1);
-  background: rgba($primary, 0.10) !important;
+  background: rgba($primary, 0.1) !important;
 
   .unit-7-icon {
     position: absolute;
@@ -2678,14 +2676,12 @@ span {
         left: 50%;
         transform: translate(-50%, -50%);
         margin-top: 0px !important;
-
-
       }
     }
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: $black;
     font-weight: 500;
     line-height: 1.2;
@@ -2700,7 +2696,6 @@ span {
     line-height: 1.2;
     margin-top: 0px !important;
     color: $black;
-
   }
 
   img {
@@ -2723,7 +2718,11 @@ span {
   // .card-footer {
   //   background-color: #fff;
   // }
-
+  .card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
   *:last-child {
     margin-bottom: 0;
   }
@@ -2770,7 +2769,7 @@ span {
 
 .unit-7-green {
   box-shadow: 0 0 15px 0 rgba($success, 1) !important;
-  background: rgba($success, 0.10) !important;
+  background: rgba($success, 0.1) !important;
 
   &:hover {
     background: $success !important;
@@ -2792,7 +2791,7 @@ span {
 
 .unit-7-yellow {
   box-shadow: 0 0 15px 0 rgba($dark-yellow, 1) !important;
-  background: rgba($dark-yellow, 0.10) !important;
+  background: rgba($dark-yellow, 0.1) !important;
 
   &:hover {
     background: $dark-yellow !important;
@@ -2827,7 +2826,7 @@ span {
 
 .unit-7-red {
   box-shadow: 0 0 15px 0 rgba($red, 1) !important;
-  background: rgba($red, 0.10) !important;
+  background: rgba($red, 0.1) !important;
 
   &:hover {
     background: $red !important;
@@ -2860,7 +2859,7 @@ span {
   text-align: center;
   padding: 0px !important;
   box-shadow: 0 4px 20px -5px rgba($primary, 1);
-  background: rgba($primary, 0.10) !important;
+  background: rgba($primary, 0.1) !important;
 
   h3 {
     font-size: 1.3rem;
@@ -2878,7 +2877,6 @@ span {
     line-height: 1;
     margin-top: 0px !important;
     color: $black;
-
   }
 
   img {
@@ -2912,7 +2910,6 @@ span {
     box-shadow: 0 4px 20px -5px rgba($primary, 0.4);
     top: -7px;
 
-
     h3 {
       color: $white;
     }
@@ -2941,7 +2938,6 @@ span {
   }
 }
 
-
 .unit-9 {
   background: $white;
   border-radius: 5px;
@@ -2949,6 +2945,6 @@ span {
   position: relative;
   border-color: $white;
   box-shadow: 0 4px 20px -5px rgba($primary, 1);
-  background: rgba($primary, 0.10) !important;
+  background: rgba($primary, 0.1) !important;
   margin-bottom: 5px;
 }

@@ -16,7 +16,7 @@ category: actualités
 
 ---
 
-Dans son numéro 52, le magazine [Udimag](https://www.google.com/url?q=https://www.udimec.fr/sites/default/files/udimag_52_planche_bd.pdf&sa=D&source=editors&ust=1622280640047000&usg=AOvVaw1tyLCnfwJeLXQBnzufSwtk) Consacre un article à AuRorA-5R.
+Dans son numéro 52, le magazine [Udimag](https://www.google.com/url?q=https://www.udimec.fr/sites/default/files/udimag_52_planche_bd.pdf&sa=D&source=editors&ust=1623858048194000&usg=AOvVaw1q3zzLkldhmYLZjJ_hlM8H) Consacre un article à AuRorA-5R.
 
 ![](images/image1.png)
 
