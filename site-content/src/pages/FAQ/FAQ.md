@@ -18,7 +18,7 @@ Tout ce que vous avez toujours voulu savoir sur A𝝻RorA-5R. sans jamais oser l
 
 ##### Vous écrivez que A𝝻RorA-5R. est un "transcubateur". Qu’entendez-vous par là ?
 
-A𝝻RorA-5R. est un concept unique et donc pour le définir nous avons inventé un mot qui est transcubateur. Pour l'expliquer nous avons écrit cette [page](https://www.google.com/url?q=https://aurora-5r.fr/transcubateur/&sa=D&source=editors&ust=1623858058483000&usg=AOvVaw1RZKLH2sCI1vhS9VX8-TBs).
+A𝝻RorA-5R. est un concept unique et donc pour le définir nous avons inventé un mot qui est transcubateur. Pour l'expliquer nous avons écrit cette [page](https://www.google.com/url?q=https://aurora-5r.fr/transcubateur/&sa=D&source=editors&ust=1625589946198000&usg=AOvVaw0ebuQ_MXGX2I4IiB6PWZBc).
 
 ##### Pourquoi avoir choisi de faire une SCIC ?
 

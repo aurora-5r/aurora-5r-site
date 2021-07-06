@@ -27,5 +27,5 @@ Des compétences dans les domaines du marketing ainsi que dans la modélisation,
 Pour postuler
 -------------
 
-Merci de nous faire parvenir ([contact@aurora-5r.fr](mailto:contact@aurora-5r.fr)) une présentation des points qui vous motivent pour nous rejoindre et de remplir ce formulaire : [https://forms.gle/NNkVKGQAitLrNqxi9](https://www.google.com/url?q=https://forms.gle/NNkVKGQAitLrNqxi9&sa=D&source=editors&ust=1623858025526000&usg=AOvVaw1_eQNkPG2bBy2j0-5Uf662)
+Merci de nous faire parvenir ([contact@aurora-5r.fr](mailto:contact@aurora-5r.fr)) une présentation des points qui vous motivent pour nous rejoindre et de remplir ce formulaire : [https://forms.gle/NNkVKGQAitLrNqxi9](https://www.google.com/url?q=https://forms.gle/NNkVKGQAitLrNqxi9&sa=D&source=editors&ust=1625589918325000&usg=AOvVaw27x9r2v-g-Q9Dm_FySgPuK)
 

@@ -1,7 +1,7 @@
 ---
 gsuiteid: 1BJA43jwsl3aYXjDQVpet6_XxJ1_2RDKAO3SY97xl20Q
-headline: Elaboration et accompagnement des stratégies de transition  
-subtitle: J’ai besoin de projeter mon organisation dans son futur en appréhendant l’évolution des marchés et en élaborant une stratégie de transition 
+headline: Accompagnement dans l’élaboration de de stratégies de transition  
+subtitle: J’ai besoin de projeter mon entreprise dans son futur en construisant une stratégie de transition pour mettre mon organisation en mouvement
 
 title: 𝝻P
 
@@ -19,42 +19,40 @@ color: green
 
 ---
 
-Notre méthode 𝝻P permet d’appréhender la structure d’un marché ou d’une filière en rupture ou en émergence afin d’en comprendre les grandes dynamiques et les variables critiques. Cela permet d’établir différents scénarios, puis d’identifier et de sélectionner avec le porteur les projets de transition les plus pertinents.
+Notre monde est traversé par 2 grands courants transformatifs concomitants: le numérique et la réduction de notre impact environnemental à un niveau durable. Ensemble, ils bouleversent des pans entiers de l’économie de par la magnitude et la vélocité des transitions qu’ils alimentent.
 
-Nous sélectionnons un flux pertinent, physique ou non, et modélisons comment il s'intègre au sein de la filière.
+Comprendre l’impact de ces 2 courants sur l’environnement d’une entreprise doit être au cœur de toute stratégie parce que déterminante dans sa capacité d’adaptation et de développement futur, et englobant toutes les fonctions, de l’industrialisation au commerce ou aux ressources humaines.
 
-Pour cela, nous
+Après une évaluation de la situation de votre entreprise (voir Y𝝻),  la seconde phase 𝝻P a pour objectif de vous accompagner dans l’élaboration d’une stratégie d’entreprise de transition répondant aux changements possibles de votre environnement, et de mettre votre organisation en mouvement tant sur les aspects de gouvernance et compétence que sur la structuration de différents projets.
+
+Nous oeuvrons avec l’entreprise sur différents axes:
 
 
-1. décomposons la filière en sous-filière pertinente et en phases de process;
-2. cartographions les variables, leurs impacts et interactions;
-3. établissons divers scénarios en faisant varier l’intensité des interactions et les valeurs d’entrées
-4. listons les acteurs ayant une influence sur les variables
-5. évaluons votre propre capacité à les influencer
+* identifier les tendances marchés à partir des usages et de leurs évolutions
+* analyser et modéliser les chaînes de valeurs et les positionnements possibles de l’entreprise en leur sein en fonction des propositions de valeur
+* développer la capacité d’influence et les liens avec les réseaux décisionnels
+* faire évoluer les organisations, la gouvernance et les compétences
+* faire émerger et structurer des projets de transition en lien avec les sujets précédents
+
+Le cœur de notre méthode est la transition apprenante. En effet, chaque entreprise a un historique et des aptitudes différentes déterminant ses chemins accessibles et sa vitesse de progression. Réussir une transition implique que l’organisation et les personnes la composant puissent l’accompagner et grandir avec. L’important est le chemin parcouru, le résultat résulte. 
+
+Les méthodes et outils que nous mettons en œuvre correspondent à chaque entreprise, sa situation, ses spécificités et ses capacités. Ils structurent le sujet sur 4 axes:
+
+
+* la gouvernance cohésive - comment créer une cohésion en interne et avec les réseaux externes autour de cette transition et faire que cette transition renforce elle-même cette cohésion.
+* la compétition collaborative - comment mettre en place des chaînes de valeur compétitive tout en respectant l’identité et l’apport de chacun des acteurs assurant ainsi leur résilience et leur agilité.
+* la sobriété des usages - s’assurer de l’utilisation parcimonieuse des ressources humaines et matérielles par la valorisation de l’usage et le contrôle des effets induits néfastes (effet rebond par exemple).
+* l’innovation temps réel - accélérer l’innovation en l’exposant aux réactions en temps réel des clients, vecteur de transition pour l’ensemble de l’entreprise.
 
 ![](images/image1.png)
 
-Ce travail permet de bien visualiser et comprendre comment un marché ou une filière opère, ses évolutions possibles et les facteurs conduisant à ce que telle ou telle évolution se produise. Cette approche est d’autant plus structurante que la filière est récente et peu mature, donc propice à des évolutions rapides et brusques, le passé et les tendances du présent ne reflétant alors pas forcément ce que sera le futur.
-
-Un tableau de synthèse est proposé permettant de sélectionner les sous-branches et/ou phases de process semblant les plus pertinentes. Des études complémentaires sont menées sur cette sélection incluant:
+L’objectif recherché est de donner les moyens à l’entreprise de se projeter en direction d’un futur possible grâce à:
 
 
-1. les différentes technologies et solutions envisageables et leur degré de maturité;
-2. la chaîne de valeur et leurs acteurs critiques;
-3. les compétiteurs présents et éventuellement futures;
-4. le dimensionnement du marché accessible
+* une meilleure compréhension de l’environnement dans lequel elle va cheminer
+* des moyens d’identifier et de lire les signaux lui indiquant les évolutions de son environnement et les progrès de son cheminement
+* une organisation dotée des compétences et de la gouvernance lui donnant l’agilité et les capacités nécessaires pour parcourir le chemin et faire face aux aléas et difficultés
+* des projets jalonnant et structurant cette transition
 
-En parallèle, nous réalisons des séances d’idéation avec vos équipes permettant de:
-
-
-1. proposer différents positionnement et business models;
-2. imaginer diverses solutions techniques;
-3. évaluer les efforts nécessaires (investissement, ressources …) pour atteindre ces positionnements ou développer ces solutions;
-4. les interactions éventuelles entre les positionnements et les solutions
-
-Nous notons les différents projets envisageables (positionnement ou solution) sur leur attractivité et l’effort nécessaire . Nous établissons un graphique de synthèse appuyant visuellement la priorisation et la sélection du ou des projets de transition à lancer.
-
-![](images/image2.png)
-
-Temps de réalisation: 2 à 6 mois selon la complexité de la filière
+Temps de réalisation: en général de 2 à 6 mois
 

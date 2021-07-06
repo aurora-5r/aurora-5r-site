@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production  $npm_execpath run build:webpack && $npm_execpath run build:eleventy",
     "build:eleventy": "cross-env NODE_ENV=production node src/scripts/generate-responsive-imgs && NODE_ENV=production eleventy",
     "build:webpack": "webpack --config webpack.prod.js",
-    "dev": "cross-env NODE_ENV=development  $npm_execpath run dev:webpack && $npm_execpath run dev:eleventy",
+    "dev": "cross-env NODE_ENV=development  npm run dev:webpack && npm run dev:eleventy",
     "dev:eleventy": "eleventy",
     "dev:webpack": "webpack --config webpack.dev.js",
     "preview": "npm-run-all --parallel preview:*",

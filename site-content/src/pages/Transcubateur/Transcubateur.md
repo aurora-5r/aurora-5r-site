@@ -6,7 +6,7 @@ parent: En savoir plus
 
 ---
 
-Transcubateur est un terme créé par la [SCIC](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Incubateur_(%25C5%2593uf)&sa=D&source=editors&ust=1623858061702000&usg=AOvVaw1OtSQ0Qtk_GtHbs1qesdU7) (Société Coopérative à Intérêt Collectif) AuRorA-5R lors de sa fondation en 2020. Il est formé de la concaténation des mots transition et incubateur.
+Transcubateur est un terme créé par la [SCIC](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Incubateur_(%25C5%2593uf)&sa=D&source=editors&ust=1625589949171000&usg=AOvVaw3_tHOpuOllD4dgRJClfSSc) (Société Coopérative à Intérêt Collectif) AuRorA-5R lors de sa fondation en 2020. Il est formé de la concaténation des mots transition et incubateur.
 
 Nos sociétés et économies doivent changer dans la première moitié du 21ème siècle pour répondre aux défis environnementaux liés au changement climatique, perte de biodiversité et pollution multiple. La majorité des acteurs envisagent ces changements comme incrémentaux par rapport à leur modèle actuel, alors que la dimension des défis requièrent des transitions fortes intégrant des transformations et des ruptures pouvant être assez abruptes.
 
@@ -26,9 +26,9 @@ A l’inverse des incubateurs d’entreprise qui s’adressent à la création d
 Voir aussi
 
 
-* [Transition](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Transition&sa=D&source=editors&ust=1623858061705000&usg=AOvVaw2KpgMNAcLhu5i-EMmTn6vH)
-* [Incubation](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Incubation&sa=D&source=editors&ust=1623858061705000&usg=AOvVaw3hpD8UEaKz1Upi_5utPxft) 
-* [AuRorA-5R](https://www.google.com/url?q=https://aurora-5r.fr/&sa=D&source=editors&ust=1623858061706000&usg=AOvVaw3c9T5KnyRHGmOgiuIblLYW) 
+* [Transition](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Transition&sa=D&source=editors&ust=1625589949173000&usg=AOvVaw2NSaVWi5vMpo4ukAw7qEUi)
+* [Incubation](https://www.google.com/url?q=https://fr.wikipedia.org/wiki/Incubation&sa=D&source=editors&ust=1625589949173000&usg=AOvVaw1BA1inHjdbzVGLPGJSY9wD) 
+* [AuRorA-5R](https://www.google.com/url?q=https://aurora-5r.fr/&sa=D&source=editors&ust=1625589949174000&usg=AOvVaw3HS_PM5o2P0dFUmy39yAgp) 
 
  
 
